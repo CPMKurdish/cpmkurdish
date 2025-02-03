@@ -148,7 +148,7 @@ class CPMKurdish:
     def set_player_wins(self, amount, amount1) -> bool:
         payload = {"account_auth": self.auth_token,
         "amount": amount,
-        "amount": amount1,
+        "amount1": amount1,
         }
         params = {"key": self.access_key}
         response = requests.post(
