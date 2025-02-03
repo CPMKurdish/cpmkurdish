@@ -239,7 +239,7 @@ class CPMKurdish:
         
     def hack_car_sexo(self, hp, innerhp, nm, innernm) -> bool:
         payload = {
-        "account_auth": self.auth_token
+        "account_auth": self.auth_token,
         "hp": hp,
         "innerhp": innerhp,
         "nm": nm,
