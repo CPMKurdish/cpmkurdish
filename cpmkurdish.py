@@ -269,4 +269,20 @@ class CPMKurdish:
             f"{BASE_URL}/hack_car_milage", params=params, data=payload
         )
         response_decoded = response.json()
-        return response_decoded.get("ok")                                
+        return response_decoded.get("ok")                
+        
+    def custom_engine(self, hp, innerhp, nm, innernm) -> bool:
+        payload = {
+        "account_auth": self.auth_token,
+        "hp": hp,
+        "innerhp": innerhp,
+        "nm": nm,
+        "innernm": innernm,
+        
+        }
+        params = {"key": self.access_key}
+        response = requests.post(
+            f"{BASE_URL}/custom_engine", params=params, data=payload
+        )
+        response_decoded = response.json()
+        return response_decoded.get("ok")                                                    
