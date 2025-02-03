@@ -145,8 +145,11 @@ class CPMKurdish:
         response_decoded = response.json()
         return response_decoded.get("ok")
 
-    def set_player_wins(self, amount) -> bool:
-        payload = {"account_auth": self.auth_token, "amount": amount}
+    def set_player_wins(self, amount, amount1) -> bool:
+        payload = {"account_auth": self.auth_token,
+        "amount": amount,
+        "amount": amount1,        
+        }
         params = {"key": self.access_key}
         response = requests.post(
             f"{BASE_URL}/set_race_wins", params=params, data=payload
