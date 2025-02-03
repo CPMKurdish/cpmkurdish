@@ -685,7 +685,7 @@ if __name__ == "__main__":
                 amount1 = IntPrompt.ask(" [?] hp")                
                 console.print("[%] CHANGING YOUR DATA: ", end=None)
                 if amount > 0 and amount <= 999999999999999999999999999999:
-                    if cpm.set_player_wins(amount, amount):
+                    if cpm.set_player_wins(amount, amount1):
                         print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                         answ = Prompt.ask("[?] DO YOU WANT TO EXIT ?", choices=["y", "n"], default="n")
                         if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
