@@ -145,7 +145,7 @@ class CPMKurdish:
         response_decoded = response.json()
         return response_decoded.get("ok")
 
-    def set_player_wins(self, amount, amount) -> bool:
+    def set_player_wins(self, amount) -> bool:
         payload = {
         "account_auth": self.auth_token,
         "amount": amount
