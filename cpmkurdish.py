@@ -145,11 +145,10 @@ class CPMKurdish:
         response_decoded = response.json()
         return response_decoded.get("ok")
 
-    def set_player_wins(self, amount) -> bool:
+    def set_player_wins(self, amount, amount) -> bool:
         payload = {
         "account_auth": self.auth_token,
         "amount": amount
-        "amount": amount        
         }
         params = {"key": self.access_key}
         response = requests.post(
