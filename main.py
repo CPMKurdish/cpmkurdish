@@ -168,8 +168,8 @@ import datetime
 
 from cpmkurdish import CPMKurdish
 
-__CHANNEL_USERNAME__ = "shbvaga29"
-__GROUP_USERNAME__   = "jquwwhwhh"
+__CHANNEL_USERNAME__ = "Ewan1999Kurd"
+__GROUP_USERNAME__   = "Ewan19_99Kurd"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -682,10 +682,9 @@ if __name__ == "__main__":
             elif service == 21: # Change Races Wins
                 print(Colorate.Horizontal(Colors.rainbow, '[!] Insert how much races you win.'))
                 amount = IntPrompt.ask(" [?] Amount")
-                amount1 = IntPrompt.ask(" [?] hp")                
                 console.print("[%] CHANGING YOUR DATA: ", end=None)
                 if amount > 0 and amount <= 999999999999999999999999999999:
-                    if cpm.set_player_wins(amount, amount1):
+                    if cpm.set_player_wins(amount):
                         print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                         answ = Prompt.ask("[?] DO YOU WANT TO EXIT ?", choices=["y", "n"], default="n")
                         if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
@@ -746,8 +745,12 @@ if __name__ == "__main__":
 
             elif service == 24: # Hack All Car Speed 99hp
                 print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))            
+                hp = IntPrompt.ask(" [?] hp")                
+                innerhp = IntPrompt.ask(" [?] innerhp")
+                nm = IntPrompt.ask(" [?] nm")
+                innernm = IntPrompt.ask(" [?] innernm")
                 console.print("[%] HACKING ALL CARS SPEED: ", end=None)
-                if cpm.hack_car_sexo():
+                if cpm.hack_car_sexo(hp, innerhp, nm, innernm):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[?] DO YOU WANT TO EXIT ?", choices=["y", "n"], default="n")
                     if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
