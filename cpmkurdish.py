@@ -237,18 +237,14 @@ class CPMKurdish:
         response_decoded = response.json()
         return response_decoded.get("ok")
         
-    def hack_car_sexo(self, amount0, amount1, amount2, amount3) -> bool:
-        payload = {"account_auth": self.auth_token,
-        "amount0": amount0}
-        "amount1": amount1}
-        "amount2": amount2}
-        "amount3": amount3}                        
+    def hack_car_sexo(self) -> bool:
+        payload = {"account_auth": self.auth_token}
         params = {"key": self.access_key}
         response = requests.post(
             f"{BASE_URL}/hack_car_sexo", params=params, data=payload
         )
         response_decoded = response.json()
-        return response_decoded.get("ok")        
+        return response_decoded.get("ok")                
         
     def chrome_all_cars(self) -> bool:
         payload = {"account_auth": self.auth_token}
