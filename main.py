@@ -807,14 +807,14 @@ if __name__ == "__main__":
                     continue
                     
                     
-                elif service == 28: # Custom Engine
+                elif service == 28: # custom engine
                 print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))            
-                hp = IntPrompt.ask(" [?] HP")                
-                innerhp = IntPrompt.ask(" [?] INNER HP")
-                nm = IntPrompt.ask(" [?] NM")
-                innernm = IntPrompt.ask(" [?] INNER NM")
-                console.print("[%] CUSTOM ENGINE: ", end=None)
-                if cpm.custom_engine(hp, innerhp, nm, innernm):
+                hp = IntPrompt.ask(" [?] hp")                
+                innerhp = IntPrompt.ask(" [?] innerhp")
+                nm = IntPrompt.ask(" [?] nm")
+                innernm = IntPrompt.ask(" [?] innernm")
+                console.print("[%] HACKING ALL CARS SPEED: ", end=None)
+                if cpm.hack_car_sexo(hp, innerhp, nm, innernm):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[?] DO YOU WANT TO EXIT ?", choices=["y", "n"], default="n")
                     if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
