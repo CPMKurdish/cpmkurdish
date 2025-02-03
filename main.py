@@ -805,9 +805,7 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE USE VALID VALUES'))
                     sleep(2)
                     continue
-                    
-                    
-                elif service == 28: # custom engine
+            elif service == 28: # custom engine
                 print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))            
                 hp = IntPrompt.ask(" [?] hp")                
                 innerhp = IntPrompt.ask(" [?] innerhp")
