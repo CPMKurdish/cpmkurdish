@@ -372,7 +372,7 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                     sleep(2)
                     continue
-            elif service == 1: # Increase Money
+            elif service == 2: # Increase Money
                 print(Colorate.Horizontal(Colors.rainbow, '[?] INSERT HOW MUCH MONEY DO YOU WANT'))
                 amount = IntPrompt.ask("[red][?] AMOUNT[/red]")
                 console.print("[red][%] SAVING YOUR DATA[/red]: ", end=None)
