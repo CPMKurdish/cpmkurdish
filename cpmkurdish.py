@@ -246,6 +246,15 @@ class CPMKurdish:
         response_decoded = response.json()
         return response_decoded.get("ok")
         
+    def car_bumper(self, car_id):
+        payload = {"account_auth": self.auth_token, "car_id": car_id}
+        params = {"key": self.access_key}
+        response = requests.post(
+            f"{BASE_URL}/car_bumper", params=params, data=payload
+        )
+        response_decoded = response.json()
+        return response_decoded.get("ok")        
+        
     def hack_car_sexo(self) -> bool:
         payload = {"account_auth": self.auth_token}
         params = {"key": self.access_key}
