@@ -893,8 +893,8 @@ if __name__ == "__main__":
                 to_access_key = prompt_valid_value("[?] ACCESS KEY", "Access Key", password=False)
         console.print("[%] TRYING TO LOGIN: ", end=None)
         cpm = CPMKurdish(acc_access_key)
-        login_response = cpm.another_account(acc_email, acc_password)
-        if login_response != 0:
+        if cpm.another_accoun(acc_email, acc_password)
+        if cpm.another_accoun != 0:
             if login_response == 100:
                 print(Colorate.Horizontal(Colors.rainbow, 'ACCOUNT NOT FOUND'))
                 sleep(2)
@@ -912,5 +912,6 @@ if __name__ == "__main__":
                 print(Colorate.Horizontal(Colors.rainbow, '! NOTE: MAKE SURE YOU FILLED OUT THE FIELDS'))
                 sleep(2)
                 continue
+            else: continue
             break
         break
