@@ -892,7 +892,6 @@ if __name__ == "__main__":
                 to_password = prompt_valid_value("[red][?] ACCOUNT PASSWORD[/red]", "Password", password=False)
                 console.print("[red][%] ﻿OPENING ANOTEH ACCOUNT[/red]: ", end=None)
                 if cpm.another_account(to_email, to_password):
-                else:
                     print(Colorate.Horizontal(Colors.rainbow, '✔'))
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     sleep(2)
