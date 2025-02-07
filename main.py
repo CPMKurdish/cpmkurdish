@@ -854,21 +854,22 @@ if __name__ == "__main__":
                     sleep(2)
                     continue
                     
-            elif service == 31: # Clone Account
+            elif service == 31: # OPENING ANOTHER ACCOUNT
                 print(Colorate.Horizontal(Colors.rainbow, '[!] PLEASE ENTER ACCOUNT DETALIS'))
                 to_email = prompt_valid_value("[red][?] ACCOUNT EMAIL[/red]", "Email", password=False)
                 to_password = prompt_valid_value("[red][?] ACCOUNT PASSWORD[/red]", "Password", password=False)
-                console.print("[red][%] CLONING YOU ACCOUNT[/red]: ", end=None)
+                console.print("[red][%] OPENING ANOTHER ACCOUNT[/red]: ", end=None)
                 if cpm.another_account(to_email, to_password):
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'ACCOUNT NOT FOUND'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
                     if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
                     else: continue
                 else:
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE USE VALID VALUES'))
+                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")                    
                     sleep(2)
-                    continue
+                    continue                    
             else: continue
             break
         break
