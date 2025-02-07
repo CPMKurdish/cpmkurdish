@@ -865,8 +865,7 @@ if __name__ == "__main__":
                     if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, '✔'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL ✔'))
                     sleep(2)
                     continue                    
             else: continue
