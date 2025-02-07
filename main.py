@@ -912,6 +912,5 @@ if __name__ == "__main__":
                 print(Colorate.Horizontal(Colors.rainbow, '! NOTE: MAKE SURE YOU FILLED OUT THE FIELDS'))
                 sleep(2)
                 continue
-            else: continue
             break
         break
