@@ -890,21 +890,16 @@ if __name__ == "__main__":
                 print(Colorate.Horizontal(Colors.rainbow, '[!] PLEASE ENTER ACCOUNT DETALIS'))
                 to_email = prompt_valid_value("[red][?] ACCOUNT EMAIL[/red]", "Email", password=False)
                 to_password = prompt_valid_value("[red][?] ACCOUNT PASSWORD[/red]", "Password", password=False)
-                to_access_key = prompt_valid_value("[?] ACCESS KEY", "Access Key", password=False)
         console.print("[%] TRYING TO LOGIN: ", end=None)
         cpm = CPMKurdish(acc_access_key)
-        if cpm.another_accoun(acc_email, acc_password)
-        if cpm.another_accoun != 0:
-            if login_response == 100:
+        another_account_response = cpm.another_account(acc_email, acc_password)
+        if login_response != 0:
+            if another_account_response == 100:
                 print(Colorate.Horizontal(Colors.rainbow, 'ACCOUNT NOT FOUND'))
                 sleep(2)
                 continue
-            elif login_response == 101:
+            elif another_account_response == 101:
                 print(Colorate.Horizontal(Colors.rainbow, 'WRONG PASSWORD'))
-                sleep(2)
-                continue
-            elif login_response == 103:
-                print(Colorate.Horizontal(Colors.rainbow, 'INVALID ACCESS KEY'))
                 sleep(2)
                 continue
             else:
