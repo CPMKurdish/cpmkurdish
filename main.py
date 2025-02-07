@@ -859,13 +859,13 @@ if __name__ == "__main__":
                 to_email = prompt_valid_value("[red][?] ACCOUNT EMAIL[/red]", "Email", password=False)
                 to_password = prompt_valid_value("[red][?] ACCOUNT PASSWORD[/red]", "Password", password=False)
                 console.print("[red][%] OPENING ANOTHER ACCOUNT[/red]: ", end=None)
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")                
                 if cpm.another_account(to_email, to_password):
                     print(Colorate.Horizontal(Colors.rainbow, 'ACCOUNT NOT FOUND'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
                     if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
                     else: continue
-                else:                    
+                else:
+                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     sleep(2)
                     continue                    
             else: continue
