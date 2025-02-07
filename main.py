@@ -315,7 +315,7 @@ if __name__ == "__main__":
             load_player_data(cpm)
             load_key_data(cpm)
             load_client_details()
-            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29"]
+            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]
             
 #1: Unlock Paid Cars       [3.500K]
 #2: Increase Money          [1.000K]
@@ -777,7 +777,7 @@ if __name__ == "__main__":
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER CAR DETALIS'))
                 car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
                 console.print("[red][%] HACKING CAR SPEED[/red]: ", end=None)
-                if cpm.remove_car_bumper(car_id):
+                if cpm.hack_car_speed(car_id):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
                     if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
@@ -852,6 +852,8 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                     sleep(2)
                     continue               
+                    
+                    
             elif service == 29: # Clone Account
                 print(Colorate.Horizontal(Colors.rainbow, '[!] PLEASE ENTER ACCOUNT DETALIS'))
                 to_email = prompt_valid_value("[red][?] ACCOUNT EMAIL[/red]", "Email", password=False)
