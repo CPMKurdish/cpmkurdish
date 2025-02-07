@@ -856,18 +856,17 @@ if __name__ == "__main__":
                     
             elif service == 29: # remove car bumper
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER CAR DETALIS'))
-                car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
-                console.print("[red][%] REMOVE ALL BUMPERS[/red]: ", end=None)
-                if cpm.remove_car_bumper(car_id):
+                console.print("[red][%] HACKING ALL CARS SPEED[/red]: ", end=None)
+                if cpm.remove_car_bumper():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
                     else: continue
                 else:
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                     sleep(2)
-                    continue                    
+                    continue
                     
                     
             elif service == 30: # Clone Account
