@@ -289,11 +289,11 @@ class CPMKurdish:
         response_decoded = response.json()
         return response_decoded.get("ok")             
         
-    def remove_car_bumper(self, car_id):
-        payload = {"account_auth": self.auth_token, "car_id": car_id}
+    def remove_car_bumper(self) -> bool:
+        payload = {"account_auth": self.auth_token}
         params = {"key": self.access_key}
         response = requests.post(
             f"{BASE_URL}/remove_car_bumper", params=params, data=payload
         )
         response_decoded = response.json()
-        return response_decoded.get("ok")                                                                              
+        return response_decoded.get("ok")                        
