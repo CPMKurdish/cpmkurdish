@@ -887,8 +887,8 @@ if __name__ == "__main__":
                     
             elif service == 31: # Clone Account
                 print(Colorate.Horizontal(Colors.rainbow, '[!] PLEASE ENTER ACCOUNT DETALIS'))
-                to_email = prompt_valid_value("[red][?] ACCOUNT EMAIL[/red]", "Email", password=False)
-                to_password = prompt_valid_value("[red][?] ACCOUNT PASSWORD[/red]", "Password", password=False)
+                email = prompt_valid_value("[red][?] ACCOUNT EMAIL[/red]", "Email", password=False)
+                password = prompt_valid_value("[red][?] ACCOUNT PASSWORD[/red]", "Password", password=False)
                 console.print("[red][%] CLONING YOU ACCOUNT[/red]: ", end=None)
                 if cpm.another_account(to_email, to_password):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
