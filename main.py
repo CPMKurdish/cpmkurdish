@@ -348,7 +348,7 @@ if __name__ == "__main__":
 #29: remove car bumper     [2.000K]
 #30: clone account          [5.000K]
             
-            print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(Box.DoubleCube( '                          𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝑇𝑂 𝑈𝑆𝐸 𝑀𝑌 𝑇𝑂𝑂𝐿\n\n          𝑁𝑂𝑇𝐸: 𝑇𝐻𝐸 𝑈𝑁𝐿𝐼𝑀𝐼𝑇𝐸𝐷 𝐵𝐴𝐿𝐴𝑁𝐶𝐸 𝑂𝑁𝐿𝑌 𝑊𝑂𝑅𝐾𝑆 𝐹𝑂𝑅 𝑂𝑁𝐸 𝑀𝑂𝑁𝑇𝐻\n\n\n01: Unlock Paid Cars      [3.500K] & 02: Increase Money          [1.000K]\n\n\n03: Unlock Coin Cars      [3.000K] & 04: Increase Coins          [3.000K]\n\n\n05: Unlock All Cars       [4.000K] & 06: King Rank               [3.500K]\n\n\n07: Unlock all Cars Siren [3.500K] & 08: Change ID               [2.500K]\n\n\n09: Unlock w16 Engine     [3.000K] & 10: Change Name             [1..00K]\n\n\n11: Unlock All Horns      [3.000K] & 12: Change Name (Rainbow)   [1..00K]\n\n\n13: Unlock Disable Damage [2.000K] & 14: Number Plates           [2.000K]\n\n\n15: Unlock Unlimited Fuel [2.000K] & 16: Account Delete          [F.REE.]\n\n\n17: Unlock All Wheels     [2.500K] & 18: Account Register        [F.REE.]\n\n\n19: Unlock House 3        [2.500K] & 20: Delete Friends          [5..00K]\n\n\n21: Unlock Smoke          [2.000K] & 22: Change Race Wins        [7..00K]\n\n\n23: Change Race Loses     [7..00K] & 24: Speed Car Hack (Car_ID) [1.500K]\n\n\n25: Speed All Cars Hack   [2.500K] & 26: Custom Engine           [4.000K]\n\n\n27: All Cars Max Milage   [2.000K] & 28: Chrome All Cars         [3.500K]\n\n\n29: remove car bumper     [2.000K] & 30: Clone Account           [5.000K]\n\n\n    𝑈𝑁𝐿𝐼𝑀𝐼𝑇𝐸𝐷 𝐵𝐴𝐿𝐴𝑁𝐶𝐸 𝐹𝑂𝑅 𝐸𝑉𝐸𝑅𝑌 𝑃𝐸𝑅𝑆𝑂𝑁 𝑊𝐻𝑂 𝐴𝐷𝐷𝑆 100 𝑃𝐸𝑂𝑃𝐿𝐸 𝑇𝑂 𝑀𝑌 𝐺𝑅𝑂𝑈𝑃'))))
+            print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(Box.DoubleCube( '                          𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝑇𝑂 𝑈𝑆𝐸 𝑀𝑌 𝑇𝑂𝑂𝐿\n\n          𝑁𝑂𝑇𝐸: 𝑇𝐻𝐸 𝑈𝑁𝐿𝐼𝑀𝐼𝑇𝐸𝐷 𝐵𝐴𝐿𝐴𝑁𝐶𝐸 𝑂𝑁𝐿𝑌 𝑊𝑂𝑅𝐾𝑆 𝐹𝑂𝑅 𝑂𝑁𝐸 𝑀𝑂𝑁𝑇𝐻\n\n\n01: Unlock Paid Cars      [3.500K] & 02: Increase Money          [1.000K]\n\n\n03: Unlock Coin Cars      [3.000K] & 04: Increase Coins          [3.000K]\n\n\n05: Unlock All Cars       [4.000K] & 06: King Rank               [3.500K]\n\n\n07: Unlock all Cars Siren [3.500K] & 08: Change ID               [2.500K]\n\n\n09: Unlock w16 Engine     [3.000K] & 10: Change Name             [1..00K]\n\n\n11: Unlock All Horns      [3.000K] & 12: Change Name (Rainbow)   [1..00K]\n\n\n13: Unlock Disable Damage [2.000K] & 14: Number Plates           [2.000K]\n\n\n15: Unlock Unlimited Fuel [2.000K] & 16: Account Delete          [F.REE.]\n\n\n17: Unlock All Wheels     [2.500K] & 18: Account Register        [F.REE.]\n\n\n19: Unlock House 3        [2.500K] & 20: Delete Friends          [5..00K]\n\n\n21: Unlock Smoke          [2.000K] & 22: Change Race Wins        [7..00K]\n\n\n23: Change Race Loses     [7..00K] & 24: Custom Engine           [4.000K]\n\n\n25: All Cars Max Milage   [2.000K] & 26: Speed Car Hack (Car_ID) [1.500K]\n\n\n27: Speed All Cars Hack   [2.500K] & 28: Chrome All Cars         [3.500K]\n\n\n29: remove car bumper     [2.000K] & 30: Clone Account           [5.000K]\n\n\n    𝑈𝑁𝐿𝐼𝑀𝐼𝑇𝐸𝐷 𝐵𝐴𝐿𝐴𝑁𝐶𝐸 𝐹𝑂𝑅 𝐸𝑉𝐸𝑅𝑌 𝑃𝐸𝑅𝑆𝑂𝑁 𝑊𝐻𝑂 𝐴𝐷𝐷𝑆 100 𝑃𝐸𝑂𝑃𝐿𝐸 𝑇𝑂 𝑀𝑌 𝐺𝑅𝑂𝑈𝑃'))))
             print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(Box.DoubleCube(  ' ➩{0}: Exit'))))
             print(Colorate.Horizontal(Colors.rainbow, '                         ─═══════════════[ ☆SERVICE☆ ]═══════════════─'))
             
@@ -772,41 +772,7 @@ if __name__ == "__main__":
 
 
 
-            elif service == 24: # Hack Car Speed (299hp)
-                print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))
-                print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER CAR DETALIS'))
-                car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
-                console.print("[red][%] HACKING CAR SPEED[/red]: ", end=None)
-                if cpm.hack_car_speed(car_id):
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
-                    else: continue
-                else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue
-
-
-
-            elif service == 25: # Hack All Car Speed 99hp
-                print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))            
-                console.print("[red][%] HACKING ALL CARS SPEED[/red]: ", end=None)
-                if cpm.hack_car_sexo():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue
-
-
-
-            elif service == 26: # custom engine
+            elif service == 24: # custom engine
                 print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))            
                 hp = IntPrompt.ask("[red][?] HP[/red]")                
                 innerhp = IntPrompt.ask("[red][?] INNER HP[/red]")
@@ -826,7 +792,7 @@ if __name__ == "__main__":
 
 
 
-            elif service == 27: # ALL CARS MAX MILAGE
+            elif service == 25: # ALL CARS MAX MILAGE
                 print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL MILAGE CAN NOT BE RESTORED'))            
                 console.print("[red][%] HACKING MILAGE[/red]: ", end=None)
                 if cpm.hack_car_milage():
@@ -839,6 +805,40 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                     sleep(2)
                     continue                           
+
+
+
+            elif service == 26: # Hack Car Speed (299hp)
+                print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))
+                print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER CAR DETALIS'))
+                car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
+                console.print("[red][%] HACKING CAR SPEED[/red]: ", end=None)
+                if cpm.hack_car_speed(car_id):
+                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
+                    if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
+                    else: continue
+                else:
+                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
+                    sleep(2)
+                    continue
+
+
+
+            elif service == 27: # Hack All Car Speed 99hp
+                print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))            
+                console.print("[red][%] HACKING ALL CARS SPEED[/red]: ", end=None)
+                if cpm.hack_car_sexo():
+                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
+                    else: continue
+                else:
+                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
+                    sleep(2)
+                    continue
             elif service == 28: # Chrome All Cars
                 print(Colorate.Horizontal(Colors.rainbow, '[!] CHROME'))            
                 console.print("[red][%] HACKING All CARS CHROME[/red]: ", end=None)
