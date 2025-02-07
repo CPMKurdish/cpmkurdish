@@ -315,7 +315,7 @@ if __name__ == "__main__":
             load_player_data(cpm)
             load_key_data(cpm)
             load_client_details()
-            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]
+            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"]
             
 #1: Unlock Paid Cars       [3.500K]
 #2: Increase Money          [1.000K]
@@ -878,6 +878,31 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
                     if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
+            elif service == 31: # Clone Account                    
+        acc_email = prompt_valid_value("[?] ACCOUNT EMAIL", "Email", password=False)
+        acc_password = prompt_valid_value("[?] ACCOUNT PASSWORD", "Password", password=False)
+        acc_access_key = prompt_valid_value("[?] ACCESS KEY", "Access Key", password=False)
+        console.print("[%] TRYING TO LOGIN: ", end=None)
+        cpm = CPMKurdish(acc_access_key)
+        login_response = cpm.cuna_zhwrawa(acc_email, acc_password)
+        if login_response != 0:
+            if login_response == 100:
+                print(Colorate.Horizontal(Colors.rainbow, 'ACCOUNT NOT FOUND'))
+                sleep(2)
+                continue
+            elif login_response == 101:
+                print(Colorate.Horizontal(Colors.rainbow, 'WRONG PASSWORD'))
+                sleep(2)
+                continue
+            elif login_response == 103:
+                print(Colorate.Horizontal(Colors.rainbow, 'INVALID ACCESS KEY'))
+                sleep(2)
+                continue
+            else:
+                print(Colorate.Horizontal(Colors.rainbow, 'TRY AGAIN'))
+                print(Colorate.Horizontal(Colors.rainbow, '! NOTE: MAKE SURE YOU FILLED OUT THE FIELDS'))
+                sleep(2)
+                continue                    
                     else: continue
                 else:
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
