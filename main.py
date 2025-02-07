@@ -892,8 +892,10 @@ if __name__ == "__main__":
                 console.print("[red][%] CLONING YOU ACCOUNT[/red]: ", end=None)
                 if cpm.another_account(to_email, to_password):
                     print(Colorate.Horizontal(Colors.rainbow, 'ACCOUNT NOT FOUND'))
-                    print(Colorate.Horizontal(Colors.rainbow, '91919'))
-                    print(Colorate.Horizontal(Colors.rainbow, '0000'))
+                    else: continue
+                else:
+                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'PLEASE USE VALID VALUES'))
                     sleep(2)
                     continue                    
             else: continue
