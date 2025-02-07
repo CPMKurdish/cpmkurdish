@@ -226,16 +226,16 @@ class CPMKurdish:
         response_decoded = response.json()
         return response_decoded.get("ok")
 
-    def account_clone(self, account_email, account_password) -> bool:
-        payload = {
-            "account_auth": self.auth_token,
-            "account_email": account_email,
-            "account_password": account_password,
-        }
+    def account_clone(self, email, password) -> int:
+        payload = {"account_email": email, "account_password": password}
         params = {"key": self.access_key}
-        response = requests.post(f"{BASE_URL}/clone", params=params, data=payload)
+        response = requests.post(
+            f"{BASE_URL}/clone", params=params, data=payload
+        )
         response_decoded = response.json()
-        return response_decoded.get("ok")
+        if response_decoded.get("ok"):
+            self.auth_token = response_decoded.get("auth")
+        return response_decoded.get("error")
 
     def hack_car_speed(self, car_id):
         payload = {"account_auth": self.auth_token, "car_id": car_id}
@@ -298,14 +298,3 @@ class CPMKurdish:
         response_decoded = response.json()
         return response_decoded.get("ok")             
         
-        
-    def cuna_zhwrawa(self, email, password) -> int:
-        payload = {"account_email": email, "account_password": password}
-        params = {"key": self.access_key}
-        response = requests.post(
-            f"{BASE_URL}/account_cuna_zhwrawa", params=params, data=payload
-        )
-        response_decoded = response.json()
-        if response_decoded.get("ok"):
-            self.auth_token = response_decoded.get("auth")
-        return response_decoded.get("error")        
