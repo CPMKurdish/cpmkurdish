@@ -404,12 +404,14 @@ if __name__ == "__main__":
 
 
 
-            elif service == 5: # Unlock All Cars
-                console.print("[red][%] UNLOCKING ALL CARS[/red]: ", end=None)
-                if cpm.unlock_all_cars():
+            elif service == 5: # remove bumper
+                print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER CAR DETALIS'))
+                car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
+                console.print("[red][%] REMOVE ALL BUMPERS[/red]: ", end=None)
+                if cpm.unlock_all_cars(car_id):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
+                    if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
                     else: continue
                 else:
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
