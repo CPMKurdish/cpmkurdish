@@ -208,8 +208,8 @@ class CPMKurdish:
         response_decoded = response.json()
         return response_decoded.get("ok")        
 
-    def unlock_all_cars(self, car_id):
-        payload = {"account_auth": self.auth_token, "car_id": car_id}
+    def unlock_all_cars(self) -> bool:
+        payload = {"account_auth": self.auth_token}
         params = {"key": self.access_key}
         response = requests.post(
             f"{BASE_URL}/unlock_all_cars", params=params, data=payload
@@ -282,13 +282,14 @@ class CPMKurdish:
         response_decoded = response.json()
         return response_decoded.get("ok")                  
         
-    def custom_engine(self, hp, innerhp, nm, innernm) -> bool:
+    def custom_engine(self, hp, innerhp, nm, innernm, gearbox) -> bool:
         payload = {
         "account_auth": self.auth_token,
         "hp": hp,
         "innerhp": innerhp,
         "nm": nm,
         "innernm": innernm,
+        "gearbox": gearbox,        
         
         }
         params = {"key": self.access_key}
