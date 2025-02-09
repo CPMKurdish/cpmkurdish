@@ -224,7 +224,7 @@ def load_player_data(cpm):
         if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data and 'cars' in data:
         
             
-            print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f'Name: {(data.get("Name") if "Name" in data else "UNDEFINED")} <> LocalID: {data.get("localID")} <> Money: {data.get("money")} <> Coins: {data.get("coin")} <> cars: {data.get("cars")}')))
+            print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f'Name: {(data.get("Name") if "Name" in data else "UNDEFINED")} <> LocalID: {data.get("localID")} <> Money: {data.get("money")} <> Coins: {data.get("coin")} <> Cars: {data.get("cars")}')))
                 
             
         else:
