@@ -221,7 +221,7 @@ def load_player_data(cpm):
     response = cpm.get_player_data()
     if response.get('ok'):
         data = response.get('data')
-        if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data:
+        if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data and 'win' in data:
         
             
             print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f'Name: {(data.get("Name") if "Name" in data else "UNDEFINED")} <> LocalID: {data.get("localID")} <> Money: {data.get("money")} <> Coins: {data.get("coin")}')))
@@ -747,9 +747,8 @@ if __name__ == "__main__":
                 innerhp = IntPrompt.ask("[red][?] INNER HP[/red]")
                 nm = IntPrompt.ask("[red][?] NM[/red]")
                 innernm = IntPrompt.ask("[red][?] INNER NM[/red]")
-                gearbox = IntPrompt.ask("[red][?] GEARBOX[/red]")                
                 console.print("[red][%] CUSTOM ENGINE[/red]: ", end=None)
-                if cpm.custom_engine(hp, innerhp, nm, innernm, gearbox):
+                if cpm.custom_engine(hp, innerhp, nm, innernm):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
                     if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
