@@ -221,7 +221,7 @@ def load_player_data(cpm):
     response = cpm.get_player_data()
     if response.get('ok'):
         data = response.get('data')
-        if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data and 'localIID' in data:
+        if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data and 'localID' in data:
         
             
             print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f'Name: {(data.get("Name") if "Name" in data else "UNDEFINED")} <> LocalID: {data.get("localID")} <> Money: {data.get("money")} <> Coins: {data.get("coin")} <> LocalID: {data.get("localID")}')))
