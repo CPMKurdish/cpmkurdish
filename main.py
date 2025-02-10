@@ -874,7 +874,7 @@ if __name__ == "__main__":
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER CAR DETALIS'))
                 car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
                 console.print("[red][%] HACKING CAR SPEED[/red]: ", end=None)
-                if cpm.get_car(car_id):
+                if cpm.set_car(car_id):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
                     if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
