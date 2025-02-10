@@ -218,7 +218,7 @@ def banner(console):
     print(Colorate.Horizontal(Colors.rainbow, Center.XCenter('─════════════════════════════[ 𝖯𝖫𝖠𝖸𝖤𝖱 𝖣𝖤𝖳𝖠𝖨𝖫𝖲 ]════════════════════════════─')))
 
 def load_player_car(cpm):
-    response = cpm.get_player_car()
+    response = cpm.get_player_car_id()
     if response.get('ok'):
         data = response.get('data')
         if 'floats' in data and 'car' in data:
