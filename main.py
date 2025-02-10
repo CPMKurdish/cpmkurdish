@@ -218,13 +218,13 @@ def banner(console):
     print(Colorate.Horizontal(Colors.rainbow, Center.XCenter('─════════════════════════════[ 𝖯𝖫𝖠𝖸𝖤𝖱 𝖣𝖤𝖳𝖠𝖨𝖫𝖲 ]════════════════════════════─')))
 
 def load_player_data(cpm):
-    response = cpm.get_player_data()
+    response = cpm.get_player_car()
     if response.get('ok'):
         data = response.get('data')
-        if 'floats' in data and 'localID' in data and 'money' in data and 'car' in data:
+        if 'floats' in data and 'car' in data:
         
             
-            print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f'Name: {(data.get("Name") if "Name" in data else "UNDEFINED")} <> LocalID: {data.get("localID")} <> Money: {data.get("money")} <> Car: {data.get("car")}')))
+            print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f' Car: {data.get("car")}')))
                 
             
         else:
@@ -312,7 +312,7 @@ if __name__ == "__main__":
             sleep(2)
         while True:
             banner(console)
-            load_player_data(cpm)
+            load_player_car(cpm)
             load_key_data(cpm)
             load_client_details()
             choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"]
