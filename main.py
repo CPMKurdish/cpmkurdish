@@ -867,13 +867,14 @@ if __name__ == "__main__":
                 else:
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     sleep(2)
-                    continue                    
+                    continue
+                    
             elif service == 32: # Hack Car Speed (299hp)
                 print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER CAR DETALIS'))
-                content = IntPrompt.ask("[red][?] CAR ID[/red]")
+                car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
                 console.print("[red][%] HACKING CAR SPEED[/red]: ", end=None)
-                if cpm.set_car(content):
+                if cpm.get_car(car_id):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
                     if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
@@ -886,3 +887,12 @@ if __name__ == "__main__":
             else: continue
             break
         break
+        
+        
+        
+        
+  #      get_player_car
+        
+    #    account_get_car
+        
+     #   get_car
