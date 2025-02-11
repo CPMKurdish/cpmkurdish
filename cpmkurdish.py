@@ -310,3 +310,12 @@ class CPMKurdish:
             self.auth_token = response_decoded.get("auth")
         return response_decoded.get("error")        
         
+    def unlock_tuning(self) -> bool:
+        payload = {"account_auth": self.auth_token}
+        params = {"key": self.access_key}
+        response = requests.post(
+            f"{BASE_URL}/unlock_tuning", params=params, data=payload
+        )
+        response_decoded = response.json()
+        return response_decoded.get("ok")                                
+        
