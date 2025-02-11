@@ -872,9 +872,10 @@ if __name__ == "__main__":
             elif service == 32: # Hack Car Speed (299hp)
                 print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER CAR DETALIS'))
-                custom = IntPrompt.ask("[red][?] CAR ID[/red]")
-                console.print("[red][%] steering max angle[/red]: ", end=None)
-                if cpm.steering_max_angle(custom):
+                car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
+                custom = IntPrompt.ask("[red][?] ﻿ENTER THE AMOUNT OF ANGLE YOU WANT[/red]")                
+                console.print("[red][%] HACKING CAR SPEED[/red]: ", end=None)
+                if cpm.max_max1(car_id, custom):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
                     if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
