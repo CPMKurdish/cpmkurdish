@@ -282,14 +282,10 @@ class CPMKurdish:
         response_decoded = response.json()
         return response_decoded.get("ok")                  
         
-    def custom_engine(self, hp, innerhp, nm, innernm, gearbox) -> bool:
+    def custom_engine(self, custom) -> bool:
         payload = {
         "account_auth": self.auth_token,
-        "hp": hp,
-        "innerhp": innerhp,
-        "nm": nm,
-        "innernm": innernm,
-        "gearbox": gearbox,        
+        "custom": custom,
         
         }
         params = {"key": self.access_key}
