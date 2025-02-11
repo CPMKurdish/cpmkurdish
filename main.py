@@ -886,9 +886,9 @@ if __name__ == "__main__":
                     sleep(2)
                     continue                    
                     
-            elif service == 33:
+            elif service == 33: # Unlock Smoke
                 console.print("[%] Unlocking Equipaments Male: ", end=None)
-                if cpm.unlock_equipaments_male():
+                if cpm.unlock_equipments_male():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
                     answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
@@ -899,9 +899,9 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
                     sleep(2)
                     continue
-            elif service == 34: 
+            elif service == 34: # Unlock Smoke
                 console.print("[%] Unlocking Equipaments Female: ", end=None)
-                if cpm.unlock_equipaments_female():
+                if cpm.unlock_equipments_female():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
                     answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
