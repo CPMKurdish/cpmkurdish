@@ -873,9 +873,8 @@ if __name__ == "__main__":
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER CAR DETALIS'))
                 car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER STEERING ANGLE'))
-                custom = IntPrompt.ask("[red][?]﻿ENTER THE AMOUNT OF ANGLE YOU WANT[/red]")
-                if amount > 0 and amount <= 99:
-                console.print("[red][%] HACKING CAR SPEED[/red]: ", end=None)
+                custom = IntPrompt.ask("[red][?]﻿ENTER THE AMOUNT OF ANGLE YOU WANT[/red]")                
+                console.print("[red][%] HACKING CAR ANGLE[/red]: ", end=None)
                 if cpm.max_max1(car_id, custom):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
