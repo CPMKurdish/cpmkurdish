@@ -886,33 +886,32 @@ if __name__ == "__main__":
                     sleep(2)
                     continue                    
                     
-            elif service == 33: # unlock equipaments male
-                print(Colorate.Horizontal(Colors.rainbow, '[!] UNLOCK EQUIPAMENTS MALE'))            
-                console.print("[red][%] PLEASE WAIT[/red]: ", end=None)
-                if cpm.unlock_equipaments_male():
+            elif service == 33: # 
+                console.print("[%] Unlocking Equipaments Male: ", end=None)
+                if cpm.unlock_equipments_male():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
+                    print(Colorate.Horizontal(Colors.rainbow, '======================================'))
+                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
                     sleep(2)
-                    continue   
-                    
-            elif service == 34: # unlock equipaments female
-                print(Colorate.Horizontal(Colors.rainbow, '[!] UNLOCK EQUIPAMENTS FEMALE'))            
-                console.print("[red][%] PLEASE WAIT[/red]: ", end=None)
-                if cpm.unlock_equipaments_female():
+                    continue
+            elif service == 34: # 
+                console.print("[%] Unlocking Equipaments Female: ", end=None)
+                if cpm.unlock_equipments_female():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
+                    print(Colorate.Horizontal(Colors.rainbow, '======================================'))
+                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
                     sleep(2)
-                    continue                           
+                    continue
                     
             elif service == 35: # OPENING ANOTHER ACCOUNT
                 print(Colorate.Horizontal(Colors.rainbow, '[!] PLEASE ENTER ACCOUNT DETALIS'))
