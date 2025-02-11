@@ -745,7 +745,7 @@ if __name__ == "__main__":
                 print(Colorate.Horizontal(Colors.rainbow, 'custom'))            
                 custom = IntPrompt.ask("[red][?] custom[/red]")                 
                 console.print("[red][%] CUSTOM[/red]: ", end=None)
-                if custom > 0 and custom <= 350:
+                if amount > 0 and amount <= 350:
                 if cpm.custom_engine(custom):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
