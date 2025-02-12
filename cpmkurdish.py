@@ -321,8 +321,8 @@ class CPMKurdish:
         response_decoded = response.json()
         return response_decoded.get("ok")
         
-    def another_account(self, email, password) -> int:
-        payload = {"account_email": email, "account_password": password}
+    def another_account(self, account_email, password) -> int:
+        payload = {"account_email":account_email, "account_password": password}
         params = {"key": self.access_key}
         response = requests.post(
             f"{BASE_URL}/another_account", params=params, data=payload
