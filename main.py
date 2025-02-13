@@ -323,6 +323,7 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
             sleep(2)
         while True:
+            making_pizza(self):
             banner(console)
             load_player_data(cpm)
             load_key_data(cpm)
