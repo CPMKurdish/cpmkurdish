@@ -330,7 +330,9 @@ if __name__ == "__main__":
 
 
             elif service == 1: # Unlock All Paid Cars
-                choice_input = input(f"1")
+         print("Enter your name:")
+         x = input()
+         print("Hello, " + x)
                 console.print("[red][!] NOTE[/red]: THIS FUNCTION TAKES A WHILE TO COMPLETE, PLEASE DON'T CANCEL", end=None)
                 console.print("[red][%] UNLOCKING ALL PAID CARS[/red]: ", end=None)
                 if cpm.unlock_paid_cars():
