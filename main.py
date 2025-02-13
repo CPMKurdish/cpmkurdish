@@ -965,25 +965,7 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                     sleep(2)
-                    continue                                                            
-                    
-            elif service == 39: # Increase Money
-                print(Colorate.Horizontal(Colors.rainbow, '[?] INSERT HOW MUCH MONEY DO YOU WANT'))
-                car_id = IntPrompt.ask("[red][?] AMOUNT[/red]")
-                console.print("[red][%] SAVING YOUR DATA[/red]: ", end=None)
-                        print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
-                        answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                        else: continue
-                    else:
-                        print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
-                        print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
-                        sleep(2)
-                        continue
-                else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'PLEASE USE VALID VALUES'))
-                    sleep(2)                    
+                    continue
                     
             elif service == 40: # OPENING ANOTHER ACCOUNT
                 print(Colorate.Horizontal(Colors.rainbow, '[!] PLEASE ENTER ACCOUNT DETALIS'))
