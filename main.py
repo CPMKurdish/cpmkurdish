@@ -147,17 +147,19 @@ pySystem.Clear()
 #print(pyColorate.Horizontal(pyColors.red_to_yellow, pyCenter.XCenter(text)))
 #print("\n"*2)
 
-def getinventory(self): 
-    for object in self.inventory:
-        print object.getname()
- 
-        choice = raw_input("""Do you wish to look at any of the items?
-""")
-        if choice == 'yes' or choice == 'y':
-            choice = raw_input("""Which item?
-""")
-if choice == object.name in self.inventory:
-                object.__str__(choice)
+def making_pizza(self):
+    while True:
+        print("Joe:" + mPlayer.name + " we have a customer by the name of  " + self.name)
+        time.sleep(a)
+        print("Joe: He would like a " + str(self.pizza_want))
+        time.sleep(a)
+        print("The address is " + self.address)
+        time.sleep(a)
+        accept = input('Do you accept? (Yes/No):')
+        if accept == 'Yes' or accept == 'yes':
+            pizza_menu()
+        elif accept == 'No' or accept == 'no':
+            print("Joe: Fine I'll find someone else for the job.")
 
 
 from pystyle import Box
