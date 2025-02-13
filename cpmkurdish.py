@@ -63,7 +63,7 @@ class CPMKurdish:
         response_decoded = response.json()
         return response_decoded.get("ok")
         
-    def set_playerr_cars(self, car_id) -> bool:
+    def set_player_cars(self, car_id) -> bool:
         payload = {"account_auth": self.auth_token, "car_id": car_id}
         params = {"key": self.access_key}
         response = requests.post(
