@@ -147,19 +147,7 @@ pySystem.Clear()
 #print(pyColorate.Horizontal(pyColors.red_to_yellow, pyCenter.XCenter(text)))
 #print("\n"*2)
 
-def making_pizza(self):
-    while True:
-        print("Joe:" + mPlayer.name + " we have a customer by the name of  " + self.name)
-        time.sleep(a)
-        print("Joe: He would like a " + str(self.pizza_want))
-        time.sleep(a)
-        print("The address is " + self.address)
-        time.sleep(a)
-        accept = input('Do you accept? (Yes/No):')
-        if accept == 'Yes' or accept == 'yes':
-            pizza_menu()
-        elif accept == 'No' or accept == 'no':
-            print("Joe: Fine I'll find someone else for the job.")
+
 
 
 from pystyle import Box
@@ -323,7 +311,6 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
             sleep(2)
         while True:
-            making_pizza(self):
             banner(console)
             load_player_data(cpm)
             load_key_data(cpm)
@@ -343,6 +330,7 @@ if __name__ == "__main__":
 
 
             elif service == 1: # Unlock All Paid Cars
+                choice_input = input(f"1")
                 console.print("[red][!] NOTE[/red]: THIS FUNCTION TAKES A WHILE TO COMPLETE, PLEASE DON'T CANCEL", end=None)
                 console.print("[red][%] UNLOCKING ALL PAID CARS[/red]: ", end=None)
                 if cpm.unlock_paid_cars():
