@@ -147,7 +147,17 @@ pySystem.Clear()
 #print(pyColorate.Horizontal(pyColors.red_to_yellow, pyCenter.XCenter(text)))
 #print("\n"*2)
 
-
+def getinventory(self): 
+    for object in self.inventory:
+        print object.getname()
+ 
+        choice = raw_input("""Do you wish to look at any of the items?
+""")
+        if choice == 'yes' or choice == 'y':
+            choice = raw_input("""Which item?
+""")
+if choice == object.name in self.inventory:
+                object.__str__(choice)
 
 
 from pystyle import Box
@@ -330,7 +340,7 @@ if __name__ == "__main__":
 
 
             elif service == 1: # Unlock All Paid Cars
-                choices = ("1", "2", "3" end=None)
+                console.print("[red][!] NOTE[/red]: THIS FUNCTION TAKES A WHILE TO COMPLETE, PLEASE DON'T CANCEL", end=None)
                 console.print("[red][%] UNLOCKING ALL PAID CARS[/red]: ", end=None)
                 if cpm.unlock_paid_cars():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
