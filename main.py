@@ -971,7 +971,7 @@ if __name__ == "__main__":
                 print(Colorate.Horizontal(Colors.rainbow, '[?] INSERT HOW MUCH MONEY DO YOU WANT'))
                 car_id = IntPrompt.ask("[red][?] AMOUNT[/red]")
                 console.print("[red][%] SAVING YOUR DATA[/red]: ", end=None)
-                    if cpm.set_cars(car_id):
+                    if cpm.set_playerr_cars(car_id):
                         print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                         answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
                         if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
