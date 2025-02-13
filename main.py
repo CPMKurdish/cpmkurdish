@@ -971,7 +971,6 @@ if __name__ == "__main__":
                 print(Colorate.Horizontal(Colors.rainbow, '[?] INSERT HOW MUCH MONEY DO YOU WANT'))
                 car_id = IntPrompt.ask("[red][?] AMOUNT[/red]")
                 console.print("[red][%] SAVING YOUR DATA[/red]: ", end=None)
-                if amount > 0 and amount <= 999999999999999999999999999999:
                     if cpm.set_player_cars(car_id):
                         print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                         answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
