@@ -411,7 +411,7 @@ if __name__ == "__main__":
 
 
             elif service == 5: # Unlock All Cars
-                console.print("[red][%] UNLOCKING ALL CARS[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING ALL CARS: "))
                 if cpm.unlock_all_cars():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -426,10 +426,10 @@ if __name__ == "__main__":
 
 
             elif service == 6: # King Rank
-                console.print("[red][!] NOTE[/red]: IF THE KING RANK DOESN'T APPEAR IN GAME, CLOSE IT AND OPEN FEW TIMES", end=None)
-                console.print("[!] NOTE: PLEASE DON'T DO KING RANK ON SAME ACCOUNT TWICE", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[!] NOTE: IF THE KING RANK DOESN'T APPEAR IN GAME, CLOSE IT AND OPEN FEW TIMES"))
+                print(Colorate.Horizontal(Colors.rainbow, "[!] NOTE: PLEASE DON'T DO KING RANK ON SAME ACCOUNT TWICE"))
                 sleep(2)
-                console.print("[red][%] GIVING YOU A KING RANK[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] GIVING YOU A KING RANK: "))
                 if cpm.set_player_rank():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -447,7 +447,7 @@ if __name__ == "__main__":
 
 
             elif service == 7: # Unlock All Cars Siren
-                console.print("[red][%] UNLOCKING ALL CARS SIREN[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING ALL CARS SIREN: "))
                 if cpm.unlock_all_cars_siren():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -464,7 +464,7 @@ if __name__ == "__main__":
             elif service == 8: # Change ID
                 print(Colorate.Horizontal(Colors.rainbow, '[?] ENTER YOUR NEW ID'))
                 new_id = Prompt.ask("[red][?] ID[/red]")
-                console.print("[red][%] SAVING YOUR DATA[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] SAVING YOUR DATA: "))
                 if len(new_id) >= 0 and len(new_id) <= 999999999 and (' ' in new_id) == False:
                     if cpm.set_player_localid(new_id.upper()):
                         print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
@@ -485,7 +485,7 @@ if __name__ == "__main__":
 
 
             elif service == 9: # Unlock w16 Engine
-                console.print("[red][%] UNLOCKING W16 ENGINE[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING W16 ENGINE: "))
                 if cpm.unlock_w16():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -502,7 +502,7 @@ if __name__ == "__main__":
             elif service == 10: # Change Name
                 print(Colorate.Horizontal(Colors.rainbow, '[?] ENTER YOUR NEW NAME'))
                 new_name = Prompt.ask("[red][?] NAME[/red]")
-                console.print("[red][%] SAVING YOUR DATA[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] SAVING YOUR DATA: "))
                 if len(new_name) >= 0 and len(new_name) <= 999999999:
                     if cpm.set_player_name(new_name):
                         print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
@@ -523,7 +523,7 @@ if __name__ == "__main__":
 
 
             elif service == 11: # Unlock All Horns
-                console.print("[red][%] UNLOCKING ALL HORNS[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING ALL HORNS: "))
                 if cpm.unlock_horns():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -540,7 +540,7 @@ if __name__ == "__main__":
             elif service == 12: # Change Name Rainbow
                 print(Colorate.Horizontal(Colors.rainbow, '[?] ENTER YOUR NEW RAINBOW NAME'))
                 new_name = Prompt.ask("[red][?] NAME[/red]")
-                console.print("[red][%] SAVING YOUR DATA[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] SAVING YOUR DATA: "))
                 if len(new_name) >= 0 and len(new_name) <= 999999999:
                     if cpm.set_player_name(rainbow_gradient_string(new_name)):
                         print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
@@ -561,7 +561,7 @@ if __name__ == "__main__":
 
 
             elif service == 13: # Disable Engine Damage
-                console.print("[red][%] UNLOCKING DISABLE DAMAGE[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING DISABLE DAMAGE: "))
                 if cpm.disable_engine_damage():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -576,7 +576,7 @@ if __name__ == "__main__":
 
 
             elif service == 14: # Number Plates
-                console.print("[red][%] GIVING YOU A NUMBER PLATES[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] GIVING YOU A NUMBER PLATES: "))
                 if cpm.set_player_plates():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -591,7 +591,7 @@ if __name__ == "__main__":
 
 
             elif service == 15: # Unlimited Fuel
-                console.print("[red][%] UNLOCKING UNLIMITED FUEL[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING UNLIMITED FUEL: "))
                 if cpm.unlimited_fuel():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -617,7 +617,7 @@ if __name__ == "__main__":
 
 
             elif service == 17: # Unlock Car Wheels
-                console.print("[red][%] UNLOCKING All Wheels[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING All WHEELS: "))
                 if cpm.unlock_car_wheel():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -635,7 +635,7 @@ if __name__ == "__main__":
                 print(Colorate.Horizontal(Colors.rainbow, '[!] REGISTRING NEW ACCOUNT'))
                 acc2_email = prompt_valid_value("[red][?] ACCOUNT EMAIL[/red]", "Email", password=False)
                 acc2_password = prompt_valid_value("[red][?] ACCOUNT PASSWORD[/red]", "Password", password=False)
-                console.print("[red][%] CREATING NEW ACCOUNT[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] CREATING NEW ACCOUNT: "))
                 status = cpm.register(acc2_email, acc2_password)
                 if status == 0:
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
@@ -657,7 +657,7 @@ if __name__ == "__main__":
 
 
             elif service == 19: # Unlock House 3
-                console.print("[red][%] UNLOCKING HOUSE 3[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING HOUSE 3:"))
                 if cpm.unlock_houses():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -672,7 +672,7 @@ if __name__ == "__main__":
 
 
             elif service == 20: # Delete Friends
-                console.print("[red][%] DELETING FRIENDS[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] DELETING FRIENDS[/red]: "))
                 if cpm.delete_player_friends():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -687,7 +687,7 @@ if __name__ == "__main__":
 
 
             elif service == 21: # Unlock Smoke
-                console.print("[red][%] UNLOCKING SMOKE[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING SMOKE: "))
                 if cpm.unlock_smoke():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -704,7 +704,7 @@ if __name__ == "__main__":
             elif service == 22: # Change Races Wins
                 print(Colorate.Horizontal(Colors.rainbow, '[!] Insert how much races you win.'))
                 amount = IntPrompt.ask("[red][?] Amount[/red]")
-                console.print("[red][%] CHANGING YOUR DATA[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] CHANGING YOUR DATA: "))
                 if amount > 0 and amount <= 999999999999999999999999999999:
                     if cpm.set_player_wins(amount):
                         print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
@@ -727,7 +727,7 @@ if __name__ == "__main__":
             elif service == 23: # Change Races Loses
                 print(Colorate.Horizontal(Colors.rainbow, '[!] INSERT HOW MUCH RACES YOU LOSE'))
                 amount = IntPrompt.ask("[red][?] AMOUNT[/red]")
-                console.print("[red][%] CHANGING YOUR DATA[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] CHANGING YOUR DATA: "))
                 if amount > 0 and amount <= 999999999999999999999999999999:
                     if cpm.set_player_loses(amount):
                         print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
@@ -754,7 +754,7 @@ if __name__ == "__main__":
                 nm = IntPrompt.ask("[red][?] NM[/red]")
                 innernm = IntPrompt.ask("[red][?] INNER NM[/red]")
                 gearbox = IntPrompt.ask("[red][?] GEARBOX[/red]")                
-                console.print("[red][%] CUSTOM ENGINE[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] CUSTOM ENGINE: "))
                 if cpm.custom_engine(hp, innerhp, nm, innernm, gearbox):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -771,11 +771,11 @@ if __name__ == "__main__":
             elif service == 25: # remove bumper
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER CAR DETALIS'))
                 car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
-                console.print("[red][%] REMOVE ALL BUMPERS[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] REMOVE ALL BUMPERS: "))
                 if cpm.car_bumper(car_id):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
                     else: continue
                 else:
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
