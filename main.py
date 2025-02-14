@@ -278,8 +278,6 @@ def rainbow_gradient_string(customer_name):
     return modified_string
 
 
-                choice_input = input(f"1")
-
 if __name__ == "__main__":
     console = Console()
     signal.signal(signal.SIGINT, signal_handler)
@@ -332,8 +330,8 @@ if __name__ == "__main__":
 
 
             elif service == 1: # Unlock All Paid Cars
-                console.print("[red][!] NOTE[/red]: THIS FUNCTION TAKES A WHILE TO COMPLETE, PLEASE DON'T CANCEL", end=None)
-                console.print("[red][%] UNLOCKING ALL PAID CARS[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow("[red][!] NOTE[/red]: THIS FUNCTION TAKES A WHILE TO COMPLETE, PLEASE DON'T CANCEL")))
+                print(Colorate.Horizontal(Colors.rainbow("[red][%] UNLOCKING ALL PAID CARS[/red]: ")))
                 if cpm.unlock_paid_cars():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
