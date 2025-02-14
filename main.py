@@ -755,6 +755,7 @@ if __name__ == "__main__":
                 innernm = IntPrompt.ask("[red][?] INNER NM[/red]")
                 gearbox = IntPrompt.ask("[red][?] GEARBOX[/red]")                
                 print(Colorate.Horizontal(Colors.rainbow, "[%] CUSTOM ENGINE: "))
+                if len(gearbox) >= 0 and len(gearbox) <= 999999999 and (' ' in gearbox) == False:                
                 if cpm.custom_engine(hp, innerhp, nm, innernm, gearbox):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
