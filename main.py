@@ -284,6 +284,7 @@ def rainbow_gradient_string(customer_name):
 
 
 if __name__ == "__main__":
+    os.system("clear")
     main()
     console = Console()
     signal.signal(signal.SIGINT, signal_handler)
