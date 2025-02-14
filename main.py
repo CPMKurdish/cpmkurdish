@@ -7,18 +7,22 @@ W = '\033[0m'
 # A Special Thanks To https://github.com/EXALAB/ !!
 os.system("clear")
 
-def clr():
-	if os.name == 'nt':
-		os.system('cls')
-	else:
-		os.system('clear')
-		
+
+
+def banner():
+    logo = """                                                  
+      ███████   ██                                           
+      ██▒▒▒▒▒   ██      ██                                        
+      ██        ██      ▒▒                 ██      ██           
+      ███████   ██      ██ ███████ ██   ██ ▒▒██  ██▒▒          
+      ▒▒▒▒▒██   ██      ██ ██▒▒▒██ ██   ██   ▒▒██▒▒                
+           ██   ██      ██ ██   ██ ██   ██   ██▒▒██              
+      ███████   ███████ ██ ██   ██ ███████ ██▒▒  ▒▒██                         
+      ▒▒▒▒▒▒▒   ▒▒▒▒▒▒▒ ▒▒ ▒▒   ▒▒ ▒▒▒▒▒▒▒ ▒▒      ▒▒                  
+                                         """
+    print(random.choice(colors) + logo + W)
+    print("\n")
 def start():
-    clr()
-    banner()
-    print("Tool started at\033[91;107m %s \033[0m " % x.strftime("%X"))
-    time.sleep(0)
-    print()
     print()
     print("\033[92m  1. Kali Linux ")
     print("  2. Parrot ")
