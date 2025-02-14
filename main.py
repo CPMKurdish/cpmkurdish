@@ -305,8 +305,7 @@ def rainbow_gradient_string(customer_name):
 ##
 import os, sys
 import readline
-from time import sleep as timeout
-from core.lzmcore import 
+from time import sleep as timeout 
 
 def main():
     banner()
