@@ -330,8 +330,8 @@ if __name__ == "__main__":
 
 
             elif service == 1: # Unlock All Paid Cars
-                print("[!] NOTE: THIS FUNCTION TAKES A WHILE TO COMPLETE, PLEASE DON'T CANCEL")
-                print("[%] UNLOCKING ALL PAID CARS: ")
+                print(Colorate.Horizontal(Colors.rainbow, "[!] NOTE: THIS FUNCTION TAKES A WHILE TO COMPLETE, PLEASE DON'T CANCEL"))
+                print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING ALL PAID CARS: ")
                 if cpm.unlock_paid_cars():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -342,10 +342,13 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                     sleep(2)
                     continue
+                    
+                    
+                    
             elif service == 2: # Increase Money
                 print(Colorate.Horizontal(Colors.rainbow, '[?] INSERT HOW MUCH MONEY DO YOU WANT'))
-                amount = IntPrompt.ask("[red][?] AMOUNT[/red]")
-                print(Colorate.Horizontal(Colors.rainbow, '[%] SAVING YOUR DATA: '))
+                amount = IntPrompt.ask("[?] AMOUNT")
+                print(Colorate.Horizontal(Colors.rainbow, "[%] SAVING YOUR DATA:"))
                 if amount > 0 and amount <= 999999999999999999999999999999:
                     if cpm.set_player_money(amount):
                         print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
@@ -366,8 +369,8 @@ if __name__ == "__main__":
 
                     continue
             elif service == 3: # Unlock All coins Cars
-                console.print("[red][!] NOTE[/red]: THIS FUNCTION TAKES A WHILE TO COMPLETE, PLEASE DON'T CANCEL", end=None)
-                console.print("[red][%] UNLOCKING ALL COIN CARS[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[!] NOTE: THIS FUNCTION TAKES A WHILE TO COMPLETE, PLEASE DON'T CANCEL"))
+                print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING ALL COIN CARS: "))
                 if cpm.unlock_coins_cars():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -377,11 +380,14 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                     sleep(2)
-                    continue                    
+                    continue              
+                    
+                          
+                                      
             elif service == 4: # Increase Coins
                 print(Colorate.Horizontal(Colors.rainbow, '[?] INSERT HOW MUCH COINS DO YOU WANT'))
                 amount = IntPrompt.ask("[red][?] AMOUNT[/red]")
-                console.print("[red][%] SAVING YOUR DATA[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] SAVING YOUR DATA: "))
                 if amount > 0 and amount <= 999999999999999999999999999999:
                     if cpm.set_player_coins(amount):
                         print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
