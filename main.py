@@ -330,8 +330,8 @@ if __name__ == "__main__":
 
 
             elif service == 1: # Unlock All Paid Cars
-                print(Colorate.Horizontal(Colors.rainbow("[red][!] NOTE[/red]: THIS FUNCTION TAKES A WHILE TO COMPLETE, PLEASE DON'T CANCEL", end=None)))
-                print(Colorate.Horizontal(Colors.rainbow("[red][%] UNLOCKING ALL PAID CARS[/red]: ", end=None)))
+                console.print("[red][!] NOTE[/red]: THIS FUNCTION TAKES A WHILE TO COMPLETE, PLEASE DON'T CANCEL", end=None)
+                console.print("[red][%] UNLOCKING ALL PAID CARS[/red]: ", end=None)
                 if cpm.unlock_paid_cars():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -345,7 +345,7 @@ if __name__ == "__main__":
             elif service == 2: # Increase Money
                 print(Colorate.Horizontal(Colors.rainbow, '[?] INSERT HOW MUCH MONEY DO YOU WANT'))
                 amount = IntPrompt.ask("[red][?] AMOUNT[/red]")
-                console.print("[red][%] SAVING YOUR DATA[/red]: ", end=None)
+                print("[red][%] SAVING YOUR DATA[/red]: ")
                 if amount > 0 and amount <= 999999999999999999999999999999:
                     if cpm.set_player_money(amount):
                         print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
