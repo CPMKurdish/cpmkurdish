@@ -410,12 +410,9 @@ if __name__ == "__main__":
 
 
 
-            elif service == 5: # Hack Car Speed (299hp)
-                print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))
-                print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER CAR DETALIS'))
-                car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
-                print(Colorate.Horizontal(Colors.rainbow, "[%] HACKING CAR SPEED: "))
-                if cpm.unlock_all_cars(car_id):
+            elif service == 5: # Unlock All Cars
+                print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING ALL CARS: "))
+                if cpm.unlock_all_cars():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
                     if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
