@@ -789,11 +789,11 @@ if __name__ == "__main__":
                 print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER CAR DETALIS'))
                 car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
-                console.print("[red][%] HACKING CAR SPEED[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] HACKING CAR SPEED: "))
                 if cpm.hack_car_speed(car_id):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
                     else: continue
                 else:
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
@@ -805,7 +805,7 @@ if __name__ == "__main__":
 
             elif service == 27: # Hack All Car Speed 99hp
                 print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))            
-                console.print("[red][%] HACKING ALL CARS SPEED[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] HACKING ALL CARS SPEED: "))
                 if cpm.hack_car_sexo():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -816,9 +816,12 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                     sleep(2)
                     continue
+                    
+                    
+                    
             elif service == 28: # Chrome All Cars
                 print(Colorate.Horizontal(Colors.rainbow, '[!] CHROME'))            
-                console.print("[red][%] HACKING All CARS CHROME[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] HACKING All CARS CHROME: "))
                 if cpm.chrome_all_cars():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -830,9 +833,11 @@ if __name__ == "__main__":
                     sleep(2)
                     continue               
                     
+                    
+                    
             elif service == 29: # ALL CARS MAX MILAGE
                 print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL MILAGE CAN NOT BE RESTORED'))            
-                console.print("[red][%] HACKING MILAGE[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] HACKING MILAGE: "))
                 if cpm.hack_car_milage():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -844,12 +849,13 @@ if __name__ == "__main__":
                     sleep(2)
                     continue                           
                     
-                                                            
+                                                 
+                                                                       
             elif service == 30: # Clone Account
                 print(Colorate.Horizontal(Colors.rainbow, '[!] PLEASE ENTER ACCOUNT DETALIS'))
                 to_email = prompt_valid_value("[red][?] ACCOUNT EMAIL[/red]", "Email", password=False)
                 to_password = prompt_valid_value("[red][?] ACCOUNT PASSWORD[/red]", "Password", password=False)
-                console.print("[red][%] CLONING YOU ACCOUNT[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] CLONING YOU ACCOUNT: "))
                 if cpm.account_clone(to_email, to_password):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -861,9 +867,11 @@ if __name__ == "__main__":
                     sleep(2)
                     continue
                     
+                    
+                    
             elif service == 31: # Unlock Tuning
                 print(Colorate.Horizontal(Colors.rainbow, '[!] TUNING'))            
-                console.print("[red][%] UNLOCK ALL TUNING[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCK ALL TUNING: "))
                 if cpm.unlock_tuning():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
@@ -875,43 +883,34 @@ if __name__ == "__main__":
                     sleep(2)
                     continue                                   
                     
+                    
+                    
             elif service == 32: # ANGLE
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER CAR DETALIS'))
                 car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER STEERING ANGLE'))
                 custom = IntPrompt.ask("[red][?]﻿ENTER THE AMOUNT OF ANGLE YOU WANT[/red]")                
-                console.print("[red][%] HACKING CAR ANGLE[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] HACKING CAR ANGLE: "))
                 if cpm.max_max1(car_id, custom):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
                     else: continue
                 else:
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                     sleep(2)
                     continue                    
+                    
+                    
                     
             elif service == 33: # Unlocking Equipaments Male
                 print(Colorate.Horizontal(Colors.rainbow, ' %100'))
-                console.print("[%] Unlocking Equipaments Male: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] Unlocking Equipaments Male: "))
                 if cpm.unlock_equipments_male():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
-                    else: continue
-                else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue                    
-            elif service == 34: # Unlocking Equipaments Female
-                print(Colorate.Horizontal(Colors.rainbow, ' %100'))
-                console.print("[%] Unlocking Equipaments Female: ", end=None)
-                if cpm.unlock_equipments_female():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
                     else: continue
                 else:
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
@@ -919,26 +918,47 @@ if __name__ == "__main__":
                     sleep(2)
                     continue                    
                     
-            elif service == 35: # Unlocking clan Equipaments Male
-                print(Colorate.Horizontal(Colors.rainbow, ' %100'))            
-                console.print("[%] ﻿FAKE CLAN DRSSING MALE: ", end=None)
-                if cpm.unlock_clan_equipments_male():
+                    
+                    
+            elif service == 34: # Unlocking Equipaments Female
+                print(Colorate.Horizontal(Colors.rainbow, ' %100'))
+                print(Colorate.Horizontal(Colors.rainbow, "[%] Unlocking Equipaments Female: "))
+                if cpm.unlock_equipments_female():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
                     else: continue
                 else:
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                     sleep(2)
                     continue                    
+                    
+                    
+                    
+            elif service == 35: # Unlocking clan Equipaments Male
+                print(Colorate.Horizontal(Colors.rainbow, ' %100'))            
+                print(Colorate.Horizontal(Colors.rainbow, "[%] ﻿FAKE CLAN DRSSING MALE: "))
+                if cpm.unlock_clan_equipments_male():
+                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
+                    else: continue
+                else:
+                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
+                    sleep(2)
+                    continue                   
+                    
+                     
+                       
             elif service == 36: # Unlocking clan Equipaments Female
                 print(Colorate.Horizontal(Colors.rainbow, ' %100'))            
-                console.print("[%] FAKE CLAN DRSSING FEMALE: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] FAKE CLAN DRSSING FEMALE: "))
                 if cpm.unlock_clan_equipments_female():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
                     else: continue
                 else:
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
@@ -946,26 +966,31 @@ if __name__ == "__main__":
                     sleep(2)
                     continue                                        
                     
+                    
+                    
             elif service == 37: # remove head Male
                 print(Colorate.Horizontal(Colors.rainbow, ' %100'))            
-                console.print("[%] ﻿REMOVE HEAD MALE: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] ﻿REMOVE HEAD MALE: "))
                 if cpm.unlock_remove_face_male():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
                     else: continue
                 else:
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                     sleep(2)
                     continue                    
+                    
+                    
+                    
             elif service == 38: # remove head Female
                 print(Colorate.Horizontal(Colors.rainbow, ' %100'))            
-                console.print("[%] REMOVE HEAD FEMALE: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] REMOVE HEAD FEMALE: "))
                 if cpm.unlock_remove_face_female():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
                     else: continue
                 else:
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
@@ -973,11 +998,13 @@ if __name__ == "__main__":
                     sleep(2)
                     continue                                                            
                     
+                    
+                    
             elif service == 39: # OPENING ANOTHER ACCOUNT
                 print(Colorate.Horizontal(Colors.rainbow, '[!] PLEASE ENTER ACCOUNT DETALIS'))
                 account_email = prompt_valid_value("[red][?] ACCOUNT EMAIL[/red]", "Email", password=False)
                 to_password = prompt_valid_value("[red][?] ACCOUNT PASSWORD[/red]", "Password", password=False)
-                console.print("[red][%] OPENING ANOTHER ACCOUNT[/red]: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, "[%] OPENING ANOTHER ACCOUNT: "))
                 if cpm.another_account(account_email, to_password):
                     print(Colorate.Horizontal(Colors.rainbow, 'ACCOUNT NOT FOUND'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
