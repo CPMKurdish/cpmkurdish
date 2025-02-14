@@ -331,7 +331,7 @@ if __name__ == "__main__":
 
             elif service == 1: # Unlock All Paid Cars
                 print(Colorate.Horizontal(Colors.rainbow, "[!] NOTE: THIS FUNCTION TAKES A WHILE TO COMPLETE, PLEASE DON'T CANCEL"))
-                print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING ALL PAID CARS: ")
+                print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING ALL PAID CARS: "))
                 if cpm.unlock_paid_cars():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
