@@ -1,85 +1,140 @@
-#Script By Nitro
-#Subscribe Noob Hackers Youtube Channel
-#you can modify and use the code but give credits
-clear
-printf "\n"
-printf "\e[1;92m              _____                        _ \e[0m\n" 
-printf "\e[1;92m             /__   \_   _ _ __  _ __   ___| |\e[0m\n"
-printf "\e[1;92m              / /\/ | | | '_ \| '_ \ / _ \ |\e[0m\n"
-printf "\e[1;92m             / /  | |_| | | | | | | |  __/ |\e[0m\n"
-printf "\e[1;92m             \/    \__,_|_| |_|_| |_|\___|_| v1.1\e[0m\n"
-printf "\n"
-printf "                \e[104m\e[1;77m  >>  Script By N17R0 << \e[0m\n"
-printf "\n"
-printf "  \e[100m\e[1;77m >>  Youtube Channel : \e[1;92m Noob Hackers \e[100m\e[1;77m << \e[0m\n"
-printf "\n"
-printf "  \e[101m\e[1;77m #>  Note: Turn on mobile internet to get link..! <# \e[0m\n"
-printf "\n"
-#scripting region
-printf "\e[1;92m[\e[0m\e[1;77m1\e[0m\e[1;92m]\e[0m\e[1;93m Install Ngrok\e[0m\n"
-printf "\e[1;92m[\e[0m\e[1;77m2\e[0m\e[1;92m]\e[0m\e[1;93m Add to Boot\e[0m\n"
-printf "\e[1;92m[\e[0m\e[1;77m3\e[0m\e[1;92m]\e[0m\e[1;93m Move to Script\e[0m\n"
-printf "\e[1;92m[\e[0m\e[1;77m4\e[0m\e[1;92m]\e[0m\e[1;93m Start Ngrok\e[0m\n"
-printf "\e[1;92m[\e[0m\e[1;77m5\e[0m\e[1;92m]\e[0m\e[1;93m Start Hoster\e[0m\n"
-printf "\e[1;92m[\e[0m\e[1;77m6\e[0m\e[1;92m]\e[0m\e[1;93m Update Script\e[0m\n"
-printf "\e[1;92m[\e[0m\e[1;77m7\e[0m\e[1;92m]\e[0m\e[1;93m About coder\e[0m\n"
-printf "\e[1;92m[\e[0m\e[1;77m8\e[0m\e[1;92m]\e[0m\e[1;93m Remove from Boot\e[0m\n"
-printf "\e[1;92m[\e[0m\e[1;77m9\e[0m\e[1;92m]\e[0m\e[1;93m Exit\e[0m\n"
-read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose an option: \e[0m' option 
+import time, datetime, os, sys, random 
+x = datetime.datetime.now()
+colors = ['\033[1;31m', '\033[1;32m', '\033[1;33m', '\033[1;34m', '\033[1;35m', '\033[1;36m']
+W = '\033[0m'
+# The Credit For This Code Goes To Panda Hackers https://github.com/HACK3RY2J/S-Linux/
+# If You Wanna Take Credits, Please Look Yourself Again!!
+# A Special Thanks To https://github.com/EXALAB/ !!
+os.system("clear")
 
-if [[ $option == 1 || $option == 01 ]]; then
-echo
-cd $HOME
-cd $HOME/tunnel/instalr
-bash installer.sh
-echo
+def clr():
+	if os.name == 'nt':
+		os.system('cls')
+	else:
+		os.system('clear')
 
-elif [[ $option == 2 || $option == 02 ]]; then
-echo
-cd $HOME/tunnel/boot
-bash boot.sh
 
-elif [[ $option == 3 || $option == 03 ]]; then
-echo
-cd $HOME/tunnel/mover
-bash movr.sh
-
-elif [[ $option == 4 || $option == 04 ]]; then
-echo
-cd $HOME/tunnel/starter
-bash starter.sh
-
-elif [[ $option == 5 || $option == 05 ]]; then
-echo
-cd $HOME/tunnel/hackserv
-bash hackserv.sh
-
-elif [[ $option == 6 || $option == 06 ]]; then
-echo
-cd $HOME/tunnel/update
-bash update.sh
-
-elif [[ $option == 7 || $option == 07 ]]; then
-echo
-cd $HOME/tunnel/about
-bash about.sh
-
-elif [[ $option == 8 || $option == 08 ]]; then
-echo
-cd $HOME/tunnel/revert
-bash revert.sh
-
-elif [[ $option == 9 ]]; then
-clear
-echo
-printf "                \e[1;93m Have A Good Day ........! \e[0m\n"
-echo
-sleep 3.0
-exit 3
-else
-printf "\e[1;93m [!] Invalid option!\e[0m\n"
-sleep 1
-bash tunnel.sh
-fi
-echo 
-cd $HOME
+def banner():
+    clr()
+    logo = """                                                  
+      ███████   ██                                           
+      ██▒▒▒▒▒   ██      ██                                        
+      ██        ██      ▒▒                 ██      ██           
+      ███████   ██      ██ ███████ ██   ██ ▒▒██  ██▒▒          
+      ▒▒▒▒▒██   ██      ██ ██▒▒▒██ ██   ██   ▒▒██▒▒                
+           ██   ██      ██ ██   ██ ██   ██   ██▒▒██              
+      ███████   ███████ ██ ██   ██ ███████ ██▒▒  ▒▒██                         
+      ▒▒▒▒▒▒▒   ▒▒▒▒▒▒▒ ▒▒ ▒▒   ▒▒ ▒▒▒▒▒▒▒ ▒▒      ▒▒                  
+                                         """
+    print(random.choice(colors) + logo + W)
+    print("\n")
+def start():
+    clr()
+    banner()
+    print("Tool started at\033[91;107m %s \033[0m " % x.strftime("%X"))
+    time.sleep(3)
+    print("██████████████████████████████████████████████████████████████")
+    print("██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██")
+    print("██            Coded by github.com/HACK3RY2J                 ██")
+    print("██   Youtube : https://www.youtube.com/c/PandaHackers       ██")
+    print("██  Telegram : https://telegram.me/HACK3RY2J                ██")
+    print("██████████████████████████████████████████████████████████████")
+    print("▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒")
+    print()
+    print()
+    print("\033[92m  1. Kali Linux ")
+    print("  2. Parrot ")
+    print("  3. Arch")
+    print("  4. Kali Nethunter ")
+    print("  5. Backbox")
+    print("  6. Alpine")
+    print("  7. Opensuse-tumbelweed ")
+    print("  8. Black Arch")
+    print("  9. Opensuse-leap ")
+    print(" 10. Ubuntu")
+    print(" 11. Debian ")
+    print(" 12. Fedora ")
+    print(" 13. Centos \033[0m ")
+    op = input("Choose your desired Linux : ")
+    if op == "1":
+        print("\033[91m Installing Kali... \033[0m")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Kali/kali.sh && bash kali.sh")
+    elif op == "2":
+        print("\033[91m Installing Parrot... \033[0m")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Parrot/parrot.sh && bash parrot.sh")
+    elif op == "3":
+        print("\033[91m Installing Arch... \033[0m ")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Arch/armhf/arch.sh && bash arch.sh ")
+    elif op == "4":
+        print("\033[91m Installing Kali Nethunter... \033[0m")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Nethunter/nethunter.sh && bash nethunter.sh")
+    elif op == "5":
+        print("\033[91m Installing Blackbox.. \033[0m")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/BackBox/backbox.sh && bash backbox.sh")
+    elif op == "6":
+        print("\033[91m Installing Alpine... \033[0m")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apy install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Alpine/alpine.sh && bash alpine.sh")
+    elif op == "7":
+        print("\033[91m Installing Tumbelweed... \033[0m")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/openSUSE/Tumbleweed/opensuse-tumbleweed.sh && bash opensuse-tumbleweed.sh")
+    elif op == "8":
+        print("\033[91m Installing Black Arch... \033[0m")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "pacman-key --init && pacman-key --populate archlinuxarm && pacman -Sy --noconfirm curl && curl -O https://blackarch.org/strap.sh && chmod +x strap.sh && ./strap.sh")
+    elif op == "9":
+        print("\033[91m Installing opensuse-leap... \033[0m ")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/openSUSE/Leap/opensuse-leap.sh && bash opensuse-leap.sh")
+    elif op == "10":
+        print("\033[91m Installing Ubuntu...\033[0m")
+        os.sytem("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh && bash ubuntu.sh")
+    elif op == "11":
+        print("\033[91m Installing Debian... \033[0m ")
+        os.system("cd")
+        time.sleep(1.5)
+        o9s.system(
+            "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Debian/debian.sh && bash debian.sh")
+    elif op == "12":
+        print("\033[91m Installing Fedora... \033[0m ")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Fedora/fedora.sh && bash fedora.sh")
+    elif op == "13":
+        print("\033[91m Installing Centos... \033[0m ")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/CentOS/centos.sh && bash centos.sh")
+    else:
+        print(" Enter a valid option... ")
+        
+start()
