@@ -12,12 +12,7 @@ def clr():
 		os.system('cls')
 	else:
 		os.system('clear')
-
-
-def banner():
-    clr()
-    print(random.choice(colors) + logo + W)
-    print("\n")
+		
 def start():
     clr()
     banner()
