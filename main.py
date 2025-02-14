@@ -970,7 +970,7 @@ if __name__ == "__main__":
                     
             elif service == 37: # remove head Male
                 print(Colorate.Horizontal(Colors.rainbow, ' %100'))            
-                print(Colorate.Horizontal(Colors.rainbow, "[%] ﻿REMOVE HEAD MALE: "))
+                print(Colorate.Horizontal(Colors.rainbow, "[%] REMOVE HEAD MALE: "))
                 if cpm.unlock_remove_face_male():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
