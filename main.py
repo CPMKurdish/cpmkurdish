@@ -105,75 +105,7 @@ def start():
 
 
 
-            continue
-                
-                
-    elif op == "3":
-        print("\033[91m Installing Arch... \033[0m ")
-        os.system("cd")
-        time.sleep(1.5)
-        os.system(
-            "apt install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Arch/armhf/arch.sh && bash arch.sh ")
-    elif op == "4":
-        print("\033[91m Installing Kali Nethunter... \033[0m")
-        os.system("cd")
-        time.sleep(1.5)
-        os.system(
-            "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Nethunter/nethunter.sh && bash nethunter.sh")
-    elif op == "5":
-        print("\033[91m Installing Blackbox.. \033[0m")
-        os.system("cd")
-        time.sleep(1.5)
-        os.system(
-            "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/BackBox/backbox.sh && bash backbox.sh")
-    elif op == "6":
-        print("\033[91m Installing Alpine... \033[0m")
-        os.system("cd")
-        time.sleep(1.5)
-        os.system(
-            "apy install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Alpine/alpine.sh && bash alpine.sh")
-    elif op == "7":
-        print("\033[91m Installing Tumbelweed... \033[0m")
-        os.system("cd")
-        time.sleep(1.5)
-        os.system(
-            "apt install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/openSUSE/Tumbleweed/opensuse-tumbleweed.sh && bash opensuse-tumbleweed.sh")
-    elif op == "8":
-        print("\033[91m Installing Black Arch... \033[0m")
-        os.system("cd")
-        time.sleep(1.5)
-        os.system(
-            "pacman-key --init && pacman-key --populate archlinuxarm && pacman -Sy --noconfirm curl && curl -O https://blackarch.org/strap.sh && chmod +x strap.sh && ./strap.sh")
-    elif op == "9":
-        print("\033[91m Installing opensuse-leap... \033[0m ")
-        os.system("cd")
-        time.sleep(1.5)
-        os.system(
-            "apt install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/openSUSE/Leap/opensuse-leap.sh && bash opensuse-leap.sh")
-    elif op == "10":
-        print("\033[91m Installing Ubuntu...\033[0m")
-        os.sytem("cd")
-        time.sleep(1.5)
-        os.system(
-            "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh && bash ubuntu.sh")
-    elif op == "11":
-        print("\033[91m Installing Debian... \033[0m ")
-        os.system("cd")
-        time.sleep(1.5)
-        o9s.system(
-            "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Debian/debian.sh && bash debian.sh")
-    elif op == "12":
-        print("\033[91m Installing Fedora... \033[0m ")
-        os.system("cd")
-        time.sleep(1.5)
-        os.system(
-            "apt install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Fedora/fedora.sh && bash fedora.sh")
-    elif op == "13":
-        print("\033[91m Installing Centos... \033[0m ")
-        os.system("cd")
-        time.sleep(1.5)
-        os.system(
-            "apt install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/CentOS/centos.sh && bash centos.sh")
+            continue               
     else:
         print(" Enter a valid option... ")
         
