@@ -254,43 +254,32 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     while True:
         banner(console)
-        acc_email = prompt_valid_value(
-            "[bold][?] Account Email[/bold]", "Email", password=False
-        )
-        acc_password = prompt_valid_value(
-            "[bold][?] Account Password[/bold]", "Password", password=False
-        )
-        acc_access_key = prompt_valid_value(
-            "[bold][?] Access Key[/bold]", "Access Key", password=False
-        )
-        console.print("[bold cyan][%] Trying to Login[/bold cyan]: ", end=None)
+        acc_email = prompt_valid_value("[?] ACCOUNT EMAIL", "Email", password=False)
+        acc_password = prompt_valid_value("[?] ACCOUNT PASSWORD", "Password", password=False)
+        acc_access_key = prompt_valid_value("[?] ACCESS KEY", "Access Key", password=False)
+        console.print("[%] TRYING TO LOGIN: ", end=None)
         cpm = CPMKurdish(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
-                print(Colorate.Horizontal(Colors.yellow_to_red, "ACCOUNT NOT FOUND."))
+                print(Colorate.Horizontal(Colors.rainbow, 'ACCOUNT NOT FOUND'))
                 sleep(2)
                 continue
             elif login_response == 101:
-                print(Colorate.Horizontal(Colors.yellow_to_red, "WRONG PASSWORD."))
+                print(Colorate.Horizontal(Colors.rainbow, 'WRONG PASSWORD'))
                 sleep(2)
                 continue
             elif login_response == 103:
-                print(Colorate.Horizontal(Colors.yellow_to_red, "INVALID ACCESS KEY."))
+                print(Colorate.Horizontal(Colors.rainbow, 'INVALID ACCESS KEY'))
                 sleep(2)
                 continue
             else:
-                print(Colorate.Horizontal(Colors.yellow_to_red, "try again (✖)."))
-                print(
-                    Colorate.Horizontal(
-                        Colors.yellow_to_red,
-                        "! Note: make sure you filled out the fields !.",
-                    )
-                )
+                print(Colorate.Horizontal(Colors.rainbow, 'TRY AGAIN'))
+                print(Colorate.Horizontal(Colors.rainbow, '! NOTE: MAKE SURE YOU FILLED OUT THE FIELDS'))
                 sleep(2)
                 continue
         else:
-            print(Colorate.Horizontal(Colors.yellow_to_red, "Success (✓)."))
+            print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
             sleep(2)
         while True:
             banner(console)
