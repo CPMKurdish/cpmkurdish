@@ -72,7 +72,6 @@ def start():
         if amount > 0 and amount <= 999999999999999999999999999999:
          if cpm.set_player_money(amount):
           print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
-                else:
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE USE VALID VALUES'))
                     sleep(2)
