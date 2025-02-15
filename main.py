@@ -187,95 +187,29 @@ def banner(console):
 
 def load_player_data(cpm):
     response = cpm.get_player_data()
-    if response.get("ok"):
-        data = response.get("data")
-        if (
-            "floats" in data
-            and "localID" in data
-            and "money" in data
-            and "coin" in data
-        ):
-
-            print(
-                Colorate.Horizontal(
-                    Colors.yellow_to_red,
-                    "╔═══════════════[. 𝗣𝗟𝗔𝗬𝗘𝗥 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡 ]═══════════════╗",
-                )
-            )
-
-            print(
-                Colorate.Horizontal(
-                    Colors.yellow_to_red,
-                    f'Name   : {(data.get("Name") if "Name" in data else "UNDEFINED")}.',
-                )
-            )
-
-            print(
-                Colorate.Horizontal(
-                    Colors.yellow_to_red, f'LocalID: {data.get("localID")}.'
-                )
-            )
-
-            print(
-                Colorate.Horizontal(
-                    Colors.yellow_to_red, f'Money  : {data.get("money")}.'
-                )
-            )
-
-            print(
-                Colorate.Horizontal(
-                    Colors.yellow_to_red, f'Coins  : {data.get("coin")}.'
-                )
-            )
-
+    if response.get('ok'):
+        data = response.get('data')
+        if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data:
+        
+            
+            print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f'Name: {(data.get("Name") if "Name" in data else "UNDEFINED")} <> LocalID: {data.get("localID")} <> Money: {data.get("money")} <> Coins: {data.get("coin")}')))
+                
+            
         else:
-            print(
-                Colorate.Horizontal(
-                    Colors.yellow_to_red,
-                    "! ERROR: new accounts most be signed-in to the game at least once !.",
-                )
-            )
+            print(Colorate.Horizontal(Colors.rainbow, '! ERROR: new accounts most be signed-in to the game at least once !.'))
             exit(1)
     else:
-        print(
-            Colorate.Horizontal(
-                Colors.yellow_to_red,
-                "! ERROR: seems like your login is not properly set !.",
-            )
-        )
+        print(Colorate.Horizontal(Colors.rainbow, '! ERROR: seems like your login is not properly set !.'))
         exit(1)
 
 
 def load_key_data(cpm):
 
     data = cpm.get_key_data()
-
-    print(
-        Colorate.Horizontal(
-            Colors.yellow_to_red,
-            "╔═══════════════[ 𝗦𝗘𝗖𝗥𝗘𝗧 𝗔𝗖𝗖𝗘𝗦𝗦 𝗞𝗘𝗬 ]═══════════════╗",
-        )
-    )
-
-    print(Colorate.Horizontal(Colors.yellow_to_red, f"Welcome {get_user_name()}"))
-
-    print(
-        Colorate.Horizontal(
-            Colors.yellow_to_red, f'Access Key : {data.get("access_key")}.'
-        )
-    )
-
-    print(
-        Colorate.Horizontal(
-            Colors.yellow_to_red, f'Telegram ID: {data.get("telegram_id")}.'
-        )
-    )
-
-    print(
-        Colorate.Horizontal(
-            Colors.yellow_to_red, f"Available balance : {data.get('coins')}."
-        )
-    )
+    
+    print(Colorate.Horizontal(Colors.rainbow, Center.XCenter('─══════════════════════[ 𝖠𝖢𝖢𝖤𝖲𝖲 𝖪𝖤𝖸 𝖣𝖤𝖳𝖠𝖨𝖫𝖲 ]══════════════════════─')))
+    
+    print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f'Access Key: {data.get("access_key")} <> Telegram ID: {data.get("telegram_id")} <> Balance: {(data.get("coins") if not data.get("is_unlimited") else "Unlimited")}')))
 
 
 def prompt_valid_value(content, tag, password=False):
