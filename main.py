@@ -105,8 +105,7 @@ def start():
 
 
 
-            continue               
-    else:
+            continue
         print(" Enter a valid option... ")
         
 start()
