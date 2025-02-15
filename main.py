@@ -249,6 +249,25 @@ def rainbow_gradient_string(customer_name):
     return modified_string
 
 
+from pystyle import Colors as pyColors
+from pystyle import Colorate as pyColorate
+from pystyle import Center as pyCenter
+from pystyle import Center
+from pystyle import System as pySystem
+import os
+import signal
+import sys
+import random
+from time import sleep
+from datetime import datetime
+
+# Bibliotecas de terceiros
+import requests
+from rich.console import Console
+from rich.prompt import Prompt, IntPrompt
+from rich.text import Text
+from rich.style import Style
+
 if __name__ == "__main__":
     console = Console()
     signal.signal(signal.SIGINT, signal_handler)
