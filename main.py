@@ -98,7 +98,7 @@ def start():
                 print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                 sleep(2)
                 continue
-        else:
+    else:
             print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
             print(Colorate.Horizontal(Colors.rainbow, 'PLEASE USE VALID VALUES'))
             sleep(2)
