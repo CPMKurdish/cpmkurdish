@@ -15,6 +15,12 @@ from rich.style import Style
 # Bibliotecas de estilo (pystyle)
 import pystyle
 from pystyle import Colors, Colorate
+from cpmkurdish import CPMKurdish
+
+__CHANNEL_USERNAME__ = "Rickdev999"
+__GROUP_USERNAME__ = "CPMCheatsChannel"
+__BOT_RICK_NAME__ = "@CPMCHEATSBOT"
+_CHEATS_NAME = "CPMCheats"
 
 
 from pystyle import Colors as pyColors
@@ -26,10 +32,11 @@ import pickle
 import time
 
 
+# Banner de boas-vindas em estilo negrito e centralizado
 BANNER = r"""
                                𝗖𝗔𝗥 𝗣𝗔𝗥𝗞𝗜𝗡𝗚 𝗠𝗨𝗟𝗧𝗜𝗣𝗟𝗔𝗬𝗘𝗥⠀
-                                      𝗖𝗣𝗠 𝗘𝗪𝗔𝗡
-                               𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥: @𝗘𝗪𝗔𝗡_𝗦𝗛𝗘𝗫_𝗔𝗟𝗜
+                                      𝗖𝗣𝗠 𝗖𝗛𝗘𝗔𝗧𝗦
+                               𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥: @𝗥𝗶𝗰𝗸𝗱𝗲𝘃𝟵𝟵𝟵
                                
                                
 ⣀⣀⣀⣀⣠⣤⣤⣤⠶⠶⠶⢦⣤⣤⣤⣄⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣤⠤⠤⠤⢤⣤⣤⣤⣤⣄⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -76,7 +83,7 @@ def prompt_user_name():
         user_name = input(
             pyColorate.Horizontal(
                 pyColors.yellow_to_red,
-                "𝗛𝗜, 𝗪𝗘𝗟𝗖𝗢𝗠𝗘! 𝗣𝗟𝗘𝗔𝗦𝗘 𝗘𝗡𝗧𝗘𝗥 𝗬𝗢𝗨𝗥 𝗡𝗔𝗠𝗘 𝗧𝗢 𝗖𝗢𝗡𝗧𝗜𝗡𝗨𝗘: ",
+                "𝗛𝗲𝗹𝗹𝗼, 𝗪𝗲𝗹𝗰𝗼𝗺𝗲! 𝗣𝗹𝗲𝗮𝘀𝗲 𝗲𝗻𝘁𝗲𝗿 𝘆𝗼𝘂𝗿 𝗻𝗮𝗺𝗲 𝘁𝗼 𝗰𝗼𝗻𝘁𝗶𝗻𝘂𝗲: ",
             )
         ).strip()
         if user_name:
@@ -84,7 +91,7 @@ def prompt_user_name():
             return user_name
         print(
             pyColorate.Horizontal(
-                pyColors.yellow_to_red, "𝗡𝗔𝗠𝗘 𝗖𝗔𝗡𝗡𝗢𝗧 𝗕𝗘 𝗘𝗠𝗣𝗧𝗬. 𝗣𝗟𝗘𝗔𝗦𝗘 𝗧𝗥𝗬 𝗔𝗚𝗔𝗜𝗡"
+                pyColors.yellow_to_red, "𝗡𝗮𝗺𝗲 𝗰𝗮𝗻𝗻𝗼𝘁 𝗯𝗲 𝗲𝗺𝗽𝘁𝘆. 𝗣𝗹𝗲𝗮𝘀𝗲 𝘁𝗿𝘆 𝗮𝗴𝗮𝗶𝗻."
             )
         )
 
@@ -94,13 +101,13 @@ def show_welcome_message(user_name):
         pyColorate.Horizontal(
             pyColors.yellow_to_red,
             pyCenter.XCenter(
-                f"𝗛𝗜 {user_name}, 𝗬𝗢𝗨𝗥 𝗡𝗔𝗠𝗘 𝗛𝗔𝗦 𝗕𝗘𝗘𝗡 𝗟𝗢𝗔𝗗𝗘𝗗 𝗙𝗥𝗢𝗠 𝗧𝗛𝗘 𝗙𝗜𝗟𝗘"
+                f"𝗛𝗲𝗹𝗹𝗼 {user_name}, 𝗬𝗼𝘂𝗿 𝗻𝗮𝗺𝗲 𝗵𝗮𝘀 𝗯𝗲𝗲𝗻 𝗹𝗼𝗮𝗱𝗲𝗱 𝗳𝗿𝗼𝗺 𝘁𝗵𝗲 𝗳𝗶𝗹𝗲!"
             ),
         )
     )
     print(
         pyColorate.Horizontal(
-            pyColors.yellow_to_red, pyCenter.XCenter("𝗧𝗛𝗔𝗡𝗞 𝗬𝗢𝗨 𝗙𝗢𝗥 𝗨𝗦𝗜𝗡𝗚 𝗖𝗣𝗠 𝗘𝗪𝗔𝗡")
+            pyColors.yellow_to_red, pyCenter.XCenter("𝗧𝗵𝗮𝗻𝗸 𝘆𝗼𝘂 𝗳𝗼𝗿 𝘂𝘀𝗶𝗻𝗴 𝗰𝗽𝗺 𝗰𝗵𝗲𝗮𝘁𝘀!")
         )
     )
 
@@ -122,32 +129,14 @@ def main():
     input(pyColorate.Horizontal(pyColors.yellow_to_red, "𝗣𝗿𝗲𝘀𝘀 𝗘𝗻𝘁𝗲𝗿 𝘁𝗼 𝗰𝗼𝗻𝘁𝗶𝗻𝘂𝗲 ..."))
 
 
+if __name__ == "__main__":
+    main()
 
-
-from pystyle import Box
-import random
-import requests
-from time import sleep
-import os, signal, sys
-from rich.console import Console
-from rich.prompt import Prompt, IntPrompt
-from rich.text import Text
-from rich.style import Style
-import pystyle
-from pystyle import Colors, Colorate
-from pystyle import Center
-import datetime
-
-
-
-from cpmkurdish import CPMKurdish
-
-__CHANNEL_USERNAME__ = "cpmkurdish_channel"
-__GROUP_USERNAME__   = "cpmkurdish_group"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
     sys.exit(0)
+
 
 def gradient_text(text, colors):
     lines = text.splitlines()
@@ -156,9 +145,18 @@ def gradient_text(text, colors):
     colorful_text = Text()
     for y, line in enumerate(lines):
         for x, char in enumerate(line):
-            if char != ' ':
-                color_index = int(((x / (width - 1 if width > 1 else 1)) + (y / (height - 1 if height > 1 else 1))) * 0.5 * (len(colors) - 1))
-                color_index = min(max(color_index, 0), len(colors) - 1)
+            if char != " ":
+                color_index = int(
+                    (
+                        (x / (width - 1 if width > 1 else 1))
+                        + (y / (height - 1 if height > 1 else 1))
+                    )
+                    * 0.5
+                    * (len(colors) - 1)
+                )
+                color_index = min(
+                    max(color_index, 0), len(colors) - 1
+                )  # Ensure the index is within bounds
                 style = Style(color=colors[color_index])
                 colorful_text.append(char, style=style)
             else:
@@ -166,30 +164,76 @@ def gradient_text(text, colors):
         colorful_text.append("\n")
     return colorful_text
 
+
+import os
+
+
 def banner(console):
-    os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name =  "                  ▄████▄   ██▓███   ███▄ ▄███▓▓█████  █     █░ ▄▄▄       ███▄    █ \n"
-    brand_name += "                  ▒██▀ ▀█  ▓██░  ██▒▓██▒▀█▀ ██▒▓█   ▀ ▓█░ █ ░█░▒████▄     ██ ▀█   █ \n"
-    brand_name += "                  ▒▓█    ▄ ▓██░ ██▓▒▓██    ▓██░▒███   ▒█░ █ ░█ ▒██  ▀█▄  ▓██  ▀█ ██▒\n"
-    brand_name += "                  ▒▓▓▄ ▄██▒▒██▄█▓▒ ▒▒██    ▒██ ▒▓█  ▄ ░█░ █ ░█ ░██▄▄▄▄██ ▓██▒  ▐▌██▒\n"
-    brand_name += "                  ▒ ▓███▀ ░▒██▒ ░  ░▒██▒   ░██▒░▒████▒░░██▒██▓  ▓█   ▓██▒▒██░   ▓██░\n"
-    brand_name += "                  ░ ░▒ ▒  ░▒▓▒░ ░  ░░ ▒░   ░  ░░░ ▒░ ░░ ▓░▒ ▒   ▒▒   ▓▒█░░ ▒░   ▒ ▒ \n"
+    os.system("cls" if os.name == "nt" else "clear")
+
+    brand_name = """
+ ██████╗██████╗ ███╗   ███╗     ██████╗██╗  ██╗███████╗ █████╗ ████████╗███████╗
+██╔════╝██╔══██╗████╗ ████║    ██╔════╝██║  ██║██╔════╝██╔══██╗╚══██╔══╝██╔════╝
+██║     ██████╔╝██╔████╔██║    ██║     ███████║█████╗  ███████║   ██║   ███████╗
+██║     ██╔═══╝ ██║╚██╔╝██║    ██║     ██╔══██║██╔══╝  ██╔══██║   ██║   ╚════██║
+╚██████╗██║     ██║ ╚═╝ ██║    ╚██████╗██║  ██║███████╗██║  ██║   ██║   ███████║
+ ╚═════╝╚═╝     ╚═╝     ╚═╝     ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝
+                                                                                """
+
     colors = [
-        "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
-        "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
-        "rgb(255,0,255)"
+        "rgb(255,0,0)",  # Vermelho
+        "rgb(255,51,0)",  # Vermelho-alaranjado
+        "rgb(255,102,0)",  # Laranja
+        "rgb(255,153,0)",  # Amarelo-alaranjado
+        "rgb(255,204,0)",  # Amarelo
+        "rgb(255,255,0)",  # Amarelo claro
     ]
+
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text)
-    print(Colorate.Horizontal(Colors.rainbow, Center.XCenter( '─══════════════════════════════════════════☆☆═════════════════════════════════════════─')))
-    
-    print(Colorate.Horizontal(Colors.rainbow, Center.XCenter("𝐏𝐋𝐄𝐀𝐒𝐄 𝐋𝐎𝐆𝐎𝐔𝐓 𝐅𝐑𝐎𝐌 𝐂𝐏𝐌 𝐁𝐄𝐅𝐎𝐑𝐄 𝐔𝐒𝐈𝐍𝐆 𝐓𝐇𝐈𝐒 𝐓𝐎𝐎𝐋")))
-    
-    print(Colorate.Horizontal(Colors.rainbow, Center.XCenter("𝐒𝐇𝐀𝐑𝐈𝐍𝐆 𝐓𝐇𝐄 𝐀𝐂𝐂𝐄𝐒𝐒 𝐊𝐄𝐘 𝐈𝐒 𝐍𝐎𝐓 𝐀𝐋𝐋𝐎𝐖𝐄𝐃 𝐀𝐍𝐃 𝐖𝐈𝐋𝐋 𝐁𝐄 𝐁𝐋𝐎𝐂𝐊𝐄𝐃")))
-    
-    print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f" 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @{__CHANNEL_USERNAME__} 𝐎𝐫 @{__GROUP_USERNAME__}")))
-    
-    print(Colorate.Horizontal(Colors.rainbow, Center.XCenter('─════════════════════════════[ 𝖯𝖫𝖠𝖸𝖤𝖱 𝖣𝖤𝖳𝖠𝖨𝖫𝖲 ]════════════════════════════─')))
+    print(
+        Colorate.Horizontal(
+            Colors.yellow_to_red,
+            "                   𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥 𝗔𝗡𝗗 𝗢𝗪𝗡𝗘𝗥:  𝗛𝗗 • 𝗥𝗜𝗖𝗞 𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥 ",
+        )
+    )
+    print(
+        Colorate.Horizontal(
+            Colors.yellow_to_red,
+            "╔═════════════════════════════[ 𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧 ! ]═════════════════════════════╗",
+        )
+    )
+    print(
+        Colorate.Horizontal(
+            Colors.yellow_to_red,
+            "\t         𝗣𝗟𝗘𝗔𝗦𝗘 𝗟𝗢𝗚 𝗢𝗨𝗧 𝗢𝗙 𝗬𝗢𝗨𝗥 𝗔𝗖𝗖𝗢𝗨𝗡𝗧 𝗕𝗘𝗙𝗢𝗥𝗘 𝗨𝗦𝗜𝗡𝗚 𝗠𝗬 𝗧𝗢𝗢𝗟 ",
+        )
+    )
+    print(
+        Colorate.Horizontal(
+            Colors.yellow_to_red,
+            "    𝗜𝗙 𝗬𝗢𝗨 𝗦𝗛𝗔𝗥𝗘 𝗧𝗛𝗘 𝗞𝗘𝗬, 𝗬𝗢𝗨𝗥 𝗞𝗘𝗬 𝗪𝗜𝗟𝗟 𝗕𝗘 𝗕𝗟𝗢𝗖𝗞𝗘𝗗 𝗪𝗜𝗧𝗛𝗢𝗨𝗧 𝗡𝗢𝗧𝗜𝗖𝗘 ",
+        )
+    )
+    print(
+        Colorate.Horizontal(
+            Colors.yellow_to_red,
+            f" ‌           𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 : {__CHANNEL_USERNAME__} 𝗚𝗥𝗢𝗨𝗣 {__GROUP_USERNAME__}",
+        )
+    )
+    print(
+        Colorate.Horizontal(
+            Colors.yellow_to_red,
+            f"   𝗥𝗲𝗺𝗲𝗺𝗯𝗲𝗿: 𝗬𝗼𝘂 𝗻𝗲𝗲𝗱 𝗯𝗮𝗹𝗮𝗻𝗰𝗲 𝘁𝗼 𝘂𝘀𝗲 𝘁𝗵𝗲 𝘁𝗼𝗼𝗹. 𝗦𝗲𝗻𝗱 /𝘀𝘁𝗮𝗿𝘁 𝘁𝗼 {__BOT_RICK_NAME__}.",
+        )
+    )
+
+    print(
+        Colorate.Horizontal(
+            Colors.yellow_to_red,
+            "╚═════════════════════════════[. 𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧 ! ]═════════════════════════════╝",
+        )
+    )
 
 def load_player_data(cpm):
     response = cpm.get_player_data()
