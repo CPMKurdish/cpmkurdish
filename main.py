@@ -25,7 +25,7 @@ _CHEATS_NAME = "CPMKurdish"
 
 from pystyle import Colors as pyColors
 from pystyle import Colorate as pyColorate
-from pystyle import Center as pyCenter
+from pystyle import Center
 from pystyle import System as pySystem
 
 import pickle
