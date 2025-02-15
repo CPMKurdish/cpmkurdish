@@ -145,18 +145,9 @@ def gradient_text(text, colors):
     colorful_text = Text()
     for y, line in enumerate(lines):
         for x, char in enumerate(line):
-            if char != " ":
-                color_index = int(
-                    (
-                        (x / (width - 1 if width > 1 else 1))
-                        + (y / (height - 1 if height > 1 else 1))
-                    )
-                    * 0.5
-                    * (len(colors) - 1)
-                )
-                color_index = min(
-                    max(color_index, 0), len(colors) - 1
-                )  # Ensure the index is within bounds
+            if char != ' ':
+                color_index = int(((x / (width - 1 if width > 1 else 1)) + (y / (height - 1 if height > 1 else 1))) * 0.5 * (len(colors) - 1))
+                color_index = min(max(color_index, 0), len(colors) - 1)
                 style = Style(color=colors[color_index])
                 colorful_text.append(char, style=style)
             else:
@@ -169,8 +160,7 @@ import os
 
 
 def banner(console):
-    os.system("cls" if os.name == "nt" else "clear")
-
+    os.system('cls' if os.name == 'nt' else 'clear')
     brand_name =  "                  ▄████▄   ██▓███   ███▄ ▄███▓▓█████  █     █░ ▄▄▄       ███▄    █ \n"
     brand_name += "                  ▒██▀ ▀█  ▓██░  ██▒▓██▒▀█▀ ██▒▓█   ▀ ▓█░ █ ░█░▒████▄     ██ ▀█   █ \n"
     brand_name += "                  ▒▓█    ▄ ▓██░ ██▓▒▓██    ▓██░▒███   ▒█░ █ ░█ ▒██  ▀█▄  ▓██  ▀█ ██▒\n"
@@ -178,14 +168,10 @@ def banner(console):
     brand_name += "                  ▒ ▓███▀ ░▒██▒ ░  ░▒██▒   ░██▒░▒████▒░░██▒██▓  ▓█   ▓██▒▒██░   ▓██░\n"
     brand_name += "                  ░ ░▒ ▒  ░▒▓▒░ ░  ░░ ▒░   ░  ░░░ ▒░ ░░ ▓░▒ ▒   ▒▒   ▓▒█░░ ▒░   ▒ ▒ \n"
     colors = [
-        "rgb(255,0,0)",  # Vermelho
-        "rgb(255,51,0)",  # Vermelho-alaranjado
-        "rgb(255,102,0)",  # Laranja
-        "rgb(255,153,0)",  # Amarelo-alaranjado
-        "rgb(255,204,0)",  # Amarelo
-        "rgb(255,255,0)",  # Amarelo claro
+        "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
+        "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
+        "rgb(255,0,255)"
     ]
-
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text)
     print(Colorate.Horizontal(Colors.rainbow, Center.XCenter( '─══════════════════════════════════════════☆☆═════════════════════════════════════════─')))
