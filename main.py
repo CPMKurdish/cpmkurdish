@@ -71,9 +71,9 @@ def start():
         print(Colorate.Horizontal(Colors.rainbow, "[%] SAVING YOUR DATA:"))
         if amount > 0 and amount <= 999999999999999999999999999999:
          if cpm.set_player_money(amount):
-         print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+          print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
         answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
+       if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
                         else: continue
                     else:
                         print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
