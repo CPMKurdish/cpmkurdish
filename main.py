@@ -111,55 +111,6 @@ def show_welcome_message(user_name):
             pyColors.yellow_to_red, pyCenter.XCenter("𝗧𝗛𝗔𝗡𝗞 𝗬𝗢𝗨 𝗙𝗢𝗥 𝗨𝗦𝗜𝗡𝗚 𝗖𝗣𝗠𝗘𝘄𝗮𝗻 ")
         )
     )
-    
-    
-    
-def get_password():
-    if os.path.exists("user_data.pkl"):
-        with open("user_data.pkl", "rb") as file:
-            user_data = pickle.load(file)
-        return user_data.get("name", "")
-    return ""
-
-
-def save_password(name):
-    user_data = {"name": name}
-    with open("user_data.pkl", "wb") as file:
-        pickle.dump(user_data, file)
-
-
-def prompt_password():
-    while True:
-        password = input(
-            pyColorate.Horizontal(
-                pyColors.yellow_to_red,
-                "𝗛𝗘𝗟𝗟𝗢, 𝗪𝗘𝗟𝗖𝗢𝗠𝗘, 𝗣𝗟𝗘𝗔𝗦𝗘 𝗘𝗡𝗧𝗘𝗥 𝗬𝗢𝗨𝗥 𝗡𝗔𝗠𝗘 𝗧𝗢 𝗖𝗢𝗡𝗧𝗜𝗡𝗨𝗘: ",
-            )
-        ).strip()
-        if user_name:
-            save_password(password)
-            return password
-        print(
-            pyColorate.Horizontal(
-                pyColors.yellow_to_red, "𝗡𝗔𝗠𝗘 𝗖𝗔𝗡𝗡𝗢𝗧 𝗕𝗘 𝗘𝗠𝗣𝗧𝗬. 𝗣𝗟𝗘𝗔𝗦𝗘 𝗧𝗥𝗬 𝗔𝗚𝗔𝗜𝗡"
-            )
-        )
-
-
-def show_welcome_message(password):
-    print(
-        pyColorate.Horizontal(
-            pyColors.yellow_to_red,
-            pyCenter.XCenter(
-                f"𝗛𝗘𝗟𝗟𝗢 {password}, 𝗬𝗢𝗨𝗥 𝗡𝗔𝗠𝗘 𝗛𝗔𝗦 𝗕𝗘𝗘𝗡 𝗟𝗢𝗔𝗗𝗘𝗗 𝗙𝗥𝗢𝗠 𝗧𝗛𝗘 𝗙𝗜𝗟𝗘"
-            ),
-        )
-    )
-    print(
-        pyColorate.Horizontal(
-            pyColors.yellow_to_red, pyCenter.XCenter("𝗧𝗛𝗔𝗡𝗞 𝗬𝗢𝗨 𝗙𝗢𝗥 𝗨𝗦𝗜𝗡𝗚 𝗖𝗣𝗠𝗘𝘄𝗮𝗻 ")
-        )
-    )    
 
 
 def main():
@@ -233,8 +184,6 @@ def banner(console):
     print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f" 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @{__CHANNEL_USERNAME__} 𝐎𝐫 @{__GROUP_USERNAME__}")))
     
     print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f"Welcome {get_user_name()}")))
-    
-    print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f"Welcome {get_password()}")))    
     
     print(Colorate.Horizontal(Colors.rainbow, Center.XCenter('─════════════════════════════[ 𝖯𝖫𝖠𝖸𝖤𝖱 𝖣𝖤𝖳𝖠𝖨𝖫𝖲 ]════════════════════════════─')))
 
