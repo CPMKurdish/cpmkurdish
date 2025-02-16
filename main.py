@@ -228,13 +228,10 @@ def load_client_details():
 
 
 def interpolate_color(start_color, end_color, fraction):
-    start_rgb = tuple(int(start_color[i : i + 2], 16) for i in (1, 3, 5))
-    end_rgb = tuple(int(end_color[i : i + 2], 16) for i in (1, 3, 5))
-    interpolated_rgb = tuple(
-        int(start + fraction * (end - start)) for start, end in zip(start_rgb, end_rgb)
-    )
+    start_rgb = tuple(int(start_color[i:i+2], 16) for i in (1, 3, 5))
+    end_rgb = tuple(int(end_color[i:i+2], 16) for i in (1, 3, 5))
+    interpolated_rgb = tuple(int(start + fraction * (end - start)) for start, end in zip(start_rgb, end_rgb))
     return "{:02x}{:02x}{:02x}".format(*interpolated_rgb)
-
 
 def rainbow_gradient_string(customer_name):
     modified_string = ""
@@ -244,7 +241,7 @@ def rainbow_gradient_string(customer_name):
     for i, char in enumerate(customer_name):
         fraction = i / max(num_chars - 1, 1)
         interpolated_color = interpolate_color(start_color, end_color, fraction)
-        modified_string += f"[{interpolated_color}]{char}"
+        modified_string += f'[{interpolated_color}]{char}'
     return modified_string
 
 
@@ -253,16 +250,10 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     while True:
         banner(console)
-        acc_email = prompt_valid_value(
-            "[bold][?] Account Email[/bold]", "Email", password=False
-        )
-        acc_password = prompt_valid_value(
-            "[bold][?] Account Password[/bold]", "Password", password=False
-        )
-        acc_access_key = prompt_valid_value(
-            "[bold][?] Access Key[/bold]", "Access Key", password=False
-        )
-        console.print("[bold cyan][%] Trying to Login[/bold cyan]: ", end=None)
+        acc_email = prompt_valid_value("[?] ACCOUNT EMAIL", "Email", password=False)
+        acc_password = prompt_valid_value("[?] ACCOUNT PASSWORD", "Password", password=False)
+        acc_access_key = prompt_valid_value("[?] ACCESS KEY", "Access Key", password=False)
+        console.print("[%] TRYING TO LOGIN: ", end=None)
         cpm = CPMKurdish(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
