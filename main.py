@@ -198,10 +198,10 @@ def load_player_data(cpm):
 
             print(
                 Colorate.Horizontal(
-                    Colors.yellow_to_red,
+                    Colors.rainbow, Center.XCenter(
                     "╔═══════════════[. 𝗣𝗟𝗔𝗬𝗘𝗥 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡 ]═══════════════╗",
                 )
-            )
+            ))
 
             print(
                 Colorate.Horizontal(
