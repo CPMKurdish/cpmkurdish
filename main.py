@@ -65,31 +65,31 @@ def show_banner():
     print("\n")
 
 
-def get_user_name():
-    if os.path.exists("user_data.pkl"):
-        with open("user_data.pkl", "rb") as file:
-            user_data = pickle.load(file)
-        return user_data.get("name", "")
+def get_password():
+    if os.path.exists("password_data.pkl"):
+        with open("password_data.pkl", "rb") as file:
+            password_data = pickle.load(file)
+        return password_data.get("password", "")
     return ""
 
 
-def save_user_name(name):
-    user_data = {"name": name}
-    with open("user_data.pkl", "wb") as file:
-        pickle.dump(user_data, file)
+def save_password(password):
+    password_data = {"password": password}
+    with open("password_data.pkl", "wb") as file:
+        pickle.dump(password_data, file)
 
 
-def prompt_user_name():
+def prompt_password():
     while True:
-        user_name = input(
+        password = input(
             pyColorate.Horizontal(
                 pyColors.yellow_to_red,
                 "𝗛𝗘𝗟𝗟𝗢, 𝗪𝗘𝗟𝗖𝗢𝗠𝗘, 𝗣𝗟𝗘𝗔𝗦𝗘 𝗘𝗡𝗧𝗘𝗥 𝗬𝗢𝗨𝗥 𝗡𝗔𝗠𝗘 𝗧𝗢 𝗖𝗢𝗡𝗧𝗜𝗡𝗨𝗘: ",
             )
         ).strip()
-        if user_name:
-            save_user_name(user_name)
-            return user_name
+        if password:
+            save_password(password)
+            return password
         print(
             pyColorate.Horizontal(
                 pyColors.yellow_to_red, "𝗡𝗔𝗠𝗘 𝗖𝗔𝗡𝗡𝗢𝗧 𝗕𝗘 𝗘𝗠𝗣𝗧𝗬. 𝗣𝗟𝗘𝗔𝗦𝗘 𝗧𝗥𝗬 𝗔𝗚𝗔𝗜𝗡"
@@ -97,12 +97,12 @@ def prompt_user_name():
         )
 
 
-def show_welcome_message(user_name):
+def show_welcome_message(password):
     print(
         pyColorate.Horizontal(
             pyColors.yellow_to_red,
             pyCenter.XCenter(
-                f"𝗛𝗘𝗟𝗟𝗢 {user_name}, 𝗬𝗢𝗨𝗥 𝗡𝗔𝗠𝗘 𝗛𝗔𝗦 𝗕𝗘𝗘𝗡 𝗟𝗢𝗔𝗗𝗘𝗗 𝗙𝗥𝗢𝗠 𝗧𝗛𝗘 𝗙𝗜𝗟𝗘"
+                f"𝗛𝗘𝗟𝗟𝗢 {password}, 𝗬𝗢𝗨𝗥 𝗡𝗔𝗠𝗘 𝗛𝗔𝗦 𝗕𝗘𝗘𝗡 𝗟𝗢𝗔𝗗𝗘𝗗 𝗙𝗥𝗢𝗠 𝗧𝗛𝗘 𝗙𝗜𝗟𝗘"
             ),
         )
     )
