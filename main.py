@@ -283,8 +283,13 @@ if __name__ == "__main__":
             load_key_data(cpm)
             load_client_details()
             choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39"]
-            print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(Box.DoubleCube, '→ {01}: 𝗜𝗻𝗰𝗿𝗲𝗮𝘀𝗲 𝗠𝗼𝗻𝗲𝘆 𝟭.𝟬𝟬𝟬$')))
-
+            print(
+                Colorate.Horizontal(
+                    Colors.rainbow, Center.XCenter(Box.DoubleCube( "→ {01}: 𝗜𝗻𝗰𝗿𝗲𝗮𝘀𝗲 𝗠𝗼𝗻𝗲𝘆 𝟭.𝟬𝟬𝟬$"
+                )
+            )
+            )
+            )
             print(Colorate.Horizontal(Colors.rainbow, '                               ─═══════════════[ ☆SERVICE☆ ]═══════════════─'))
             
             service = IntPrompt.ask(f"[bold]                                     [?] SELECT A SERVICE[red][1-{choices[-1]} or 0][/red][/bold]", choices=choices, show_choices=False)
