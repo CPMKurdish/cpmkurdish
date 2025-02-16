@@ -234,6 +234,8 @@ def banner(console):
     
     print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f"Welcome {get_user_name()}")))
     
+    print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f"Welcome {get_password()}")))    
+    
     print(Colorate.Horizontal(Colors.rainbow, Center.XCenter('─════════════════════════════[ 𝖯𝖫𝖠𝖸𝖤𝖱 𝖣𝖤𝖳𝖠𝖨𝖫𝖲 ]════════════════════════════─')))
 
 
