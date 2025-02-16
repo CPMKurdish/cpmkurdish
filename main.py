@@ -216,73 +216,15 @@ def prompt_valid_value(content, tag, password=False):
     while True:
         value = Prompt.ask(content, password=password)
         if not value or value.isspace():
-            print(
-                Colorate.Horizontal(
-                    Colors.yellow_to_red,
-                    f"{tag} cannot be empty or just spaces. Please try again (✖).",
-                )
-            )
+            print(Colorate.Horizontal(Colors.rainbow, f'{tag} CANNOT BE EMPTY OR JUST SPACES, PLEASE TRY AGAIN'))
         else:
             return value
-
-
+            
 def load_client_details():
-    # Obtém os dados de localização
     response = requests.get("http://ip-api.com/json")
     data = response.json()
-
-    # Obtém a data e hora atual
-    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-    # Informações adicionais
-    isp = data.get("isp", "Não disponível")  # Provedor de internet
-    org = data.get("org", "Não disponível")  # Organização do provedor
-    as_network = data.get("as", "Não disponível")  # Sistema autônomo de rede
-    lat = data.get("lat", "Não disponível")  # Latitude
-    lon = data.get("lon", "Não disponível")  # Longitude
-    timezone = data.get("timezone", "Não disponível")  # Fuso horário
-    mobile = data.get("mobile", "Não disponível")  # Indica se é conexão móvel
-    region = data.get("region", "Não disponível")  # Região ou estado
-    district = data.get(
-        "district", "Não disponível"
-    )  # Bairro ou distrito (se disponível)
-
-    # Exibe a localização com a data e hora
-    print(
-        Colorate.Horizontal(
-            Colors.yellow_to_red, "╔═══════════════[ 𝐋𝐎𝐂𝐀𝐓𝐈𝐎𝐍 ]═══════════════╗"
-        )
-    )
-    print(
-        Colorate.Horizontal(Colors.yellow_to_red, f'Ip Address : {data.get("query")}.')
-    )
-    print(
-        Colorate.Horizontal(
-            Colors.yellow_to_red,
-            f'Location   : {data.get("city")} {data.get("regionName")} {data.get("countryCode")}.',
-        )
-    )
-    print(
-        Colorate.Horizontal(
-            Colors.yellow_to_red,
-            f'Country    : {data.get("country")} {data.get("zip")}.',
-        )
-    )
-    print(Colorate.Horizontal(Colors.yellow_to_red, f"Date & Time: {current_time}."))
-    print(Colorate.Horizontal(Colors.yellow_to_red, f"Org        : {org}."))
-    print(Colorate.Horizontal(Colors.yellow_to_red, f"ASN        : {as_network}."))
-    print(Colorate.Horizontal(Colors.yellow_to_red, f"Timezone   : {timezone}."))
-    print(Colorate.Horizontal(Colors.yellow_to_red, f"Region     : {region}."))
-    print(
-        Colorate.Horizontal(
-            Colors.yellow_to_red,
-            "╔═══════════════[ ☆ 𝗖𝗣𝗠 𝟭 𝗦𝗘𝗥𝗩𝗜𝗖𝗘𝗦☆ ]═══════════════╗",
-        )
-    )
-
-
-# Chamada da função (caso queira testar imediatamente)
-load_client_details()
+    print(Colorate.Horizontal(Colors.rainbow, Center.XCenter('─═════════════════════[ 𝖫𝖮𝖢𝖠𝖳𝖨𝖮𝖭 ]═════════════════════─')))
+    print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f'Country: {data.get("country")} <> Region: {data.get("regionName")} <> City: {data.get("city")}')))
 
 
 def interpolate_color(start_color, end_color, fraction):
