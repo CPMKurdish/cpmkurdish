@@ -187,21 +187,16 @@ def banner(console):
 
 def load_player_data(cpm):
     response = cpm.get_player_data()
-    if response.get("ok"):
-        data = response.get("data")
-        if (
-            "floats" in data
-            and "localID" in data
-            and "money" in data
-            and "coin" in data
-        ):
+    if response.get('ok'):
+        data = response.get('data')
+        if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data:
 
             print(
                 Colorate.Horizontal(
-                    Colors.rainbow, Center.XCenter(
+                    Colors.yellow_to_red,
                     "╔═══════════════[. 𝗣𝗟𝗔𝗬𝗘𝗥 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡 ]═══════════════╗",
                 )
-            ))
+            )
 
             print(
                 Colorate.Horizontal(
