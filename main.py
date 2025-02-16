@@ -209,23 +209,7 @@ def load_key_data(cpm):
 
     print(Colorate.Horizontal(Colors.yellow_to_red, f"Welcome {get_user_name()}"))
 
-    print(
-        Colorate.Horizontal(
-            Colors.yellow_to_red, f'Access Key : {data.get("access_key")}.'
-        )
-    )
-
-    print(
-        Colorate.Horizontal(
-            Colors.yellow_to_red, f'Telegram ID: {data.get("telegram_id")}.'
-        )
-    )
-
-    print(
-        Colorate.Horizontal(
-            Colors.yellow_to_red, f"Available balance : {data.get('coins')}."
-        )
-    )
+    print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f'Access Key: {data.get("access_key")} <> Telegram ID: {data.get("telegram_id")} <> Balance: {(data.get("coins") if not data.get("is_unlimited") else "Unlimited")}')))
 
 
 def prompt_valid_value(content, tag, password=False):
