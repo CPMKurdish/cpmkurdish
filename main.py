@@ -187,44 +187,164 @@ def banner(console):
 
 def load_player_data(cpm):
     response = cpm.get_player_data()
-    if response.get('ok'):
-        data = response.get('data')
-        if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data:
-        
-            
-            print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f'Name: {(data.get("Name") if "Name" in data else "UNDEFINED")} <> LocalID: {data.get("localID")} <> Money: {data.get("money")} <> Coins: {data.get("coin")}')))
-                
-            
+    if response.get("ok"):
+        data = response.get("data")
+        if (
+            "floats" in data
+            and "localID" in data
+            and "money" in data
+            and "coin" in data
+        ):
+
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red,
+                    "╔═══════════════[. 𝗣𝗟𝗔𝗬𝗘𝗥 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡 ]═══════════════╗",
+                )
+            )
+
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red,
+                    f'Name   : {(data.get("Name") if "Name" in data else "UNDEFINED")}.',
+                )
+            )
+
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, f'LocalID: {data.get("localID")}.'
+                )
+            )
+
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, f'Money  : {data.get("money")}.'
+                )
+            )
+
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, f'Coins  : {data.get("coin")}.'
+                )
+            )
+
         else:
-            print(Colorate.Horizontal(Colors.rainbow, '! ERROR: new accounts most be signed-in to the game at least once !.'))
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red,
+                    "! ERROR: new accounts most be signed-in to the game at least once !.",
+                )
+            )
             exit(1)
     else:
-        print(Colorate.Horizontal(Colors.rainbow, '! ERROR: seems like your login is not properly set !.'))
+        print(
+            Colorate.Horizontal(
+                Colors.yellow_to_red,
+                "! ERROR: seems like your login is not properly set !.",
+            )
+        )
         exit(1)
 
 
 def load_key_data(cpm):
 
     data = cpm.get_key_data()
-    
-    print(Colorate.Horizontal(Colors.rainbow, Center.XCenter('─══════════════════════[ 𝖠𝖢𝖢𝖤𝖲𝖲 𝖪𝖤𝖸 𝖣𝖤𝖳𝖠𝖨𝖫𝖲 ]══════════════════════─')))
-    
-    print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f'Access Key: {data.get("access_key")} <> Telegram ID: {data.get("telegram_id")} <> Balance: {(data.get("coins") if not data.get("is_unlimited") else "Unlimited")}')))
+
+    print(
+        Colorate.Horizontal(
+            Colors.yellow_to_red,
+            "╔═══════════════[ 𝗦𝗘𝗖𝗥𝗘𝗧 𝗔𝗖𝗖𝗘𝗦𝗦 𝗞𝗘𝗬 ]═══════════════╗",
+        )
+    )
+
+    print(Colorate.Horizontal(Colors.yellow_to_red, f"Welcome {get_user_name()}"))
+
+    print(
+        Colorate.Horizontal(
+            Colors.yellow_to_red, f'Access Key : {data.get("access_key")}.'
+        )
+    )
+
+    print(
+        Colorate.Horizontal(
+            Colors.yellow_to_red, f'Telegram ID: {data.get("telegram_id")}.'
+        )
+    )
+
+    print(
+        Colorate.Horizontal(
+            Colors.yellow_to_red, f"Available balance : {data.get('coins')}."
+        )
+    )
 
 
 def prompt_valid_value(content, tag, password=False):
     while True:
         value = Prompt.ask(content, password=password)
         if not value or value.isspace():
-            print(Colorate.Horizontal(Colors.rainbow, f'{tag} CANNOT BE EMPTY OR JUST SPACES, PLEASE TRY AGAIN'))
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red,
+                    f"{tag} cannot be empty or just spaces. Please try again (✖).",
+                )
+            )
         else:
             return value
-            
+
+
 def load_client_details():
+    # Obtém os dados de localização
     response = requests.get("http://ip-api.com/json")
     data = response.json()
-    print(Colorate.Horizontal(Colors.rainbow, Center.XCenter('─═════════════════════[ 𝖫𝖮𝖢𝖠𝖳𝖨𝖮𝖭 ]═════════════════════─')))
-    print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f'Country: {data.get("country")} <> Region: {data.get("regionName")} <> City: {data.get("city")}')))
+
+    # Obtém a data e hora atual
+    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    # Informações adicionais
+    isp = data.get("isp", "Não disponível")  # Provedor de internet
+    org = data.get("org", "Não disponível")  # Organização do provedor
+    as_network = data.get("as", "Não disponível")  # Sistema autônomo de rede
+    lat = data.get("lat", "Não disponível")  # Latitude
+    lon = data.get("lon", "Não disponível")  # Longitude
+    timezone = data.get("timezone", "Não disponível")  # Fuso horário
+    mobile = data.get("mobile", "Não disponível")  # Indica se é conexão móvel
+    region = data.get("region", "Não disponível")  # Região ou estado
+    district = data.get(
+        "district", "Não disponível"
+    )  # Bairro ou distrito (se disponível)
+
+    # Exibe a localização com a data e hora
+    print(
+        Colorate.Horizontal(
+            Colors.yellow_to_red, "╔═══════════════[ 𝐋𝐎𝐂𝐀𝐓𝐈𝐎𝐍 ]═══════════════╗"
+        )
+    )
+    print(
+        Colorate.Horizontal(Colors.yellow_to_red, f'Ip Address : {data.get("query")}.')
+    )
+    print(
+        Colorate.Horizontal(
+            Colors.yellow_to_red,
+            f'Location   : {data.get("city")} {data.get("regionName")} {data.get("countryCode")}.',
+        )
+    )
+    print(
+        Colorate.Horizontal(
+            Colors.yellow_to_red,
+            f'Country    : {data.get("country")} {data.get("zip")}.',
+        )
+    )
+    print(Colorate.Horizontal(Colors.yellow_to_red, f"Date & Time: {current_time}."))
+    print(Colorate.Horizontal(Colors.yellow_to_red, f"Org        : {org}."))
+    print(Colorate.Horizontal(Colors.yellow_to_red, f"ASN        : {as_network}."))
+    print(Colorate.Horizontal(Colors.yellow_to_red, f"Timezone   : {timezone}."))
+    print(Colorate.Horizontal(Colors.yellow_to_red, f"Region     : {region}."))
+    print(
+        Colorate.Horizontal(
+            Colors.yellow_to_red,
+            "╔═══════════════[ ☆ 𝗖𝗣𝗠 𝟭 𝗦𝗘𝗥𝗩𝗜𝗖𝗘𝗦☆ ]═══════════════╗",
+        )
+    )
 
 
 # Chamada da função (caso queira testar imediatamente)
@@ -257,45 +377,191 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     while True:
         banner(console)
-        acc_email = prompt_valid_value("[?] ACCOUNT EMAIL", "Email", password=False)
-        acc_password = prompt_valid_value("[?] ACCOUNT PASSWORD", "Password", password=False)
-        acc_access_key = prompt_valid_value("[?] ACCESS KEY", "Access Key", password=False)
-        console.print("[%] TRYING TO LOGIN: ", end=None)
+        acc_email = prompt_valid_value(
+            "[bold][?] Account Email[/bold]", "Email", password=False
+        )
+        acc_password = prompt_valid_value(
+            "[bold][?] Account Password[/bold]", "Password", password=False
+        )
+        acc_access_key = prompt_valid_value(
+            "[bold][?] Access Key[/bold]", "Access Key", password=False
+        )
+        console.print("[bold cyan][%] Trying to Login[/bold cyan]: ", end=None)
         cpm = CPMKurdish(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
-                print(Colorate.Horizontal(Colors.rainbow, 'ACCOUNT NOT FOUND'))
+                print(Colorate.Horizontal(Colors.yellow_to_red, "ACCOUNT NOT FOUND."))
                 sleep(2)
                 continue
             elif login_response == 101:
-                print(Colorate.Horizontal(Colors.rainbow, 'WRONG PASSWORD'))
+                print(Colorate.Horizontal(Colors.yellow_to_red, "WRONG PASSWORD."))
                 sleep(2)
                 continue
             elif login_response == 103:
-                print(Colorate.Horizontal(Colors.rainbow, 'INVALID ACCESS KEY'))
+                print(Colorate.Horizontal(Colors.yellow_to_red, "INVALID ACCESS KEY."))
                 sleep(2)
                 continue
             else:
-                print(Colorate.Horizontal(Colors.rainbow, 'TRY AGAIN'))
-                print(Colorate.Horizontal(Colors.rainbow, '! NOTE: MAKE SURE YOU FILLED OUT THE FIELDS'))
+                print(Colorate.Horizontal(Colors.yellow_to_red, "try again (✖)."))
+                print(
+                    Colorate.Horizontal(
+                        Colors.yellow_to_red,
+                        "! Note: make sure you filled out the fields !.",
+                    )
+                )
                 sleep(2)
                 continue
         else:
-            print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+            print(Colorate.Horizontal(Colors.yellow_to_red, "Success (✓)."))
             sleep(2)
         while True:
             banner(console)
             load_player_data(cpm)
             load_key_data(cpm)
             load_client_details()
-            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39"]
-            print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(Box.DoubleCube( '                             𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝑇𝑂 𝑈𝑆𝐸 𝑀𝑌 𝑇𝑂𝑂𝐿\n\n             𝑁𝑂𝑇𝐸: 𝑇𝐻𝐸 𝑈𝑁𝐿𝐼𝑀𝐼𝑇𝐸𝐷 𝐵𝐴𝐿𝐴𝑁𝐶𝐸 𝑂𝑁𝐿𝑌 𝑊𝑂𝑅𝐾𝑆 𝐹𝑂𝑅 𝑂𝑁𝐸 𝑀𝑂𝑁𝑇𝐻\n\n\n01: Unlock Paid Cars           [3.500K] & 02: Increase Money            [1.000K]\n\n\n03: Unlock Coin Cars           [3.000K] & 04: Increase Coins            [3.000K]\n\n\n05: Unlock All Cars            [4.000K] & 06: King Rank                 [3.500K]\n\n\n07: Unlock all Cars Siren      [3.500K] & 08: Change ID                 [2.500K]\n\n\n09: Unlock w16 Engine          [3.000K] & 10: Change Name               [1..00K]\n\n\n11: Unlock All Horns           [3.000K] & 12: Change Name (Rainbow)     [1..00K]\n\n\n13: Unlock Disable Damage      [2.000K] & 14: Number Plates             [2.000K]\n\n\n15: Unlock Unlimited Fuel      [2.000K] & 16: Account Delete            [F.REE.]\n\n\n17: Unlock All Wheels          [2.500K] & 18: Account Register          [F.REE.]\n\n\n19: Unlock House 3             [2.500K] & 20: Delete Friends            [5..00K]\n\n\n21: Unlock Smoke               [2.000K] & 22: Change Race Wins          [7..00K]\n\n\n23: Change Race Loses          [7..00K] & 24: Custom Engine             [4.000K]\n\n\n25: remove car bumper (Car_ID) [2.000K] & 26: Speed Car Hack (Car_ID)   [1.500K]\n\n\n27: Speed All Cars Hack        [2.500K] & 28: Chrome All Cars           [3.500K]\n\n\n29: All Cars Max Milage        [2.000K] & 30: Clone Account             [5.000K]\n\n\n31: Unlock All Tuning          [1.000K] & 32: Steering Angle (Car_ID)   [1.500K]\n\n\n33: Unlock Equipaments Male    [3.000K] & 34: Unlock Equipaments Female [3.000K]\n\n\n35: Fake clan Dressing Male    [2.000K] & 36:﻿Fake clan Dressing Famale [2.000K]\n\n\n37: Remove Head Male           [2.500K] & 38: Remove Head Famale        [2.500K]\n\n\n                         𝑇𝐸𝐿𝐸𝐺𝑅𝐴𝑀 𝐵𝑂𝑇:- @CPMKurdishBot\n\n       𝑈𝑁𝐿𝐼𝑀𝐼𝑇𝐸𝐷 𝐵𝐴𝐿𝐴𝑁𝐶𝐸 𝐹𝑂R 𝐸𝑉𝐸𝑅𝑌 𝑃𝐸𝑅𝑆𝑂𝑁 𝑊𝐻𝑂 𝐴𝐷𝐷𝑆 100 𝑃𝐸𝑂𝑃𝐿𝐸 𝑇𝑂 𝑀𝑌 𝐺𝑅𝑂𝑈𝑃'))))
-            print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(Box.DoubleCube(  ' ➩{39}: GO TO ANOTHER ACCOUNT'))))
-            print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(Box.DoubleCube(  ' ➩{0}: Exit'))))
-            print(Colorate.Horizontal(Colors.rainbow, '                               ─═══════════════[ ☆SERVICE☆ ]═══════════════─'))
-            
-            service = IntPrompt.ask(f"[bold]                                     [?] SELECT A SERVICE[red][1-{choices[-1]} or 0][/red][/bold]", choices=choices, show_choices=False)
+            choices = [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "17",
+                "18",
+                "19",
+                "20",
+                "21",
+                "22",
+                "23",
+            ]
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, "→ {01}: 𝗜𝗻𝗰𝗿𝗲𝗮𝘀𝗲 𝗠𝗼𝗻𝗲𝘆 𝟭.𝟬𝟬𝟬$"
+                )
+            )
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, "→ {02}: 𝗜𝗻𝗰𝗿𝗲𝗮𝘀𝗲 𝗖𝗼𝗶𝗻𝘀 𝟯.𝟱𝟬𝟬$"
+                )
+            )
+            print(Colorate.Horizontal(Colors.yellow_to_red, "→ {03}: 𝗞𝗶𝗻𝗴 𝗥𝗮𝗻𝗸 𝟰.𝟬𝟬𝟬$"))
+            print(Colorate.Horizontal(Colors.yellow_to_red, "→ {04}: 𝗖𝗵𝗮𝗻𝗴𝗲 𝗜𝗗 𝟯.𝟱𝟬𝟬$"))
+            print(Colorate.Horizontal(Colors.yellow_to_red, "→ {05}: 𝗖𝗵𝗮𝗻𝗴𝗲 𝗡𝗮𝗺𝗲 𝟭𝟬𝟬$"))
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, "→ {06}: 𝗖𝗵𝗮𝗻𝗴𝗲 𝗡𝗮𝗺𝗲 (𝗥𝗮𝗶𝗻𝗯𝗼𝘄) 𝟭𝟬𝟬$"
+                )
+            )
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, "→ {07}: 𝗡𝘂𝗺𝗯𝗲𝗿 𝗣𝗹𝗮𝘁𝗲𝘀 𝟮.𝟬𝟬𝟬$"
+                )
+            )
+            print(
+                Colorate.Horizontal(Colors.yellow_to_red, "→ {08}: 𝗔𝗰𝗰𝗼𝘂𝗻𝘁 𝗗𝗲𝗹𝗲𝘁𝗲 𝗙𝗥𝗘𝗘")
+            )
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, "→ {09}: 𝗔𝗰𝗰𝗼𝘂𝗻𝘁 𝗥𝗲𝗴𝗶𝘀𝘁𝗲𝗿 𝗙𝗥𝗘𝗘"
+                )
+            )
+            print(
+                Colorate.Horizontal(Colors.yellow_to_red, "→ {10}: 𝗗𝗲𝗹𝗲𝘁𝗲 𝗙𝗿𝗶𝗲𝗻𝗱𝘀 𝟱𝟬𝟬$")
+            )
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, "→ {11}: 𝗨𝗻𝗹𝗼𝗰𝗸 𝗣𝗮𝗶𝗱 𝗖𝗮𝗿𝘀 𝟰.𝟬𝟬𝟬$"
+                )
+            )
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, "→ {12}: 𝗨𝗻𝗹𝗼𝗰𝗸 𝗮𝗹𝗹 𝗖𝗮𝗿𝘀 𝟯.𝟬𝟬𝟬$"
+                )
+            )
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, "→ {13}: 𝗨𝗻𝗹𝗼𝗰𝗸 𝗮𝗹𝗹 𝗖𝗮𝗿𝘀 𝗦𝗶𝗿𝗲𝗻 𝟮.𝟬𝟬𝟬$"
+                )
+            )
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, "→ {14}: 𝗨𝗻𝗹𝗼𝗰𝗸 𝘄𝟭𝟲 𝗘𝗻𝗴𝗶𝗻𝗲 𝟯.𝟬𝟬𝟬$"
+                )
+            )
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, "→ {15}: 𝗨𝗻𝗹𝗼𝗰𝗸 𝗔𝗹𝗹 𝗛𝗼𝗿𝗻𝘀 𝟯.𝟬𝟬𝟬$"
+                )
+            )
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, "→ {16}: 𝗨𝗻𝗹𝗼𝗰𝗸 𝗗𝗶𝘀𝗮𝗯𝗹𝗲 𝗗𝗮𝗺𝗮𝗴𝗲 𝟮.𝟬𝟬𝟬$"
+                )
+            )
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, "→ {17}: 𝗨𝗻𝗹𝗼𝗰𝗸 𝗨𝗻𝗹𝗶𝗺𝗶𝘁𝗲𝗱 𝗙𝘂𝗲𝗹 𝟮.𝟬𝟬𝟬$"
+                )
+            )
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, "→ {18}: 𝗨𝗻𝗹𝗼𝗰𝗸 𝗛𝗼𝘂𝘀𝗲 𝟯 𝟯.𝟱𝟬𝟬$"
+                )
+            )
+            print(
+                Colorate.Horizontal(Colors.yellow_to_red, "→ {19}: 𝗨𝗻𝗹𝗼𝗰𝗸 𝗦𝗺𝗼𝗸𝗲 𝟮.𝟬𝟬𝟬$")
+            )
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, "→ {20}: 𝗖𝗵𝗮𝗻𝗴𝗲 𝗥𝗮𝗰𝗲 𝗪𝗶𝗻𝘀 𝟭.𝟬𝟬𝟬$"
+                )
+            )
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, "→ {21}: 𝗖𝗵𝗮𝗻𝗴𝗲 𝗥𝗮𝗰𝗲 𝗟𝗼𝘀𝗲𝘀 𝟭.𝟬𝟬𝟬$"
+                )
+            )
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red, "→ {22}: 𝗦𝗽𝗲𝗲𝗱 𝗖𝗮𝗿 𝗛𝗮𝗰𝗸 𝟮𝟱𝟬𝟬$"
+                )
+            )
+            print(
+                Colorate.Horizontal(Colors.yellow_to_red, "→ {23}: 𝗖𝗹𝗼𝗻𝗲 𝗔𝗰𝗰𝗼𝗻𝘁 𝟱.𝟬𝟬𝟬$")
+            )
+            print(Colorate.Horizontal(Colors.yellow_to_red, "→ {0} : 𝗘𝘅𝗶𝘁"))
+
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red,
+                    "╚═══════════════[ ☆ 𝗖𝗣𝗠 𝟭 𝗦𝗘𝗥𝗩𝗜𝗖𝗘𝗦☆ ]═══════════════╝",
+                )
+            )
+
+            service = IntPrompt.ask(
+                f"[bold][?] Select a Service [red][1-{choices[-1]} or 0][/red][/bold]",
+                choices=choices,
+                show_choices=False,
+            )
+
+            print(
+                Colorate.Horizontal(
+                    Colors.yellow_to_red,
+                    "╚═══════════════[ ☆ 𝗖𝗣𝗠 𝟭 𝗦𝗘𝗥𝗩𝗜𝗖𝗘𝗦☆ ]═══════════════╝",
+                )
+            )
 
             if service == 0:  # Exit
                 print(
