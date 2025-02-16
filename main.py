@@ -194,20 +194,10 @@ def load_player_data(cpm):
             print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(f'Name: {(data.get("Name") if "Name" in data else "UNDEFINED")} <> LocalID: {data.get("localID")} <> Money: {data.get("money")} <> Coins: {data.get("coin")}')))
 
         else:
-            print(
-                Colorate.Horizontal(
-                    Colors.yellow_to_red,
-                    "! ERROR: new accounts most be signed-in to the game at least once !.",
-                )
-            )
+            print(Colorate.Horizontal(Colors.rainbow, '! ERROR: new accounts most be signed-in to the game at least once !.'))
             exit(1)
     else:
-        print(
-            Colorate.Horizontal(
-                Colors.yellow_to_red,
-                "! ERROR: seems like your login is not properly set !.",
-            )
-        )
+        print(Colorate.Horizontal(Colors.rainbow, '! ERROR: seems like your login is not properly set !.'))
         exit(1)
 
 
@@ -215,12 +205,7 @@ def load_key_data(cpm):
 
     data = cpm.get_key_data()
 
-    print(
-        Colorate.Horizontal(
-            Colors.yellow_to_red,
-            "╔═══════════════[ 𝗦𝗘𝗖𝗥𝗘𝗧 𝗔𝗖𝗖𝗘𝗦𝗦 𝗞𝗘𝗬 ]═══════════════╗",
-        )
-    )
+    print(Colorate.Horizontal(Colors.rainbow, Center.XCenter('─══════════════════════[ 𝖠𝖢𝖢𝖤𝖲𝖲 𝖪𝖤𝖸 𝖣𝖤𝖳𝖠𝖨𝖫𝖲 ]══════════════════════─')))
 
     print(Colorate.Horizontal(Colors.yellow_to_red, f"Welcome {get_user_name()}"))
 
