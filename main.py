@@ -264,7 +264,7 @@ def start():
             "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Parrot/parrot.sh && bash parrot.sh")
     else:
         print(" Enter a valid option... ")
-
+start()
 
 
 if __name__ == "__main__":
@@ -300,7 +300,6 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
             sleep(2)
         while True:
-            start()        
             banner(console)
             load_player_data(cpm)
             load_key_data(cpm)
