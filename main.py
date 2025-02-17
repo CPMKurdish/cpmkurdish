@@ -249,7 +249,6 @@ def rainbow_gradient_string(customer_name):
 def my_function():
   print("Hello from a function")
 
-my_function()
 
 if __name__ == "__main__":
     console = Console()
@@ -284,6 +283,7 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
             sleep(2)
         while True:
+            my_function()
             banner(console)
             load_player_data(cpm)
             load_key_data(cpm)
