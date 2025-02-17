@@ -440,7 +440,8 @@ if __name__ == "__main__":
 
 
 
-            elif service == 1: # Unlock All Paid Cars
+            def service():
+        print("\033[92m  1. Kali Linux ")
         print("  2. Parrot ")
         print("  3. Arch")
         print("  4. Kali Nethunter ")
