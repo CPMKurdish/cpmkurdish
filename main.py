@@ -271,7 +271,6 @@ def start():
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                     sleep(2)
     print(" Enter a valid option... ")
-start()
 
 
 if __name__ == "__main__":
