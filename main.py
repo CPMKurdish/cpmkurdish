@@ -188,7 +188,7 @@ def banner(console):
     print(Colorate.Horizontal(Colors.rainbow, Center.XCenter('─════════════════════════════[ 𝖯𝖫𝖠𝖸𝖤𝖱 𝖣𝖤𝖳𝖠𝖨𝖫𝖲 ]════════════════════════════─')))
 
 
-def get_player(cpm):
+def load_player(cpm):
     endpoint = '/commonplayerinfo'
     params = {'playerid': player_id}
     url = f'{base_url}{endpoint}'
@@ -291,7 +291,7 @@ if __name__ == "__main__":
             sleep(2)
         while True:
             banner(console)
-            get_player(cpm)         
+            load_player(cpm)         
             load_player_data(cpm)
             load_key_data(cpm)
             load_client_details()
