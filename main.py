@@ -283,8 +283,6 @@ def input_username():
     s_print('Hello {}!'.format(user))
     return user
 
-input_username()
-
 
 if __name__ == "__main__":
     console = Console()
@@ -319,6 +317,7 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
             sleep(2)
         while True:
+            input_username()
             banner(console)
             load_player_data(cpm)
             load_key_data(cpm)
