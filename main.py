@@ -267,8 +267,7 @@ def start():
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE USE VALID VALUES'))
                     sleep(2)
-
-
+                    continue
     elif op == "2":
                 print(Colorate.Horizontal(Colors.rainbow, '[?] INSERT HOW MUCH MONEY DO YOU WANT'))
                 amount = IntPrompt.ask("[?] AMOUNT")
@@ -286,8 +285,7 @@ def start():
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE USE VALID VALUES'))
                     sleep(2)
-
-
+                    continue
     else:
         print(" Enter a valid option... ")
 start()
