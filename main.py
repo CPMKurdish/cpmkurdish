@@ -289,7 +289,7 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(Box.DoubleCube(  ' ➩{0}: Exit'))))
             print(Colorate.Horizontal(Colors.rainbow, '                          ─═══════════════[ ☆option☆ ]═══════════════─'))
             
-            option = IntPrompt.ask(f"[bold]                                [?] SELECT A option[red][1-{choices[-1]} or 0][/red][/bold]", option=option, show_option=False)
+            option = IntPrompt.ask(f"[bold]                                [?] SELECT A option[red][1-{choices[-1]} or 0][/red][/bold]", choices=choices, show_choices=False)
             
             
             if option == 0: # Exit
