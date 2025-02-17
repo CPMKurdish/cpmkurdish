@@ -266,7 +266,7 @@ def prompt_valid_value(content, tag, password=False):
     while True:
         value = Prompt.ask(content, password=password)
         if not value or value.isspace():
-            print(pyColorate.Horizontal(pyColors.yellow_to_redf'{tag} CANNOT BE EMPTY OR JUST SPACES, PLEASE TRY AGAIN'))
+            print(pyColorate.Horizontal(pyColors.yellow_to_red, f'{tag} CANNOT BE EMPTY OR JUST SPACES, PLEASE TRY AGAIN'))
         else:
             return value
             
