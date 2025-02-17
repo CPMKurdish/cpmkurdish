@@ -188,6 +188,17 @@ def banner(console):
     print(Colorate.Horizontal(Colors.rainbow, Center.XCenter('─════════════════════════════[ 𝖯𝖫𝖠𝖸𝖤𝖱 𝖣𝖤𝖳𝖠𝖨𝖫𝖲 ]════════════════════════════─')))
 
 
+def get_player(player_id, player_name):
+    endpoint = '/commonplayerinfo'
+    params = {'playerid': player_id}
+    url = f'{base_url}{endpoint}'
+    print(f'Getting player {player_name}')
+    resp = requests.get(url, headers=HEADERS, params=params)
+    print(resp)
+    data = resp.text
+    with open(f'{player_name.replace(" ", "_")}.json', 'w') as file:
+        file.write(data)
+
 def load_player_data(cpm):
     response = cpm.get_player_data()
     if response.get('ok'):
@@ -245,12 +256,6 @@ def rainbow_gradient_string(customer_name):
         modified_string += f'[{interpolated_color}]{char}'
     return modified_string
 
-def roll_number(**kwargs):
-    for i in kwargs:
-        print(i, kwargs[i])
-
-# Find the roll number and student name
-roll_number(A = 1001, B = 1002, C = 1003, D = 1004, E = 1005)
 
 if __name__ == "__main__":
     console = Console()
@@ -286,6 +291,7 @@ if __name__ == "__main__":
             sleep(2)
         while True:
             banner(console)
+            get_player(player_id, player_name)         
             load_player_data(cpm)
             load_key_data(cpm)
             load_client_details()
