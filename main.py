@@ -245,10 +245,12 @@ def rainbow_gradient_string(customer_name):
         modified_string += f'[{interpolated_color}]{char}'
     return modified_string
 
+def roll_number(**kwargs):
+    for i in kwargs:
+        print(i, kwargs[i])
 
-def my_function():
-  print("Hello from a function")
-
+# Find the roll number and student name
+roll_number(A = 1001, B = 1002, C = 1003, D = 1004, E = 1005)
 
 if __name__ == "__main__":
     console = Console()
@@ -283,7 +285,6 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
             sleep(2)
         while True:
-            my_function()
             banner(console)
             load_player_data(cpm)
             load_key_data(cpm)
