@@ -272,7 +272,6 @@ def start():
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                     sleep(2)
                     continue
-            break
         print(" Enter a valid option... ")
 start()
 
