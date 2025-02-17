@@ -246,21 +246,10 @@ def rainbow_gradient_string(customer_name):
     return modified_string
 
 
-def writefile(FILE, DATA):
-    file = open(FILE, "w")
-    X = str(DATA) 
-    file.write(X)
-    file.close()
+def my_function():
+  print("Hello from a function")
 
-
-def readfile(FILE):
-    file = open(FILE, "r")
-    readvar = file.read()
-    file.close()
-
-
-readfile("BAL.txt")
-print(readvar)
+my_function()
 
 if __name__ == "__main__":
     console = Console()
