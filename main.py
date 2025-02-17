@@ -269,8 +269,6 @@ def start():
                     sleep(2)
 
 
-
-                    continue
     elif op == "2":
                 print(Colorate.Horizontal(Colors.rainbow, '[?] INSERT HOW MUCH MONEY DO YOU WANT'))
                 amount = IntPrompt.ask("[?] AMOUNT")
@@ -290,8 +288,6 @@ def start():
                     sleep(2)
 
 
-
-                    continue
     else:
         print(" Enter a valid option... ")
 start()
