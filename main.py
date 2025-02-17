@@ -245,41 +245,7 @@ def rainbow_gradient_string(customer_name):
         modified_string += f'[{interpolated_color}]{char}'
     return modified_string
 
-import time, datetime, os, sys, random 
-x = datetime.datetime.now()
-colors = ['\033[1;31m', '\033[1;32m', '\033[1;33m', '\033[1;34m', '\033[1;35m', '\033[1;36m']
-W = '\033[0m'
-# The Credit For This Code Goes To Panda Hackers https://github.com/HACK3RY2J/S-Linux/
-# If You Wanna Take Credits, Please Look Yourself Again!!
-# A Special Thanks To https://github.com/EXALAB/ !!
-os.system("clear")
-
-def clr():
-	if os.name == 'nt':
-		os.system('cls')
-	else:
-		os.system('clear')
-
-
-def banner():
-    clr()
-    logo = """                                                  
-      ███████   ██                                           
-      ██▒▒▒▒▒   ██      ██                                        
-      ██        ██      ▒▒                 ██      ██           
-      ███████   ██      ██ ███████ ██   ██ ▒▒██  ██▒▒          
-      ▒▒▒▒▒██   ██      ██ ██▒▒▒██ ██   ██   ▒▒██▒▒                
-           ██   ██      ██ ██   ██ ██   ██   ██▒▒██              
-      ███████   ███████ ██ ██   ██ ███████ ██▒▒  ▒▒██                         
-      ▒▒▒▒▒▒▒   ▒▒▒▒▒▒▒ ▒▒ ▒▒   ▒▒ ▒▒▒▒▒▒▒ ▒▒      ▒▒                  
-                                         """
-    print(random.choice(colors) + logo + W)
-    print("\n")
 def start():
-    clr()
-    banner()
-    print("Tool started at\033[91;107m %s \033[0m " % x.strftime("%X"))
-    time.sleep(3)
     print("██████████████████████████████████████████████████████████████")
     print("██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██")
     print("██            Coded by github.com/HACK3RY2J                 ██")
