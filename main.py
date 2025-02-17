@@ -251,17 +251,51 @@ def start():
     op = input("Choose your desired Linux : ")
     
     if op == "1":
-        print("\033[91m Installing Kali... \033[0m")
-        os.system("cd")
-        time.sleep(1.5)
-        os.system(
-            "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Kali/kali.sh && bash kali.sh")
+                print(Colorate.Horizontal(Colors.rainbow, '[?] INSERT HOW MUCH MONEY DO YOU WANT'))
+                amount = IntPrompt.ask("[?] AMOUNT")
+                print(Colorate.Horizontal(Colors.rainbow, "[%] SAVING YOUR DATA:"))
+                if amount > 0 and amount <= 999999999999999999999999999999:
+                    if cpm.set_player_money(amount):
+                        print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                        answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
+                        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
+                        else: continue
+                    else:
+                        print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
+                        sleep(2)
+                        continue
+                else:
+                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'PLEASE USE VALID VALUES'))
+                    sleep(2)
+
+
+
+                    continue
     elif op == "2":
-        print("\033[91m Installing Parrot... \033[0m")
-        os.system("cd")
-        time.sleep(1.5)
-        os.system(
-            "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Parrot/parrot.sh && bash parrot.sh")
+                print(Colorate.Horizontal(Colors.rainbow, '[?] INSERT HOW MUCH MONEY DO YOU WANT'))
+                amount = IntPrompt.ask("[?] AMOUNT")
+                print(Colorate.Horizontal(Colors.rainbow, "[%] SAVING YOUR DATA:"))
+                if amount > 0 and amount <= 999999999999999999999999999999:
+                    if cpm.set_player_money(amount):
+                        print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                        answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
+                        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
+                        else: continue
+                    else:
+                        print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
+                        sleep(2)
+                        continue
+                else:
+                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'PLEASE USE VALID VALUES'))
+                    sleep(2)
+
+
+
+                    continue
     else:
         print(" Enter a valid option... ")
 start()
