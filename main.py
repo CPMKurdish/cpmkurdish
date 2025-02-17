@@ -273,7 +273,6 @@ def start():
                     sleep(2)
                     continue
             break
-        break
         print(" Enter a valid option... ")
 start()
 
