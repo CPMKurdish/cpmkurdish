@@ -160,6 +160,45 @@ def gradient_text(text, colors):
 import os
 
 
+import requests
+
+base_url = 'http://stats.nba.com/stats'
+HEADERS = {
+    'user-agent': ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) '
+                   'AppleWebKit/537.36 (KHTML, like Gecko) '
+                   'Chrome/45.0.2454.101 Safari/537.36'),
+}
+
+
+def get_players(player_args):
+    endpoint = '/commonallplayers'
+    params = {'leagueid': '00', 'season': '2016-17', 'isonlycurrentseason': '1'}
+    url = f'{base_url}{endpoint}'
+    print('Getting all players...')
+    resp = requests.get(url, headers=HEADERS, params=params)
+    data = resp.json()
+    player_args.extend(
+        [(item[0], item[2]) for item in data['resultSets'][0]['rowSet']])
+
+
+def get_player(player_id, player_name):
+    endpoint = '/commonplayerinfo'
+    params = {'playerid': player_id}
+    url = f'{base_url}{endpoint}'
+    print(f'Getting player {player_name}')
+    resp = requests.get(url, headers=HEADERS, params=params)
+    print(resp)
+    data = resp.text
+    with open(f'{player_name.replace(" ", "_")}.json', 'w') as file:
+        file.write(data)
+
+
+player_args = []
+get_players(player_args)
+for args in player_args:
+    get_player(*args)
+
+
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
     brand_name =  "                  ▄████▄   ██▓███   ███▄ ▄███▓▓█████  █     █░ ▄▄▄       ███▄    █ \n"
@@ -187,17 +226,6 @@ def banner(console):
     
     print(Colorate.Horizontal(Colors.rainbow, Center.XCenter('─════════════════════════════[ 𝖯𝖫𝖠𝖸𝖤𝖱 𝖣𝖤𝖳𝖠𝖨𝖫𝖲 ]════════════════════════════─')))
 
-
-def load_player(cpm):
-    endpoint = '/commonplayerinfo'
-    params = {'playerid': player_id}
-    url = f'{base_url}{endpoint}'
-    print(f'Getting player {player_name}')
-    resp = requests.get(url, headers=HEADERS, params=params)
-    print(resp)
-    data = resp.text
-    with open(f'{player_name.replace(" ", "_")}.json', 'w') as file:
-        file.write(data)
 
 def load_player_data(cpm):
     response = cpm.get_player_data()
@@ -291,7 +319,6 @@ if __name__ == "__main__":
             sleep(2)
         while True:
             banner(console)
-            load_player(cpm)         
             load_player_data(cpm)
             load_key_data(cpm)
             load_client_details()
