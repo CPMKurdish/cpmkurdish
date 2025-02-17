@@ -245,6 +245,148 @@ def rainbow_gradient_string(customer_name):
         modified_string += f'[{interpolated_color}]{char}'
     return modified_string
 
+import time, datetime, os, sys, random 
+x = datetime.datetime.now()
+colors = ['\033[1;31m', '\033[1;32m', '\033[1;33m', '\033[1;34m', '\033[1;35m', '\033[1;36m']
+W = '\033[0m'
+# The Credit For This Code Goes To Panda Hackers https://github.com/HACK3RY2J/S-Linux/
+# If You Wanna Take Credits, Please Look Yourself Again!!
+# A Special Thanks To https://github.com/EXALAB/ !!
+os.system("clear")
+
+def clr():
+	if os.name == 'nt':
+		os.system('cls')
+	else:
+		os.system('clear')
+
+
+def banner():
+    clr()
+    logo = """                                                  
+      ███████   ██                                           
+      ██▒▒▒▒▒   ██      ██                                        
+      ██        ██      ▒▒                 ██      ██           
+      ███████   ██      ██ ███████ ██   ██ ▒▒██  ██▒▒          
+      ▒▒▒▒▒██   ██      ██ ██▒▒▒██ ██   ██   ▒▒██▒▒                
+           ██   ██      ██ ██   ██ ██   ██   ██▒▒██              
+      ███████   ███████ ██ ██   ██ ███████ ██▒▒  ▒▒██                         
+      ▒▒▒▒▒▒▒   ▒▒▒▒▒▒▒ ▒▒ ▒▒   ▒▒ ▒▒▒▒▒▒▒ ▒▒      ▒▒                  
+                                         """
+    print(random.choice(colors) + logo + W)
+    print("\n")
+def start():
+    clr()
+    banner()
+    print("Tool started at\033[91;107m %s \033[0m " % x.strftime("%X"))
+    time.sleep(3)
+    print("██████████████████████████████████████████████████████████████")
+    print("██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██")
+    print("██            Coded by github.com/HACK3RY2J                 ██")
+    print("██   Youtube : https://www.youtube.com/c/PandaHackers       ██")
+    print("██  Telegram : https://telegram.me/HACK3RY2J                ██")
+    print("██████████████████████████████████████████████████████████████")
+    print("▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒")
+    print()
+    print()
+    print("\033[92m  1. Kali Linux ")
+    print("  2. Parrot ")
+    print("  3. Arch")
+    print("  4. Kali Nethunter ")
+    print("  5. Backbox")
+    print("  6. Alpine")
+    print("  7. Opensuse-tumbelweed ")
+    print("  8. Black Arch")
+    print("  9. Opensuse-leap ")
+    print(" 10. Ubuntu")
+    print(" 11. Debian ")
+    print(" 12. Fedora ")
+    print(" 13. Centos \033[0m ")
+    op = input("Choose your desired Linux : ")
+    if op == "1":
+        print("\033[91m Installing Kali... \033[0m")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Kali/kali.sh && bash kali.sh")
+    elif op == "2":
+        print("\033[91m Installing Parrot... \033[0m")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Parrot/parrot.sh && bash parrot.sh")
+    elif op == "3":
+        print("\033[91m Installing Arch... \033[0m ")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Arch/armhf/arch.sh && bash arch.sh ")
+    elif op == "4":
+        print("\033[91m Installing Kali Nethunter... \033[0m")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Nethunter/nethunter.sh && bash nethunter.sh")
+    elif op == "5":
+        print("\033[91m Installing Blackbox.. \033[0m")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/BackBox/backbox.sh && bash backbox.sh")
+    elif op == "6":
+        print("\033[91m Installing Alpine... \033[0m")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apy install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Alpine/alpine.sh && bash alpine.sh")
+    elif op == "7":
+        print("\033[91m Installing Tumbelweed... \033[0m")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/openSUSE/Tumbleweed/opensuse-tumbleweed.sh && bash opensuse-tumbleweed.sh")
+    elif op == "8":
+        print("\033[91m Installing Black Arch... \033[0m")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "pacman-key --init && pacman-key --populate archlinuxarm && pacman -Sy --noconfirm curl && curl -O https://blackarch.org/strap.sh && chmod +x strap.sh && ./strap.sh")
+    elif op == "9":
+        print("\033[91m Installing opensuse-leap... \033[0m ")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/openSUSE/Leap/opensuse-leap.sh && bash opensuse-leap.sh")
+    elif op == "10":
+        print("\033[91m Installing Ubuntu...\033[0m")
+        os.sytem("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh && bash ubuntu.sh")
+    elif op == "11":
+        print("\033[91m Installing Debian... \033[0m ")
+        os.system("cd")
+        time.sleep(1.5)
+        o9s.system(
+            "apt install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Debian/debian.sh && bash debian.sh")
+    elif op == "12":
+        print("\033[91m Installing Fedora... \033[0m ")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Fedora/fedora.sh && bash fedora.sh")
+    elif op == "13":
+        print("\033[91m Installing Centos... \033[0m ")
+        os.system("cd")
+        time.sleep(1.5)
+        os.system(
+            "apt install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/CentOS/centos.sh && bash centos.sh")
+    else:
+        print(" Enter a valid option... ")
+        
+
+
+
 
 if __name__ == "__main__":
     console = Console()
@@ -283,21 +425,22 @@ if __name__ == "__main__":
             load_player_data(cpm)
             load_key_data(cpm)
             load_client_details()
-            option = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39"]
+            start()
+            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39"]
             print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(Box.DoubleCube( '                             𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝑇𝑂 𝑈𝑆𝐸 𝑀𝑌 𝑇𝑂𝑂𝐿\n\n             𝑁𝑂𝑇𝐸: 𝑇𝐻𝐸 𝑈𝑁𝐿𝐼𝑀𝐼𝑇𝐸𝐷 𝐵𝐴𝐿𝐴𝑁𝐶𝐸 𝑂𝑁𝐿𝑌 𝑊𝑂𝑅𝐾𝑆 𝐹𝑂𝑅 𝑂𝑁𝐸 𝑀𝑂𝑁𝑇𝐻\n\n\n01: Unlock Paid Cars           [3.500K] & 02: Increase Money            [1.000K]\n\n\n03: Unlock Coin Cars           [3.000K] & 04: Increase Coins            [3.000K]\n\n\n05: Unlock All Cars            [4.000K] & 06: King Rank                 [3.500K]\n\n\n07: Unlock all Cars Siren      [3.500K] & 08: Change ID                 [2.500K]\n\n\n09: Unlock w16 Engine          [3.000K] & 10: Change Name               [1..00K]\n\n\n11: Unlock All Horns           [3.000K] & 12: Change Name (Rainbow)     [1..00K]\n\n\n13: Unlock Disable Damage      [2.000K] & 14: Number Plates             [2.000K]\n\n\n15: Unlock Unlimited Fuel      [2.000K] & 16: Account Delete            [F.REE.]\n\n\n17: Unlock All Wheels          [2.500K] & 18: Account Register          [F.REE.]\n\n\n19: Unlock House 3             [2.500K] & 20: Delete Friends            [5..00K]\n\n\n21: Unlock Smoke               [2.000K] & 22: Change Race Wins          [7..00K]\n\n\n23: Change Race Loses          [7..00K] & 24: Custom Engine             [4.000K]\n\n\n25: remove car bumper (Car_ID) [2.000K] & 26: Speed Car Hack (Car_ID)   [1.500K]\n\n\n27: Speed All Cars Hack        [2.500K] & 28: Chrome All Cars           [3.500K]\n\n\n29: All Cars Max Milage        [2.000K] & 30: Clone Account             [5.000K]\n\n\n31: Unlock All Tuning          [1.000K] & 32: Steering Angle (Car_ID)   [1.500K]\n\n\n33: Unlock Equipaments Male    [3.000K] & 34: Unlock Equipaments Female [3.000K]\n\n\n35: Fake clan Dressing Male    [2.000K] & 36:﻿Fake clan Dressing Famale [2.000K]\n\n\n37: Remove Head Male           [2.500K] & 38: Remove Head Famale        [2.500K]\n\n\n                         𝑇𝐸𝐿𝐸𝐺𝑅𝐴𝑀 𝐵𝑂𝑇:- @CPMKurdishBot\n\n       𝑈𝑁𝐿𝐼𝑀𝐼𝑇𝐸𝐷 𝐵𝐴𝐿𝐴𝑁𝐶𝐸 𝐹𝑂R 𝐸𝑉𝐸𝑅𝑌 𝑃𝐸𝑅𝑆𝑂𝑁 𝑊𝐻𝑂 𝐴𝐷𝐷𝑆 100 𝑃𝐸𝑂𝑃𝐿𝐸 𝑇𝑂 𝑀𝑌 𝐺𝑅𝑂𝑈𝑃'))))
             print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(Box.DoubleCube(  ' ➩{39}: GO TO ANOTHER ACCOUNT'))))
             print(Colorate.Horizontal(Colors.rainbow, Center.XCenter(Box.DoubleCube(  ' ➩{0}: Exit'))))
             print(Colorate.Horizontal(Colors.rainbow, '                          ─═══════════════[ ☆SERVICE☆ ]═══════════════─'))
             
-            choices = IntPrompt.ask(f"[bold]                                [?] SELECT A SERVICE[red][1-{choices[-1]} or 0][/red][/bold]", choices=choices, show_choices=False)
+            service = IntPrompt.ask(f"[bold]                                [?] SELECT A SERVICE[red][1-{choices[-1]} or 0][/red][/bold]", choices=choices, show_choices=False)
             
             
-            if option == 0: # Exit
+            if service == 0: # Exit
                 print(Colorate.Horizontal(Colors.rainbow, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
 
 
 
-            elif option == 1: # Unlock All Paid Cars
+            elif service == 1: # Unlock All Paid Cars
                 print(Colorate.Horizontal(Colors.rainbow, "[!] NOTE: THIS FUNCTION TAKES A WHILE TO COMPLETE, PLEASE DON'T CANCEL"))
                 print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING ALL PAID CARS: "))
                 if cpm.unlock_paid_cars():
@@ -313,7 +456,7 @@ if __name__ == "__main__":
                     
                     
                     
-            elif option == 2: # Increase Money
+            elif service == 2: # Increase Money
                 print(Colorate.Horizontal(Colors.rainbow, '[?] INSERT HOW MUCH MONEY DO YOU WANT'))
                 amount = IntPrompt.ask("[?] AMOUNT")
                 print(Colorate.Horizontal(Colors.rainbow, "[%] SAVING YOUR DATA:"))
@@ -336,7 +479,7 @@ if __name__ == "__main__":
 
 
                     continue
-            elif option == 3: # Unlock All coins Cars
+            elif service == 3: # Unlock All coins Cars
                 print(Colorate.Horizontal(Colors.rainbow, "[!] NOTE: THIS FUNCTION TAKES A WHILE TO COMPLETE, PLEASE DON'T CANCEL"))
                 print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING ALL COIN CARS: "))
                 if cpm.unlock_coins_cars():
@@ -352,7 +495,7 @@ if __name__ == "__main__":
                     
                           
                                       
-            elif option == 4: # Increase Coins
+            elif service == 4: # Increase Coins
                 print(Colorate.Horizontal(Colors.rainbow, '[?] INSERT HOW MUCH COINS DO YOU WANT'))
                 amount = IntPrompt.ask("[red][?] AMOUNT[/red]")
                 print(Colorate.Horizontal(Colors.rainbow, "[%] SAVING YOUR DATA: "))
@@ -378,7 +521,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 5: # Unlock All Cars
+            elif service == 5: # Unlock All Cars
                 print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING ALL CARS: "))
                 if cpm.unlock_all_cars():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
@@ -393,7 +536,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 6: # King Rank
+            elif service == 6: # King Rank
                 print(Colorate.Horizontal(Colors.rainbow, "[!] NOTE: IF THE KING RANK DOESN'T APPEAR IN GAME, CLOSE IT AND OPEN FEW TIMES"))
                 print(Colorate.Horizontal(Colors.rainbow, "[!] NOTE: PLEASE DON'T DO KING RANK ON SAME ACCOUNT TWICE"))
                 sleep(2)
@@ -414,7 +557,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 7: # Unlock All Cars Siren
+            elif service == 7: # Unlock All Cars Siren
                 print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING ALL CARS SIREN: "))
                 if cpm.unlock_all_cars_siren():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
@@ -429,7 +572,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 8: # Change ID
+            elif service == 8: # Change ID
                 print(Colorate.Horizontal(Colors.rainbow, '[?] ENTER YOUR NEW ID'))
                 new_id = Prompt.ask("[red][?] ID[/red]")
                 print(Colorate.Horizontal(Colors.rainbow, "[%] SAVING YOUR DATA: "))
@@ -452,7 +595,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 9: # Unlock w16 Engine
+            elif service == 9: # Unlock w16 Engine
                 print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING W16 ENGINE: "))
                 if cpm.unlock_w16():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
@@ -467,7 +610,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 10: # Change Name
+            elif service == 10: # Change Name
                 print(Colorate.Horizontal(Colors.rainbow, '[?] ENTER YOUR NEW NAME'))
                 new_name = Prompt.ask("[red][?] NAME[/red]")
                 print(Colorate.Horizontal(Colors.rainbow, "[%] SAVING YOUR DATA: "))
@@ -490,7 +633,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 11: # Unlock All Horns
+            elif service == 11: # Unlock All Horns
                 print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING ALL HORNS: "))
                 if cpm.unlock_horns():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
@@ -505,7 +648,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 12: # Change Name Rainbow
+            elif service == 12: # Change Name Rainbow
                 print(Colorate.Horizontal(Colors.rainbow, '[?] ENTER YOUR NEW RAINBOW NAME'))
                 new_name = Prompt.ask("[red][?] NAME[/red]")
                 print(Colorate.Horizontal(Colors.rainbow, "[%] SAVING YOUR DATA: "))
@@ -528,7 +671,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 13: # Disable Engine Damage
+            elif service == 13: # Disable Engine Damage
                 print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING DISABLE DAMAGE: "))
                 if cpm.disable_engine_damage():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
@@ -543,7 +686,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 14: # Number Plates
+            elif service == 14: # Number Plates
                 print(Colorate.Horizontal(Colors.rainbow, "[%] GIVING YOU A NUMBER PLATES: "))
                 if cpm.set_player_plates():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
@@ -558,7 +701,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 15: # Unlimited Fuel
+            elif service == 15: # Unlimited Fuel
                 print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING UNLIMITED FUEL: "))
                 if cpm.unlimited_fuel():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
@@ -573,7 +716,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 16: # Account Delete
+            elif service == 16: # Account Delete
                 print(Colorate.Horizontal(Colors.rainbow, '[!] AFTER DELETING YOUR ACCOUNT THERE IS NO GOING BACK'))
                 answ = Prompt.ask("[red][?] DO YOU WANT TO DELETE THIS ACCOUNT[/red]", choices=["y", "n"], default="n")
                 if answ == "y":
@@ -584,7 +727,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 17: # Unlock Car Wheels
+            elif service == 17: # Unlock Car Wheels
                 print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING All WHEELS: "))
                 if cpm.unlock_car_wheel():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
@@ -599,7 +742,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 18: # Account Register
+            elif service == 18: # Account Register
                 print(Colorate.Horizontal(Colors.rainbow, '[!] REGISTRING NEW ACCOUNT'))
                 acc2_email = prompt_valid_value("[red][?] ACCOUNT EMAIL[/red]", "Email", password=False)
                 acc2_password = prompt_valid_value("[red][?] ACCOUNT PASSWORD[/red]", "Password", password=False)
@@ -624,7 +767,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 19: # Unlock House 3
+            elif service == 19: # Unlock House 3
                 print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING HOUSE 3:"))
                 if cpm.unlock_houses():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
@@ -639,7 +782,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 20: # Delete Friends
+            elif service == 20: # Delete Friends
                 print(Colorate.Horizontal(Colors.rainbow, "[%] DELETING FRIENDS[/red]: "))
                 if cpm.delete_player_friends():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
@@ -654,7 +797,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 21: # Unlock Smoke
+            elif service == 21: # Unlock Smoke
                 print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCKING SMOKE: "))
                 if cpm.unlock_smoke():
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
@@ -669,7 +812,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 22: # Change Races Wins
+            elif service == 22: # Change Races Wins
                 print(Colorate.Horizontal(Colors.rainbow, '[!] Insert how much races you win.'))
                 amount = IntPrompt.ask("[red][?] Amount[/red]")
                 print(Colorate.Horizontal(Colors.rainbow, "[%] CHANGING YOUR DATA: "))
@@ -692,7 +835,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 23: # Change Races Loses
+            elif service == 23: # Change Races Loses
                 print(Colorate.Horizontal(Colors.rainbow, '[!] INSERT HOW MUCH RACES YOU LOSE'))
                 amount = IntPrompt.ask("[red][?] AMOUNT[/red]")
                 print(Colorate.Horizontal(Colors.rainbow, "[%] CHANGING YOUR DATA: "))
@@ -715,7 +858,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 24: # custom engine
+            elif service == 24: # custom engine
                 print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))            
                 hp = IntPrompt.ask("[red][?] HP[/red]")                
                 innerhp = IntPrompt.ask("[red][?] INNER HP[/red]")
@@ -736,7 +879,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 25: # remove bumper
+            elif service == 25: # remove bumper
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER CAR DETALIS'))
                 car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
                 print(Colorate.Horizontal(Colors.rainbow, "[%] REMOVE ALL BUMPERS: "))
@@ -753,7 +896,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 26: # Hack Car Speed (299hp)
+            elif service == 26: # Hack Car Speed (299hp)
                 print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER CAR DETALIS'))
                 car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
@@ -771,7 +914,7 @@ if __name__ == "__main__":
 
 
 
-            elif option == 27: # Hack All Car Speed 99hp
+            elif service == 27: # Hack All Car Speed 99hp
                 print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))            
                 print(Colorate.Horizontal(Colors.rainbow, "[%] HACKING ALL CARS SPEED: "))
                 if cpm.hack_car_sexo():
@@ -787,7 +930,7 @@ if __name__ == "__main__":
                     
                     
                     
-            elif option == 28: # Chrome All Cars
+            elif service == 28: # Chrome All Cars
                 print(Colorate.Horizontal(Colors.rainbow, '[!] CHROME'))            
                 print(Colorate.Horizontal(Colors.rainbow, "[%] HACKING All CARS CHROME: "))
                 if cpm.chrome_all_cars():
@@ -803,7 +946,7 @@ if __name__ == "__main__":
                     
                     
                     
-            elif option == 29: # ALL CARS MAX MILAGE
+            elif service == 29: # ALL CARS MAX MILAGE
                 print(Colorate.Horizontal(Colors.rainbow, '[!] NOTE: ORIGINAL MILAGE CAN NOT BE RESTORED'))            
                 print(Colorate.Horizontal(Colors.rainbow, "[%] HACKING MILAGE: "))
                 if cpm.hack_car_milage():
@@ -819,7 +962,7 @@ if __name__ == "__main__":
                     
                                                  
                                                                        
-            elif option == 30: # Clone Account
+            elif service == 30: # Clone Account
                 print(Colorate.Horizontal(Colors.rainbow, '[!] PLEASE ENTER ACCOUNT DETALIS'))
                 to_email = prompt_valid_value("[red][?] ACCOUNT EMAIL[/red]", "Email", password=False)
                 to_password = prompt_valid_value("[red][?] ACCOUNT PASSWORD[/red]", "Password", password=False)
@@ -837,7 +980,7 @@ if __name__ == "__main__":
                     
                     
                     
-            elif option == 31: # Unlock Tuning
+            elif service == 31: # Unlock Tuning
                 print(Colorate.Horizontal(Colors.rainbow, '[!] TUNING'))            
                 print(Colorate.Horizontal(Colors.rainbow, "[%] UNLOCK ALL TUNING: "))
                 if cpm.unlock_tuning():
@@ -853,7 +996,7 @@ if __name__ == "__main__":
                     
                     
                     
-            elif option == 32: # ANGLE
+            elif service == 32: # ANGLE
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER CAR DETALIS'))
                 car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER STEERING ANGLE'))
@@ -872,7 +1015,7 @@ if __name__ == "__main__":
                     
                     
                     
-            elif option == 33: # Unlocking Equipaments Male
+            elif service == 33: # Unlocking Equipaments Male
                 print(Colorate.Horizontal(Colors.rainbow, ' %100'))
                 print(Colorate.Horizontal(Colors.rainbow, "[%] Unlocking Equipaments Male: "))
                 if cpm.unlock_equipments_male():
@@ -888,7 +1031,7 @@ if __name__ == "__main__":
                     
                     
                     
-            elif option == 34: # Unlocking Equipaments Female
+            elif service == 34: # Unlocking Equipaments Female
                 print(Colorate.Horizontal(Colors.rainbow, ' %100'))
                 print(Colorate.Horizontal(Colors.rainbow, "[%] Unlocking Equipaments Female: "))
                 if cpm.unlock_equipments_female():
@@ -904,7 +1047,7 @@ if __name__ == "__main__":
                     
                     
                     
-            elif option == 35: # Unlocking clan Equipaments Male
+            elif service == 35: # Unlocking clan Equipaments Male
                 print(Colorate.Horizontal(Colors.rainbow, ' %100'))            
                 print(Colorate.Horizontal(Colors.rainbow, "[%] ﻿FAKE CLAN DRSSING MALE: "))
                 if cpm.unlock_clan_equipments_male():
@@ -920,7 +1063,7 @@ if __name__ == "__main__":
                     
                      
                        
-            elif option == 36: # Unlocking clan Equipaments Female
+            elif service == 36: # Unlocking clan Equipaments Female
                 print(Colorate.Horizontal(Colors.rainbow, ' %100'))            
                 print(Colorate.Horizontal(Colors.rainbow, "[%] FAKE CLAN DRSSING FEMALE: "))
                 if cpm.unlock_clan_equipments_female():
@@ -936,7 +1079,7 @@ if __name__ == "__main__":
                     
                     
                     
-            elif option == 37: # remove head Male
+            elif service == 37: # remove head Male
                 print(Colorate.Horizontal(Colors.rainbow, ' %100'))            
                 print(Colorate.Horizontal(Colors.rainbow, "[%] REMOVE HEAD MALE: "))
                 if cpm.unlock_remove_face_male():
@@ -952,7 +1095,7 @@ if __name__ == "__main__":
                     
                     
                     
-            elif option == 38: # remove head Female
+            elif service == 38: # remove head Female
                 print(Colorate.Horizontal(Colors.rainbow, ' %100'))            
                 print(Colorate.Horizontal(Colors.rainbow, "[%] REMOVE HEAD FEMALE: "))
                 if cpm.unlock_remove_face_female():
@@ -968,7 +1111,7 @@ if __name__ == "__main__":
                     
                     
                     
-            elif option == 39: # OPENING ANOTHER ACCOUNT
+            elif service == 39: # OPENING ANOTHER ACCOUNT
                 print(Colorate.Horizontal(Colors.rainbow, '[!] PLEASE ENTER ACCOUNT DETALIS'))
                 account_email = prompt_valid_value("[red][?] ACCOUNT EMAIL[/red]", "Email", password=False)
                 to_password = prompt_valid_value("[red][?] ACCOUNT PASSWORD[/red]", "Password", password=False)
