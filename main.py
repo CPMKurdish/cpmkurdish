@@ -1040,6 +1040,7 @@ if __name__ == "__main__":
                 print('code2')
             elif i == 'G' or 'H' or 'I':
                 print('code3')
-            else: continue
+            else: continue 
+                else:
             break
         break
