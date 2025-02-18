@@ -347,18 +347,15 @@ if __name__ == "__main__":
 
 
             elif service == 1: # Unlock All Paid Cars
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[!] NOTE: THIS FUNCTION TAKES A WHILE TO COMPLETE, PLEASE DON'T CANCEL"))
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] UNLOCKING ALL PAID CARS: "))
-                if cpm.unlock_paid_cars():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue
+                i = input('if exercise:\n')
+            if i == 'A' or 'B' or 'C':
+                print('code1')
+            elif i == 'D' or 'E' or 'F':
+                print('code2')
+            elif i == 'G' or 'H' or 'I':
+                print('code3')
+            else:
+                print('code4')
                     
                     
                     
