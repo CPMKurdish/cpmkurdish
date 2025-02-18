@@ -1036,11 +1036,11 @@ if __name__ == "__main__":
                 i = input('if exercise:\n')
             if i == 'A' or 'B' or 'C':
                 print('code1')
-                elif i == 'D' or 'E' or 'F':
+            elif i == 'D' or 'E' or 'F':
                 print('code2')
-                 elif i == 'G' or 'H' or 'I':
+            elif i == 'G' or 'H' or 'I':
                 print('code3')
-                 else:
+            else:
             else: continue
             break
         break
