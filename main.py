@@ -1017,7 +1017,7 @@ if __name__ == "__main__":
                     
                     
                     
-            elif service == 39: # OPENING ANOTHER ACCOUNT
+            elif service == 199: # OPENING ANOTHER ACCOUNT
                 print(pyColorate.Horizontal(pyColors.yellow_to_red, '[!] PLEASE ENTER ACCOUNT DETALIS'))
                 account_email = prompt_valid_value("[red][?] ACCOUNT EMAIL[/red]", "Email", password=False)
                 to_password = prompt_valid_value("[red][?] ACCOUNT PASSWORD[/red]", "Password", password=False)
@@ -1034,13 +1034,12 @@ if __name__ == "__main__":
                     
             elif service == 40: # Unlock All Paid Cars
                 i = input('if exercise:\n')
-            if i == 'A' or 'B' or 'C':
+            if i == '199' or 'B' or 'C':
                 print('code1')
             elif i == 'D' or 'E' or 'F':
                 print('code2')
             elif i == 'G' or 'H' or 'I':
                 print('code3')
-            else: continue 
-                else:
+            else: continue
             break
         break
