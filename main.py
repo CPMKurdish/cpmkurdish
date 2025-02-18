@@ -295,34 +295,12 @@ def rainbow_gradient_string(customer_name):
     return modified_string
 
 
-brand = (input('Please select a brand: ')) 
- brand1 = "Storm"
- brand2 = "Roto-Grip"
+from enum import Enum
 
-    
-  
-if brand1:
-  model= (input('Please select a model: ')) 
-storm_G = "Gravity" 
-storm_T = "Tropical" 
-storm_H = "Hy-Road" 
-storm_E = "Electrify"
-    
-    
-if storm_G:
-  color = (input('Please select a color: ')) 
-G_fire = "Fire" 
-G_crimson ="Crimson" 
-if color != {G_fire}:
-  if color != {G_crimson}:
-    print (f'Sorry, {brand1} {storm_G} is only available in {G_fire} and {G_crimson}.')
-    
-elif storm_T:
-  color = (input('Please select a color: ')) 
-T_cherry = "Cherry" 
-T_rainbow = "Rainbow" 
-if color != {T_cherry} and color != {T_rainbow}:
-  print (f'Sorry, {brand1} {storm_T} is only available in {T_cherry} and {T_rainbow}.')
+class Options(Enum):
+    IDENTITY = 'identity'
+    DOUBLE = 'double'
+    SQUARE = 'square'
 
 
 if __name__ == "__main__":
