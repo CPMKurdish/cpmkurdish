@@ -368,13 +368,13 @@ if __name__ == "__main__":
                         print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
                         answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
                         if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                        else: continue
-                    else:
+            else: continue
+            else:
                         print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
                         print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
                         sleep(2)
                         continue
-                else:
+            else:
                     print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
                     print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE USE VALID VALUES'))
                     sleep(2)
@@ -389,8 +389,8 @@ if __name__ == "__main__":
                     print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
                     if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
+            else: continue
+            else:
                     print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
                     print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
                     sleep(2)
@@ -407,13 +407,13 @@ if __name__ == "__main__":
                         print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
                         answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
                         if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                        else: continue
-                    else:
+            else: continue
+            else:
                         print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
                         print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
                         sleep(2)
                         continue
-                else:
+            else:
                     print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
                     print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE USE VALID VALUES'))
                     sleep(2)
@@ -430,8 +430,8 @@ if __name__ == "__main__":
                     print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
                     if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
+            else: continue
+            else:
                     print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
                     print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
                     sleep(2)
@@ -448,8 +448,8 @@ if __name__ == "__main__":
                     print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
                     if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
+            else: continue
+            else:
                     print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
                     print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
                     sleep(2)
@@ -466,8 +466,8 @@ if __name__ == "__main__":
                     print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
                     answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
                     if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
+            else: continue
+            else:
                     print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
                     print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
                     sleep(2)
@@ -484,550 +484,17 @@ if __name__ == "__main__":
                         print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
                         answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
                         if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                        else: continue
-                    else:
+            else: continue
+            else:
                         print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
                         print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
                         sleep(2)
                         continue
-                else:
+            else:
                     print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
                     print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE USE VALID ID'))
                     sleep(2)
                     continue
-
-
-
-            elif service == 9: # Unlock w16 Engine
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] UNLOCKING W16 ENGINE: "))
-                if cpm.unlock_w16():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue
-
-
-
-            elif service == 10: # Change Name
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[?] ENTER YOUR NEW NAME'))
-                new_name = Prompt.ask("[red][?] NAME[/red]")
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] SAVING YOUR DATA: "))
-                if len(new_name) >= 0 and len(new_name) <= 999999999:
-                    if cpm.set_player_name(new_name):
-                        print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                        answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                        if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                        else: continue
-                    else:
-                        print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                        print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                        sleep(2)
-                        continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE USE VALID VALUES'))
-                    sleep(2)
-                    continue
-
-
-
-            elif service == 11: # Unlock All Horns
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] UNLOCKING ALL HORNS: "))
-                if cpm.unlock_horns():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue
-
-
-
-            elif service == 12: # Change Name Rainbow
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[?] ENTER YOUR NEW RAINBOW NAME'))
-                new_name = Prompt.ask("[red][?] NAME[/red]")
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] SAVING YOUR DATA: "))
-                if len(new_name) >= 0 and len(new_name) <= 999999999:
-                    if cpm.set_player_name(rainbow_gradient_string(new_name)):
-                        print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                        answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                        if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                        else: continue
-                    else:
-                        print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                        print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                        sleep(2)
-                        continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE USE VALID VALUES'))
-                    sleep(2)
-                    continue
-
-
-
-            elif service == 13: # Disable Engine Damage
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] UNLOCKING DISABLE DAMAGE: "))
-                if cpm.disable_engine_damage():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue
-
-
-
-            elif service == 14: # Number Plates
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] GIVING YOU A NUMBER PLATES: "))
-                if cpm.set_player_plates():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue
-
-
-
-            elif service == 15: # Unlimited Fuel
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] UNLOCKING UNLIMITED FUEL: "))
-                if cpm.unlimited_fuel():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue
-
-
-
-            elif service == 16: # Account Delete
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[!] AFTER DELETING YOUR ACCOUNT THERE IS NO GOING BACK'))
-                answ = Prompt.ask("[red][?] DO YOU WANT TO DELETE THIS ACCOUNT[/red]", choices=["y", "n"], default="n")
-                if answ == "y":
-                    cpm.delete()
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                else: continue
-
-
-
-            elif service == 17: # Unlock Car Wheels
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] UNLOCKING All WHEELS: "))
-                if cpm.unlock_car_wheel():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue                                  
-
-
-
-            elif service == 18: # Account Register
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[!] REGISTRING NEW ACCOUNT'))
-                acc2_email = prompt_valid_value("[red][?] ACCOUNT EMAIL[/red]", "Email", password=False)
-                acc2_password = prompt_valid_value("[red][?] ACCOUNT PASSWORD[/red]", "Password", password=False)
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] CREATING NEW ACCOUNT: "))
-                status = cpm.register(acc2_email, acc2_password)
-                if status == 0:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, f'INFO: IN ORDER TO TWEAK THIS ACCOUNT WITH Ewan_Kurdish.'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'YOU MOST SIGN-IN TO THE GAME USING THIS CCOUNT'))
-                    sleep(2)
-                    continue
-                elif status == 105:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'THIS EMAIL IS ALREADY EXISTS'))
-                    sleep(2)
-                    continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue
-
-
-
-            elif service == 19: # Unlock House 3
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] UNLOCKING HOUSE 3:"))
-                if cpm.unlock_houses():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue
-
-
-
-            elif service == 20: # Delete Friends
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] DELETING FRIENDS[/red]: "))
-                if cpm.delete_player_friends():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue
-
-
-
-            elif service == 21: # Unlock Smoke
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] UNLOCKING SMOKE: "))
-                if cpm.unlock_smoke():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue
-
-
-
-            elif service == 22: # Change Races Wins
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[!] Insert how much races you win.'))
-                amount = IntPrompt.ask("[red][?] Amount[/red]")
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] CHANGING YOUR DATA: "))
-                if amount > 0 and amount <= 999999999999999999999999999999:
-                    if cpm.set_player_wins(amount):
-                        print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                        answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                        if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                        else: continue
-                    else:
-                        print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                        print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                        sleep(2)
-                        continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE USE VALID VALUES'))
-                    sleep(2)
-                    continue
-
-
-
-            elif service == 23: # Change Races Loses
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[!] INSERT HOW MUCH RACES YOU LOSE'))
-                amount = IntPrompt.ask("[red][?] AMOUNT[/red]")
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] CHANGING YOUR DATA: "))
-                if amount > 0 and amount <= 999999999999999999999999999999:
-                    if cpm.set_player_loses(amount):
-                        print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                        answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                        if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                        else: continue
-                    else:
-                        print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                        print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE USE VALID VALUES'))
-                        sleep(2)
-                        continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE USE VALID VALUES'))
-                    sleep(2)
-                    continue
-
-
-
-            elif service == 24: # custom engine
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))            
-                hp = IntPrompt.ask("[red][?] HP[/red]")                
-                innerhp = IntPrompt.ask("[red][?] INNER HP[/red]")
-                nm = IntPrompt.ask("[red][?] NM[/red]")
-                innernm = IntPrompt.ask("[red][?] INNER NM[/red]")
-                gearbox = IntPrompt.ask("[red][?] GEARBOX[/red]")                
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] CUSTOM ENGINE: "))
-                if cpm.custom_engine(hp, innerhp, nm, innernm, gearbox):
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue                    
-
-
-
-            elif service == 25: # remove bumper
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[!] ENTER CAR DETALIS'))
-                car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] REMOVE ALL BUMPERS: "))
-                if cpm.car_bumper(car_id):
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue
-
-
-
-            elif service == 26: # Hack Car Speed (299hp)
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[!] ENTER CAR DETALIS'))
-                car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] HACKING CAR SPEED: "))
-                if cpm.hack_car_speed(car_id):
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue
-
-
-
-            elif service == 27: # Hack All Car Speed 99hp
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[!] NOTE: ORIGINAL SPEED CAN NOT BE RESTORED'))            
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] HACKING ALL CARS SPEED: "))
-                if cpm.hack_car_sexo():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue
-                    
-                    
-                    
-            elif service == 28: # Chrome All Cars
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[!] CHROME'))            
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] HACKING All CARS CHROME: "))
-                if cpm.chrome_all_cars():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue               
-                    
-                    
-                    
-            elif service == 29: # ALL CARS MAX MILAGE
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[!] NOTE: ORIGINAL MILAGE CAN NOT BE RESTORED'))            
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] HACKING MILAGE: "))
-                if cpm.hack_car_milage():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue                           
-                    
-                                                 
-                                                                       
-            elif service == 30: # Clone Account
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[!] PLEASE ENTER ACCOUNT DETALIS'))
-                to_email = prompt_valid_value("[red][?] ACCOUNT EMAIL[/red]", "Email", password=False)
-                to_password = prompt_valid_value("[red][?] ACCOUNT PASSWORD[/red]", "Password", password=False)
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] CLONING YOU ACCOUNT: "))
-                if cpm.account_clone(to_email, to_password):
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE USE VALID VALUES'))
-                    sleep(2)
-                    continue
-                    
-                    
-                    
-            elif service == 31: # Unlock Tuning
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[!] TUNING'))            
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] UNLOCK ALL TUNING: "))
-                if cpm.unlock_tuning():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue                                   
-                    
-                    
-                    
-            elif service == 32: # ANGLE
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[!] ENTER CAR DETALIS'))
-                car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[!] ENTER STEERING ANGLE'))
-                custom = IntPrompt.ask("[red][?]﻿ENTER THE AMOUNT OF ANGLE YOU WANT[/red]")                
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] HACKING CAR ANGLE: "))
-                if cpm.max_max1(car_id, custom):
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue                    
-                    
-                    
-                    
-            elif service == 33: # Unlocking Equipaments Male
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, ' %100'))
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] Unlocking Equipaments Male: "))
-                if cpm.unlock_equipments_male():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue                    
-                    
-                    
-                    
-            elif service == 34: # Unlocking Equipaments Female
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, ' %100'))
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] Unlocking Equipaments Female: "))
-                if cpm.unlock_equipments_female():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue                    
-                    
-                    
-                    
-            elif service == 35: # Unlocking clan Equipaments Male
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, ' %100'))            
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] ﻿FAKE CLAN DRSSING MALE: "))
-                if cpm.unlock_clan_equipments_male():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue                   
-                    
-                     
-                       
-            elif service == 36: # Unlocking clan Equipaments Female
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, ' %100'))            
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] FAKE CLAN DRSSING FEMALE: "))
-                if cpm.unlock_clan_equipments_female():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue                                        
-                    
-                    
-                    
-            elif service == 37: # remove head Male
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, ' %100'))            
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] REMOVE HEAD MALE: "))
-                if cpm.unlock_remove_face_male():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue                    
-                    
-                    
-                    
-            elif service == 38: # remove head Female
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, ' %100'))            
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] REMOVE HEAD FEMALE: "))
-                if cpm.unlock_remove_face_female():
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'FAILED'))
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'PLEASE TRY AGAIN'))
-                    sleep(2)
-                    continue                                                            
-                    
-                    
-                    
-            elif service == 39: # OPENING ANOTHER ACCOUNT
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[!] PLEASE ENTER ACCOUNT DETALIS'))
-                account_email = prompt_valid_value("[red][?] ACCOUNT EMAIL[/red]", "Email", password=False)
-                to_password = prompt_valid_value("[red][?] ACCOUNT PASSWORD[/red]", "Password", password=False)
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] OPENING ANOTHER ACCOUNT: "))
-                if cpm.another_account(account_email, to_password):
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'ACCOUNT NOT FOUND'))
-                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
-                    else: continue
-                else:
-                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-                    sleep(2)
-                    continue                    
             else: continue
             break
         break
