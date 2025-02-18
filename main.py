@@ -1018,7 +1018,6 @@ if __name__ == "__main__":
                     
                     
             elif service == 39: # OPENING ANOTHER ACCOUNT
-if __name__ == "__main__":
     console = Console()
     signal.signal(signal.SIGINT, signal_handler)
     while True:
