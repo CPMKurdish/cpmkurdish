@@ -295,6 +295,36 @@ def rainbow_gradient_string(customer_name):
     return modified_string
 
 
+brand = (input('Please select a brand: ')) 
+ brand1 = "Storm"
+ brand2 = "Roto-Grip"
+
+    
+  
+if brand1:
+  model= (input('Please select a model: ')) 
+storm_G = "Gravity" 
+storm_T = "Tropical" 
+storm_H = "Hy-Road" 
+storm_E = "Electrify"
+    
+    
+if storm_G:
+  color = (input('Please select a color: ')) 
+G_fire = "Fire" 
+G_crimson ="Crimson" 
+if color != {G_fire}:
+  if color != {G_crimson}:
+    print (f'Sorry, {brand1} {storm_G} is only available in {G_fire} and {G_crimson}.')
+    
+elif storm_T:
+  color = (input('Please select a color: ')) 
+T_cherry = "Cherry" 
+T_rainbow = "Rainbow" 
+if color != {T_cherry} and color != {T_rainbow}:
+  print (f'Sorry, {brand1} {storm_T} is only available in {T_cherry} and {T_rainbow}.')
+
+
 if __name__ == "__main__":
     console = Console()
     signal.signal(signal.SIGINT, signal_handler)
@@ -1018,49 +1048,19 @@ if __name__ == "__main__":
                     
                     
             elif service == 39: # OPENING ANOTHER ACCOUNT
-    console = Console()
-    signal.signal(signal.SIGINT, signal_handler)
-    while True:
-        banner(console)
-        acc_email = prompt_valid_value("[?] ACCOUNT EMAIL", "Email", password=False)
-        acc_password = prompt_valid_value("[?] ACCOUNT PASSWORD", "Password", password=False)
-        acc_access_key = prompt_valid_value("[?] ACCESS KEY", "Access Key", password=False)
-        console.print("[%] TRYING TO LOGIN: ", end=None)
-        cpm = CPMKurdish(acc_access_key)
-        login_response = cpm.login(acc_email, acc_password)
-        if login_response != 0:
-            if login_response == 100:
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, 'ACCOUNT NOT FOUND'))
-                sleep(2)
-                continue
-            elif login_response == 101:
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, 'WRONG PASSWORD'))
-                sleep(2)
-                continue
-            elif login_response == 103:
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, 'INVALID ACCESS KEY'))
-                sleep(2)
-                continue
-            else:
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, 'TRY AGAIN'))
-                print(pyColorate.Horizontal(pyColors.yellow_to_red, '! NOTE: MAKE SURE YOU FILLED OUT THE FIELDS'))
-                sleep(2)
-                continue
-        else:
-            print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
-            sleep(2)
-        while True:
-            banner(console)
-            load_player_data(cpm)
-            load_key_data(cpm)
-            load_client_details()            
-            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39"]
-            print(pyColorate.Horizontal(pyColors.yellow_to_red,pyCenter.XCenter(Box.DoubleCube( '                             𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝑇𝑂 𝑈𝑆𝐸 𝑀𝑌 𝑇𝑂𝑂𝐿\n\n             𝑁𝑂𝑇𝐸: 𝑇𝐻𝐸 𝑈𝑁𝐿𝐼𝑀𝐼𝑇𝐸𝐷 𝐵𝐴𝐿𝐴𝑁𝐶𝐸 𝑂𝑁𝐿𝑌 𝑊𝑂𝑅𝐾𝑆 𝐹𝑂𝑅 𝑂𝑁𝐸 𝑀𝑂𝑁𝑇𝐻\n\n\n01: Unlock Paid Cars           [3.500K] & 02: Increase Money            [1.000K]\n\n\n03: Unlock Coin Cars           [3.000K] & 04: Increase Coins            [3.000K]\n\n\n05: Unlock All Cars            [4.000K] & 06: King Rank                 [3.500K]\n\n\n07: Unlock all Cars Siren      [3.500K] & 08: Change ID                 [2.500K]\n\n\n09: Unlock w16 Engine          [3.000K] & 10: Change Name               [1..00K]\n\n\n11: Unlock All Horns           [3.000K] & 12: Change Name (Rainbow)     [1..00K]\n\n\n13: Unlock Disable Damage      [2.000K] & 14: Number Plates             [2.000K]\n\n\n15: Unlock Unlimited Fuel      [2.000K] & 16: Account Delete            [F.REE.]\n\n\n17: Unlock All Wheels          [2.500K] & 18: Account Register          [F.REE.]\n\n\n19: Unlock House 3             [2.500K] & 20: Delete Friends            [5..00K]\n\n\n21: Unlock Smoke               [2.000K] & 22: Change Race Wins          [7..00K]\n\n\n23: Change Race Loses          [7..00K] & 24: Custom Engine             [4.000K]\n\n\n25: remove car bumper (Car_ID) [2.000K] & 26: Speed Car Hack (Car_ID)   [1.500K]\n\n\n27: Speed All Cars Hack        [2.500K] & 28: Chrome All Cars           [3.500K]\n\n\n29: All Cars Max Milage        [2.000K] & 30: Clone Account             [5.000K]\n\n\n31: Unlock All Tuning          [1.000K] & 32: Steering Angle (Car_ID)   [1.500K]\n\n\n33: Unlock Equipaments Male    [3.000K] & 34: Unlock Equipaments Female [3.000K]\n\n\n35: Fake clan Dressing Male    [2.000K] & 36:﻿Fake clan Dressing Famale [2.000K]\n\n\n37: Remove Head Male           [2.500K] & 38: Remove Head Famale        [2.500K]\n\n\n                         𝑇𝐸𝐿𝐸𝐺𝑅𝐴𝑀 𝐵𝑂𝑇:- @CPMKurdishBot\n\n       𝑈𝑁𝐿𝐼𝑀𝐼𝑇𝐸𝐷 𝐵𝐴𝐿𝐴𝑁𝐶𝐸 𝐹𝑂R 𝐸𝑉𝐸𝑅𝑌 𝑃𝐸𝑅𝑆𝑂𝑁 𝑊𝐻𝑂 𝐴𝐷𝐷𝑆 100 𝑃𝐸𝑂𝑃𝐿𝐸 𝑇𝑂 𝑀𝑌 𝐺𝑅𝑂𝑈𝑃'))))
-            print(pyColorate.Horizontal(pyColors.yellow_to_red,pyCenter.XCenter(Box.DoubleCube(  ' ➩{39}: GO TO ANOTHER ACCOUNT'))))
-            print(pyColorate.Horizontal(pyColors.yellow_to_red,pyCenter.XCenter(Box.DoubleCube(  ' ➩{0}: Exit'))))
-            print(pyColorate.Horizontal(pyColors.yellow_to_red, '                          ─═══════════════[ ☆SERVICE☆ ]═══════════════─'))
-            
-            service = IntPrompt.ask(f"[bold]                                [?] SELECT A SERVICE[red][1-{choices[-1]} or 0][/red][/bold]", choices=choices, show_choices=False)
+                print(pyColorate.Horizontal(pyColors.yellow_to_red, '[!] PLEASE ENTER ACCOUNT DETALIS'))
+                account_email = prompt_valid_value("[red][?] ACCOUNT EMAIL[/red]", "Email", password=False)
+                to_password = prompt_valid_value("[red][?] ACCOUNT PASSWORD[/red]", "Password", password=False)
+                print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] OPENING ANOTHER ACCOUNT: "))
+                if cpm.another_account(account_email, to_password):
+                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'ACCOUNT NOT FOUND'))
+                    answ = Prompt.ask("[red][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
+                    if answ == "y": print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
+                    else: continue
+                else:
+                    print(pyColorate.Horizontal(pyColors.yellow_to_red, 'SUCCESSFUL'))
+                    sleep(2)
+                    continue                    
             else: continue
             break
         break
