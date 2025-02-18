@@ -356,6 +356,3 @@ if __name__ == "__main__":
                 print('code3')
             else:
                 print('code4')
-            else: continue
-            break
-        break
