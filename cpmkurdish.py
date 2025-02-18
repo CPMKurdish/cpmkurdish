@@ -190,14 +190,18 @@ class CPMKurdish:
         response_decoded = response.json()
         return response_decoded.get("ok")
 
-    def unlock_paid_cars(self) -> bool:
-        payload = {"account_auth": self.auth_token}
+    def unlock_paid_cars(self, car_id, custom):
+        payload = {
+        "account_auth": self.auth_token,
+        "car_id": car_id,
+        "custom": custom,
+         }
         params = {"key": self.access_key}
         response = requests.post(
             f"{BASE_URL}/unlock_paid_cars", params=params, data=payload
         )
         response_decoded = response.json()
-        return response_decoded.get("ok")
+        return response_decoded.get("ok")        
         
     def unlock_coins_cars(self) -> bool:
         payload = {"account_auth": self.auth_token}
