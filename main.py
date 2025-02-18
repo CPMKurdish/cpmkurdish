@@ -295,14 +295,6 @@ def rainbow_gradient_string(customer_name):
     return modified_string
 
 
-from enum import Enum
-
-class Options(Enum):
-    IDENTITY = 'identity'
-    DOUBLE = 'double'
-    SQUARE = 'square'
-
-
 if __name__ == "__main__":
     console = Console()
     signal.signal(signal.SIGINT, signal_handler)
