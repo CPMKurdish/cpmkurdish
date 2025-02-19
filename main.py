@@ -338,10 +338,10 @@ if __name__ == "__main__":
             print(pyColorate.Horizontal(pyColors.yellow_to_red,pyCenter.XCenter(Box.DoubleCube(  ' ➩{0}: Exit'))))
             print(pyColorate.Horizontal(pyColors.yellow_to_red, '                          ─═══════════════[ ☆SERVICE☆ ]═══════════════─'))
             
-            service = IntPrompt.ask(f"[bold]                                [?] SELECT A SERVICE[red][1-{choices[-1]} or 0][/red][/bold]", choices=choices, show_choices=False)
+            op = IntPrompt.ask(f"[bold]                                [?] SELECT A SERVICE[red][1-{choices[-1]} or 0][/red][/bold]", choices=choices, show_choices=False)
             
             
-            if service == 0: # Exit
+            if op == 0: # Exit
                 print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
 
 
