@@ -346,7 +346,7 @@ if __name__ == "__main__":
 
 
 
-            elif service == 1: # Unlock All Paid Cars
+            elif op == "1": # Unlock All Paid Cars
                 print(pyColorate.Horizontal(pyColors.yellow_to_red, "[!] NOTE: THIS FUNCTION TAKES A WHILE TO COMPLETE, PLEASE DON'T CANCEL"))
                 print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] UNLOCKING ALL PAID CARS: "))
                 if cpm.unlock_paid_cars():
