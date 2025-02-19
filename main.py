@@ -338,15 +338,15 @@ if __name__ == "__main__":
             print(pyColorate.Horizontal(pyColors.yellow_to_red,pyCenter.XCenter(Box.DoubleCube(  ' ➩{0}: Exit'))))
             print(pyColorate.Horizontal(pyColors.yellow_to_red, '                          ─═══════════════[ ☆SERVICE☆ ]═══════════════─'))
             
-            op = IntPrompt.ask(f"[bold]                                [?] SELECT A SERVICE[red][1-{choices[-1]} or 0][/red][/bold]", choices=choices, show_choices=False)
+            service = IntPrompt.ask(f"[bold]                                [?] SELECT A SERVICE[red][1-{choices[-1]} or 0][/red][/bold]", choices=choices, show_choices=False)
             
             
-            if op == 0: # Exit
+            if service == 0: # Exit
                 print(pyColorate.Horizontal(pyColors.yellow_to_red, f'THANK YOU FOR USING OUR TOOL, PLEASE JOIN OUR TELEGRAM CHANNEL: @{__CHANNEL_USERNAME__}'))
 
 
 
-            elif op == "1": # Unlock All Paid Cars
+            elif service == 1: # Unlock All Paid Cars
                 print(pyColorate.Horizontal(pyColors.yellow_to_red, "[!] NOTE: THIS FUNCTION TAKES A WHILE TO COMPLETE, PLEASE DON'T CANCEL"))
                 print(pyColorate.Horizontal(pyColors.yellow_to_red, "[%] UNLOCKING ALL PAID CARS: "))
                 if cpm.unlock_paid_cars():
