@@ -4,17 +4,15 @@ import sys
 import random
 from time import sleep
 from datetime import datetime
-
-# Bibliotecas de terceiros
 import requests
 from rich.console import Console
 from rich.prompt import Prompt, IntPrompt
 from rich.text import Text
 from rich.style import Style
-
-# Bibliotecas de estilo (pystyle)
 import pystyle
 from pystyle import Colors, Colorate
+
+
 from cpmkurdish import CPMKurdish
 
 __CHANNEL_USERNAME__ = "cpmkurdish_channel"
@@ -106,7 +104,6 @@ def show_banner():
     for line in BANNER.splitlines():
         if line.strip():
             print(pyColorate.Horizontal(pyColors.yellow_to_red, pyCenter.XCenter(line)))
-            time.sleep(0.1)
     print("\n")
 
 
