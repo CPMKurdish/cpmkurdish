@@ -104,6 +104,7 @@ def show_banner():
     for line in BANNER.splitlines():
         if line.strip():
             print(pyColorate.Horizontal(pyColors.yellow_to_red, pyCenter.XCenter(line)))
+            time.sleep(0.9)
     print("\n")
 
 
