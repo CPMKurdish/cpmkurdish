@@ -195,7 +195,7 @@ def banner(console):
     console.print(colorful_text)
     print(Colorate.Horizontal(Colors.yellow_to_red,pyCenter.XCenter('─══════════════════════════════════════════☆☆═════════════════════════════════════════─')))
  
-            print(pyColorate.Horizontal(pyColors.yellow_to_red,pyCenter.XCenter(Box.DoubleCube(f"𝐇𝐈 {get_user_name()}"))))
+            print(pyColorate.Horizontal(pyColors.yellow_to_red,pyCenter.XCenter(Box.DoubleCube, f"𝐇𝐈 {get_user_name()}")))
           
     print(pyColorate.Horizontal(pyColors.yellow_to_red,pyCenter.XCenter("𝐏𝐋𝐄𝐀𝐒𝐄 𝐋𝐎𝐆𝐎𝐔𝐓 𝐅𝐑𝐎𝐌 𝐂𝐏𝐌 𝐁𝐄𝐅𝐎𝐑𝐄 𝐔𝐒𝐈𝐍𝐆 𝐓𝐇𝐈𝐒 𝐓𝐎𝐎𝐋")))
     
